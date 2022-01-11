@@ -59,7 +59,7 @@ echo The game has detected this is your first time running JesusAI.
 echo Please read our terms and conditions.
 echo[
 echo This game is not designed to offend in any way.
-echo All of JesusAI was created by three devs, @download_free_ram69, DREZMOR & SEZMALOIN.
+echo All of JesusAI was created by three devs, @download_free_ram69, DREZMOR and SEZMALOIN.
 echo This game in no way means to bash religion or its figures.
 echo[
 echo Please type anything to agree to these terms.
