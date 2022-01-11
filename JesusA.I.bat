@@ -1,9 +1,10 @@
 ::Alpha branch coded and maintained by DREZMOR on GitHub
+::Alternate fork by SEZMALOIN on GitHub
 ::JesusAI runs best on Powershell, however it will load using Command Prompt too
 ::Found an issue? Report it at our repository: https://github.com/JesusAIexperience/JesusAI
 
 @echo off
-title JesusAI (Dev Build)
+title JesusAI (Prototype)
 
 ::Runs on startup
 ::Checks if "verify.txt" exists (to identify if the game has been ran before)
@@ -58,7 +59,7 @@ echo The game has detected this is your first time running JesusAI.
 echo Please read our terms and conditions.
 echo[
 echo This game is not designed to offend in any way.
-echo All of JesusAI was created by two devs, @download_free_ram69 and DREZMOR.
+echo All of JesusAI was created by three devs, @download_free_ram69, DREZMOR & SEZMALOIN.
 echo This game in no way means to bash religion or its figures.
 echo[
 echo Please type anything to agree to these terms.
@@ -173,7 +174,7 @@ echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
-echo 5. Open Cartridges Menu (DLC)
+echo 5. Open Extras / DLC Menu
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: 0.01 (Indev Copy)
@@ -189,7 +190,7 @@ if "%menudeluxe%" equ "calibrate" goto calibrate
 if "%menudeluxe%" equ "enable.debug" cd %temp% & echo .> debug.txt & goto debugmenudeluxe
 if "%menudeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudeluxe%" equ "5" goto cartridges
+if "%menudeluxe%" equ "5" goto dlc
 if "%menudeluxe%" equ "4" goto credits
 if "%menudeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
 if "%menudeluxe%" equ "2" exit
@@ -217,10 +218,9 @@ echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
-echo 5. Open Cartridges Menu (DLC)
+echo 5. Open Extras / DLC Menu
 echo 6. (DEBUG) List Directories
 echo 7. (DEBUG) Experimental Features
-echo 8. (DEV) Terminal
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: 0.01 (Indev Copy)
@@ -238,17 +238,42 @@ if "%menudebugdeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebugdeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
 if "%menudebugdeluxe%" equ "7" goto experimental
 if "%menudebugdeluxe%" equ "6" goto directorylist
-if "%menudebugdeluxe%" equ "5" goto cartridges
+if "%menudebugdeluxe%" equ "5" goto dlc
 if "%menudebugdeluxe%" equ "4" goto credits
 if "%menudebugdeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
 if "%menudebugdeluxe%" equ "2" exit
 if "%menudebugdeluxe%" equ "1" goto jesusai
 goto debugmenudeluxe
 
+:dlc
+cls
+color 0c
+echo               __                            
+echo              /\ \__                         
+echo    __   __  _\ \ ,_\  _ __    __      ____  
+echo  /'__`\/\ \/'\\ \ \/ /\`'__\/'__`\   /',__\ 
+echo /\  __/\/>  </ \ \ \_\ \ \//\ \L\.\_/\__, `\
+echo \ \____\/\_/\_\ \ \__\\ \_\\ \__/.\_\/\____/
+echo  \/____/\//\/_/  \/__/ \/_/ \/__/\/_/\/___/ 
+echo[
+echo Congratulations on finishing JesusAI! You now
+echo have access to a few optional extras. These will
+echo be periodically updated as more content is added.
+echo (EXTRAS menu created by SEZMALOIN)
+echo[
+echo 1. Open Cartridges Menu (DLC)
+echo 2. Play JesusAI Prototype
+echo 3. Go Back to Main Menu
+echo[
+set /p "dlc=Selected option: "
+if "%dlc%" equ "1" goto cartridges
+if "%dlc%" equ "2" goto oldmenu
+if "%dlc%" equ "3" goto menudeluxe
+goto dlc
 
 :cartridges
 cls
-title JesusAI (Dev Build)
+title JesusAI (Prototype)
 color 0c
 echo                       __                   __                           
 echo                      /\ \__         __    /\ \                          
@@ -273,14 +298,14 @@ echo 2. Run Cartridge 1
 echo 3. Run Cartridge 2
 echo 4. Run Cartridge 3
 echo 5. Run Cartridge 0
-echo 6. Go Back to Main Menu
+echo 6. Go Back to Extras Menu
 set /p "cartridges=Selected option: "
 if "%cartridges%" equ "1" start "" "https://github.com/schneerocket/JesusAI-Cartridges"
 if "%cartridges%" equ "2" call %~dp0Cartridge 1.bat
 if "%cartridges%" equ "3" call %~dp0Cartridge 2.bat
 if "%cartridges%" equ "4" goto cartridge3
 if "%cartridges%" equ "5" goto cartridges
-if "%cartridges%" equ "6" goto menudeluxe
+if "%cartridges%" equ "6" goto dlc
 goto cartridges
 
 :cartridge3
@@ -553,10 +578,10 @@ echo 17. Old JesusAI (Easter Egg on Credits Screen)
 echo 18. Terms and Conditions Menu
 echo DISCLAIMER: It's recommended not to go here since it could break JesusAI
 echo You've been warned.
-echo 19. Cartridges Menu
+echo 19. DLC Menu
 echo[
 set /p "directories=Directory you want to travel to: "
-if "%directories%" equ "19" goto cartridges
+if "%directories%" equ "19" goto dlc
 if "%directories%" equ "18" goto termsandconditions
 if "%directories%" equ "17" goto oldmenu
 if "%directories%" equ "16" goto directorylist   
@@ -579,34 +604,16 @@ goto directorylist
 
 :credits
 cls
-echo                   .@% .@@                                        
-echo                     .@@                                          
-echo             *@% .@% .@@  @@  @@                                  
-echo             .(#@@@@@@@@@@@@@@((                                  
-echo               ,@@@@@@@@@@@@@@                                    
-echo                 .@@@@@@@@@@                                      
-echo                 .@@@@@@@@@@                                      
-echo                .*@@@@@@@@@@..                                    
-echo           /@@@@@@@@@@@@@@@@@@@@@@                                
-echo               ,@@@@@@@@@@@@@@                                    
-echo               ,@@@@@@@@@@@@@@                                    
-echo @@@@/         ,@@@@@@@@@@@@@@                                    
-echo @@@@/ (@@@@@@@@@@@@@@@@@@@@@@            @@            @@@@,     
-echo @@* (@/ (@( *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@        
-echo @@@@/ (@* /@# ,@@@@@@@@@@@@@@  @@  @@  @@  @@@@@@@@@@  @@@@,     
-echo @@* (@/ (@( *@@@@@@@@@@@@@@@@@@  @@  @@@@              @@    %@, 
-echo @@%(///(///((/(@@@@@@@@@@@@@@//((//((//@@              @@((((@@#(
-echo @@@@/ (@/ /@# ,@@@@@@@@@@@@@@  @@  @@  @@  @@@@@@@@@@  @@@@,     
-echo @@* (@/ (@( *@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@      @@@@@@        
-echo @@@@/ (@@@@@@@@@@@@@@@@@@@@@@@@          @@            @@@@,     
-echo @@@@@@@@@@/ *@@@@@@@@@@@@@@@@@@          @@                      
-echo           /@@@@@@@@@@@@@@@@@@@@@@                                
-echo           /@@@@@@@@@@@@@@@@@@@@@@                                
-echo           /@@@@@@@@@@@@@@@@@@@@@@                                
-echo         (@@@@@@@@@@@@@@@@@@@@@@@@@@                                                             
+                      __      __             
+                     /\ \  __/\ \__          
+  ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+ /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+/\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+\ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+ \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
 echo[
 echo JesusAI - Created by C0rp Studios
-echo Programming by DREZMOR and @download_free_ram69
+echo Programming by DREZMOR, SEZMALOIN and @download_free_ram69
 echo Entirely written via Batch in Virtual Studio Code
 echo Project concept established in Late 2019 as an inside joke between friends
 echo Project fully started in December 2021
@@ -615,7 +622,6 @@ echo Thanks StackOverflow (for helping fix so many things)
 echo[
 echo Type anything to go back.
 set /p "credits=?: "
-if "%credits%" equ "unlock" goto oldmenu
 if "%credits%" equ "bhfbhdfohbob324ohihatejewsbhshui" exit
 goto endingchecker
 
@@ -623,19 +629,20 @@ goto endingchecker
 color 0a
 cls
 echo Jesus A.I
-echo The first ever build / original edition
+echo The first ever prototype
 echo Slightly optimized and modified to work properly
 echo Originally by @download_free_ram69
 echo Recoded and patched in by DREZMOR
+echo Small fixes by SEZMALOIN
 echo[
 echo Please pick an option
 echo 1. Start Experience
 echo 2. Exit
-echo 3. Return to the new JesusAI
+echo 3. Return to Extras Menu
 set /p "oldmenu=Selected option: "
 if "%oldmenu%" equ "1" goto oldjesusai
 if "%oldmenu%" equ "2" exit
-if "%oldmenu%" equ "3" goto endingchecker
+if "%oldmenu%" equ "3" goto dlc
 if "%oldmenu%" equ "4" goto oldjudgement
 goto oldmenu
 
@@ -945,8 +952,8 @@ echo             II_.-I   I-,_II
 echo           .-"`   `"`'`   `"-.   
 echo         .'                   '. 
 echo[
-echo [JesusAI] IS THE CREATION OF TWO [HOT, SINGLE]
-echo DEVELOPERS, [DREZMOR] AND [@download_free_ram69].
+echo [JesusAI] IS THE CREATION OF THREE [HOT, SINGLE]
+echo DEVELOPERS, [DREZMOR], [SEZMALOIN] AND [@download_free_ram69].
 echo THE MAIN GOAL WAS TO CREATE AN [ATTRACTIVE] VERISON
 echo OF [Jesus Christ], FULLY EXECUTABLE FROM YOUR [Personal Computer]!
 echo ANYTHING ELSE YOU'D LIKE TO ASK, [Markiplier]?
