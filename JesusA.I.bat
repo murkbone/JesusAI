@@ -252,13 +252,13 @@ echo               __
 echo              /\ \__                         
 echo    __   __  _\ \ ,_\  _ __    __      ____  
 echo  /'__`\/\ \/'\\ \ \/ /\`'__\/'__`\   /',__\ 
-echo /\  __/\/>  </ \ \ \_\ \ \//\ \L\.\_/\__, `\
+echo /\  __/\/'  '/ \ \ \_\ \ \//\ \L\.\_/\__, `\
 echo \ \____\/\_/\_\ \ \__\\ \_\\ \__/.\_\/\____/
 echo  \/____/\//\/_/  \/__/ \/_/ \/__/\/_/\/___/ 
 echo[
-echo Congratulations on finishing JesusAI! You now
-echo have access to a few optional extras. These will
-echo be periodically updated as more content is added.
+echo Congratulations on finishing the JesusAI campaign!
+echo You now have access to some cool little extras.
+echo New extras will be added at random times throughout updates.
 echo (EXTRAS menu created by SEZMALOIN)
 echo[
 echo 1. Open Cartridges Menu (DLC)
