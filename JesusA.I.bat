@@ -300,7 +300,7 @@ echo 4. Run Cartridge 3
 echo 5. Run Cartridge 0
 echo 6. Go Back to Extras Menu
 set /p "cartridges=Selected option: "
-if "%cartridges%" equ "1" start "" "https://github.com/schneerocket/JesusAI-Cartridges"
+if "%cartridges%" equ "1" start "" "https://github.com/DREZMOR/JesusAI-Cartridges"
 if "%cartridges%" equ "2" call %~dp0Cartridge 1.bat
 if "%cartridges%" equ "3" call %~dp0Cartridge 2.bat
 if "%cartridges%" equ "4" goto cartridge3
