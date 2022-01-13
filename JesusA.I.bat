@@ -604,13 +604,13 @@ goto directorylist
 
 :credits
 cls
-                      __      __             
-                     /\ \  __/\ \__          
-  ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
- /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
-/\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
-\ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
- \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
 echo[
 echo JesusAI - Created by C0rp Studios
 echo Programming by DREZMOR, SEZMALOIN and @download_free_ram69
@@ -1105,6 +1105,7 @@ if "%extendedoptions%" equ "Where do I find X?" goto findx
 if "%extendedoptions%" equ "where do I find X?" goto findx
 if "%extendedoptions%" equ "Where do I find X" goto findx
 if "%extendedoptions%" equ "where do I find X" goto findx
+if "%extendedoptions%" equ "where do i find x" goto findx
 if "%extendedoptions%" equ "Why were you created?" goto creationreal
 if "%extendedoptions%" equ "Why were you created" goto creationreal
 if "%extendedoptions%" equ "why were you created?" goto creationreal
@@ -1114,8 +1115,6 @@ if "%extendedoptions%" equ "How were you created" goto howwereyoucreated
 if "%extendedoptions%" equ "how were you created?" goto howwereyoucreated
 if "%extendedoptions%" equ "how were you created" goto howwereyoucreated
 goto jesusconversationpage2
-
-::Unfinished currently
 
 :findx
 cls
@@ -1137,11 +1136,35 @@ echo[
 echo PROMPTS TO ASK JESUS:
 echo "Don't worry about it."
 echo[
-set /p "findx=?:"
+set /p "findx=?: "
 if "%findx%" equ "Don't worry about it." goto findx2
 if "%findx%" equ "Don't worry about it" goto findx2
 if "%findx%" equ "don't worry about it." goto findx2
 if "%findx%" equ "don't worry about it" goto findx2
+
+:findx2
+cls
+color 0a
+echo                  .---.               
+echo             '-.  I   I  .-'         
+echo               ___I   I___          
+echo          -=  [           ]  =-   
+echo              `---.   .---'        
+echo           __II__ I   I __II__    
+echo           '-..-' I   I '-..-'   
+echo             II   I   I   II     
+echo             II_.-I   I-,_II     
+echo           .-"`   `"`'`   `"-.   
+echo         .'                   '. 
+echo[
+echo     ENTER "X" ON THE TITLE SCREEN.
+echo         YOU HAVE MUCH TO DO.
+echo[
+echo      Type anything to go back.
+echo[
+set /p "findx2= "
+if "%findx2%" equ "isudbfksdfb3hjb423jhv4b1jk31321k1j23vh123hkv123k123k" exit
+goto endingchecker
  
 :creationreal
 cls
