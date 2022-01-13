@@ -97,6 +97,8 @@ echo This version is probably unstable.
 echo Expect random crashes or glitches.
 echo[
 set /p "menu=Selected option: "
+if "%menu%" equ "X" goto xshop
+if "%menu%" equ "x" goto xshop
 if "%menu%" equ "repent" goto repent
 if "%menu%" equ "password" goto password
 if "%menu%" equ "calibrate" goto calibrate
@@ -142,6 +144,8 @@ echo This version is probably unstable.
 echo Expect random crashes or glitches.
 echo[
 set /p "menudebug=Selected option: "
+if "%menudebug%" equ "X" goto xshop
+if "%menudebug%" equ "x" goto xshop
 if "%menudebug%" equ "repent" goto repent
 if "%menudebug%" equ "password" goto password
 if "%menudebug%" equ "calibrate" goto calibrate
@@ -244,6 +248,13 @@ if "%menudebugdeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/Je
 if "%menudebugdeluxe%" equ "2" exit
 if "%menudebugdeluxe%" equ "1" goto jesusai
 goto debugmenudeluxe
+
+:xshop
+cls
+echo Unfinished
+set /p "unf=?: "
+if "%unf%" equ "ushuidfhuio3gh4uyg4yo234ouyu234vg234yv21y4v123v213yv123123y12o3ui1vi3vy1o1iu23yi21u3yui213yk21y3fg127i1f23iuydsfgiusdtfsdif86" exit
+goto endingchecker
 
 :dlc
 cls
