@@ -1,10 +1,9 @@
 # JesusAI
-# Currently in Alpha!
 
 ### A batch game featuring Jesus, 4 endings + extra DLC
 ### Tons of hidden and extra content too
-### Created by @download_free_ram69, DREZMOR & SEZMALOIN
-### 75% COMPLETE!
+### Created by @download_free_ram69, DREZMOR & 448v
+### Currently in alpha. 75% complete.
 
 Made using state of the art blockchain and Batch technology. 
 Not affiliated with God, Jesus or The Bible in any way.
@@ -17,4 +16,4 @@ Original code by @download_free_ram69
 
 Alpha branch maintained frequently by DREZMOR
 
-Pull requests + additional features by SEZMALOIN
+Beta testing, bug fixes and additional features by 448v
