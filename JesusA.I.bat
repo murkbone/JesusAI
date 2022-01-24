@@ -1,5 +1,5 @@
 ::Alpha branch coded and maintained by DREZMOR on GitHub
-::Alternate fork by SEZMALOIN on GitHub
+::Alternate fork by 448v on GitHub
 ::JesusAI runs best on Powershell, however it will load using Command Prompt too
 ::Found an issue? Report it at our repository: https://github.com/JesusAIexperience/JesusAI
 
@@ -59,7 +59,7 @@ echo The game has detected this is your first time running JesusAI.
 echo Please read our terms and conditions.
 echo[
 echo This game is not designed to offend in any way.
-echo All of JesusAI was created by three devs, @download_free_ram69, DREZMOR and SEZMALOIN.
+echo All of JesusAI was created by three devs, @download_free_ram69, DREZMOR and 448v.
 echo This game in no way means to bash religion or its figures.
 echo[
 echo Please type anything to agree to these terms.
@@ -71,7 +71,7 @@ if "%terms%" equ "qweha8ds78dagdbahl2" exit
 goto endingchecker
 
 :menu
-color 0a
+color 0e
 cls
 echo  _____                                  ______  ______     
 echo /\___ \                                /\  _  \/\__  _\    
@@ -81,7 +81,7 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0a
+color 0e
 echo Welcome to JesusAI!
 echo Please select an option.
 echo 1. Start Experience
@@ -112,7 +112,7 @@ if "%menu%" equ "1" goto jesusai
 goto menu
 
 :debugmenu
-color 0a
+color 0e
 cls
 echo  _____                                  ______  ______     
 echo /\___ \                                /\  _  \/\__  _\    
@@ -122,7 +122,7 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0a
+color 0e
 echo DEBUG OPTIONS ENABLED!
 echo Enter "disable.debug" to disable debug options.
 echo[
@@ -161,7 +161,7 @@ if "%menudebug%" equ "1" goto jesusai
 goto debugmenu
 
 :menudeluxe
-color 0a
+color 0e
 cls
 echo  _____                                  ______  ______     
 echo /\___ \                                /\  _  \/\__  _\    
@@ -171,7 +171,7 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0a
+color 0e
 echo Welcome to JesusAI!
 echo Please select an option.
 echo 1. Start Experience
@@ -202,7 +202,7 @@ if "%menudeluxe%" equ "1" goto jesusai
 goto menu
 
 :debugmenudeluxe
-color 0a
+color 0e
 cls
 echo  _____                                  ______  ______     
 echo /\___ \                                /\  _  \/\__  _\    
@@ -212,7 +212,7 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0a
+color 0e
 echo DEBUG OPTIONS ENABLED!
 echo Enter "disable.debug" to disable debug options.
 echo[
@@ -251,9 +251,104 @@ goto debugmenudeluxe
 
 :xshop
 cls
-echo Unfinished
-set /p "unf=?: "
-if "%unf%" equ "ushuidfhuio3gh4uyg4yo234ouyu234vg234yv21y4v123v213yv123123y12o3ui1vi3vy1o1iu23yi21u3yui213yk21y3fg127i1f23iuydsfgiusdtfsdif86" exit
+echo  ___,___,_______,____
+echo /  :::////.///'//    \
+echo /  :::///.//// // H)  /
+echo /  ::://.////!!!/     /
+echo /   _______________   /
+echo /  /:::::::::::::::/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo //_/               //_/
+echo /__/_______________/__/
+echo[
+echo Good evening.
+echo What are you here for?
+echo[
+echo PROMPTS:
+echo "Nothing." (Go back to Main Menu)
+echo "I'm looking for X."
+echo[
+set /p "xshop=Selected prompt: "
+if "%xshop%" equ "nothing" goto endingchecker
+if "%xshop%" equ "nothing." goto endingchecker
+if "%xshop%" equ "Nothing" goto endingchecker
+if "%xshop%" equ "Nothing." goto endingchecker
+if "%xshop%" equ "i'm looking for X" goto xshop2
+if "%xshop%" equ "i'm looking for X." goto xshop2
+if "%xshop%" equ "I'm looking for X" goto xshop2
+if "%xshop%" equ "I'm looking for X." goto xshop2
+if "%xshop%" equ "im looking for x" goto xshop2
+goto xshop
+
+:xshop2
+cls
+echo  ___,___,_______,____
+echo /  :::////.///'//    \
+echo /  :::///.//// // H)  /
+echo /  ::://.////!!!/     /
+echo /   _______________   /
+echo /  /:::::::::::::::/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo //_/               //_/
+echo /__/_______________/__/
+echo[
+echo I am X.
+echo What business do you seek with me?
+echo[
+echo PROMPTS:
+echo "Nothing." (Go back to Main Menu)
+echo "JesusAI brought me here."
+echo[
+set /p "xshop2=Selected prompt: "
+if "%xshop2%" equ "nothing" goto endingchecker
+if "%xshop2%" equ "nothing." goto endingchecker
+if "%xshop2%" equ "Nothing" goto endingchecker
+if "%xshop2%" equ "Nothing." goto endingchecker
+if "%xshop2%" equ "JesusAI brought me here." goto xshop3
+if "%xshop2%" equ "JesusAI brought me here" goto xshop3
+if "%xshop2%" equ "jesusai brought me here." goto xshop3
+if "%xshop2%" equ "jesusai brought me here" goto xshop3
+goto xshop2
+
+:xshop3
+cls
+echo  ___,___,_______,____
+echo /  :::////.///'//    \
+echo /  :::///.//// // H)  /
+echo /  ::://.////!!!/     /
+echo /   _______________   /
+echo /  /:::::::::::::::/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo /  /_______________/  /
+echo //_/               //_/
+echo /__/_______________/__/
+echo[ 
+echo I see. I know of who runs that AI.
+echo Take this floppy disc. Get to the screen with your IP information.
+echo Insert the floppy disc and see what happens.
+echo[
+echo NEW ITEM OBTAINED: Floppy Disc 
+echo Type anything to go back.
+echo[
+set /p "xshop3=?: "
+if "%xshop3%" equ "Smugownsacertainsphereafavorgy1u23uy1g23b1h23ku123hku123kuh" exit
+goto xshopcompletedpayload
+
+:xshopcompletedpayload
+cls
+if not exist "%temp%\floppy.txt" (
+    cd %temp%
+    echo Looks like you got an item, kid!> floppy.txt
+    goto endingchecker
+)
 goto endingchecker
 
 :dlc
@@ -270,7 +365,7 @@ echo[
 echo Congratulations on finishing the JesusAI campaign!
 echo You now have access to some cool little extras.
 echo New extras will be added at random times throughout updates.
-echo (EXTRAS menu created by SEZMALOIN)
+echo (DLC menu created by 448v)
 echo[
 echo 1. Open Cartridges Menu (DLC)
 echo 2. Play JesusAI Prototype
@@ -624,7 +719,7 @@ echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
 echo[
 echo JesusAI - Created by C0rp Studios
-echo Programming by DREZMOR, SEZMALOIN and @download_free_ram69
+echo Programming by DREZMOR, 448v and @download_free_ram69
 echo Entirely written via Batch in Virtual Studio Code
 echo Project concept established in Late 2019 as an inside joke between friends
 echo Project fully started in December 2021
@@ -633,7 +728,7 @@ echo Thanks StackOverflow (for helping fix so many things)
 echo[
 echo Type anything to go back.
 set /p "credits=?: "
-if "%credits%" equ "bhfbhdfohbob324ohihatejewsbhshui" exit
+if "%credits%" equ "bhfbhdfohbob324ohsdfsdf234234bhshui" exit
 goto endingchecker
 
 :oldmenu
@@ -644,7 +739,7 @@ echo The first ever prototype
 echo Slightly optimized and modified to work properly
 echo Originally by @download_free_ram69
 echo Recoded and patched in by DREZMOR
-echo Small fixes by SEZMALOIN
+echo Small fixes by 448v
 echo[
 echo Please pick an option
 echo 1. Start Experience
@@ -964,7 +1059,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo [JesusAI] IS THE CREATION OF THREE [HOT, SINGLE]
-echo DEVELOPERS, [DREZMOR], [SEZMALOIN] AND [@download_free_ram69].
+echo DEVELOPERS, [DREZMOR], [448v] AND [@download_free_ram69].
 echo THE MAIN GOAL WAS TO CREATE AN [ATTRACTIVE] VERISON
 echo OF [Jesus Christ], FULLY EXECUTABLE FROM YOUR [Personal Computer]!
 echo ANYTHING ELSE YOU'D LIKE TO ASK, [Markiplier]?
