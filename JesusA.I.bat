@@ -1117,7 +1117,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo HELLO [1,000,00TH USER]!! ANYTHING ELSE
-echo YOU WOULD LIKE TO ASK ME, [BLUE HAIR AND PRONOUNS]?
+echo YOU WOULD LIKE TO ASK ME, [FRIENDLY NEIGHBOR]?
 echo[
 echo 1. (your text) Ask Jesus a question.
 echo 2. Beg for forgiveness.
@@ -1357,8 +1357,14 @@ goto endingchecker
 
 :payloadtohell
 cls
-echo Type "unlock" on the credits scene to unlock a surprise >>"%~dp0Hello.txt"
+if exist "%temp%\floppy.txt" (
+    goto xhell
+)
 goto hell
+
+:xhell
+cls
+color 0c
 
 :hell
 cls
