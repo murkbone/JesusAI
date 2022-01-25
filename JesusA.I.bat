@@ -1,15 +1,25 @@
 ::Alpha branch coded and maintained by DREZMOR on GitHub
 ::Alternate fork by 448v on GitHub
-::JesusAI runs best on Powershell, however it will load using Command Prompt too
+::Built for Windows Command Prompt & Windows Powershell.
+::Untested on other operating systems
 ::Found an issue? Report it at our repository: https://github.com/JesusAIexperience/JesusAI
 
 @echo off
-title JesusAI (Prototype)
+title JesusAI (v1.0.0-beta1)
 
 ::Runs on startup
 ::Checks if "verify.txt" exists (to identify if the game has been ran before)
 ::If file exists, instantly send to menu
 ::If not, create file & send to intro screen
+
+:startup
+cls
+if not exist "%appdata%\JesusAI" (
+    cd %appdata%
+    mkdir JesusAI
+    goto info
+)
+goto info
 
 :info
 cls
@@ -81,17 +91,17 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0e
 echo Welcome to JesusAI!
 echo Please select an option.
 echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
+echo 5. Options
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: 0.01 (Indev Copy)
-echo Last update: 10/01/2022
+echo Version: v1.0.0-beta1
+echo Last update: 25/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -105,6 +115,7 @@ if "%menu%" equ "calibrate" goto calibrate
 if "%menu%" equ "enable.debug" cd %temp% & echo .> debug.txt & goto debugmenu
 if "%menu%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menu%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
+if "%menu%" equ "5" goto options
 if "%menu%" equ "4" goto credits
 if "%menu%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
 if "%menu%" equ "2" exit
@@ -122,7 +133,6 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0e
 echo DEBUG OPTIONS ENABLED!
 echo Enter "disable.debug" to disable debug options.
 echo[
@@ -132,13 +142,12 @@ echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
-echo 5. (DEBUG) List Directories
-echo 6. (DEBUG) Experimental Features
-echo 7. (DEV) Terminal
+echo 5. Options
+echo 6. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: 0.01 (Indev Copy)
-echo Last update: 10/01/2022
+echo Version: v1.0.0-beta1
+echo Last update: 25/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -152,8 +161,8 @@ if "%menudebug%" equ "calibrate" goto calibrate
 if "%menudebug%" equ "disable.debug" del "%temp%\debug.txt" & goto endingchecker
 if "%menudebug%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebug%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudebug%" equ "6" goto experimental
-if "%menudebug%" equ "5" goto directorylist
+if "%menudebug%" equ "6" goto directorylist
+if "%menudebug%" equ "5" goto options
 if "%menudebug%" equ "4" goto credits
 if "%menudebug%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
 if "%menudebug%" equ "2" exit
@@ -171,18 +180,18 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0e
 echo Welcome to JesusAI!
 echo Please select an option.
 echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
-echo 5. Open Extras / DLC Menu
+echo 5. Options
+echo 6. Open Extras / DLC Menu
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: 0.01 (Indev Copy)
-echo Last update: 10/01/2022
+echo Version: v1.0.0-beta1
+echo Last update: 25/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -194,7 +203,8 @@ if "%menudeluxe%" equ "calibrate" goto calibrate
 if "%menudeluxe%" equ "enable.debug" cd %temp% & echo .> debug.txt & goto debugmenudeluxe
 if "%menudeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudeluxe%" equ "5" goto dlc
+if "%menudeluxe%" equ "6" goto dlc
+if "%menudeluxe%" equ "5" goto options
 if "%menudeluxe%" equ "4" goto credits
 if "%menudeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
 if "%menudeluxe%" equ "2" exit
@@ -212,7 +222,6 @@ echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__
 echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
-color 0e
 echo DEBUG OPTIONS ENABLED!
 echo Enter "disable.debug" to disable debug options.
 echo[
@@ -222,13 +231,13 @@ echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
-echo 5. Open Extras / DLC Menu
-echo 6. (DEBUG) List Directories
-echo 7. (DEBUG) Experimental Features
+echo 5. Options
+echo 6. Open Extras / DLC Menu
+echo 7. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: 0.01 (Indev Copy)
-echo Last update: 10/01/2022
+echo Version: v1.0.0-beta1
+echo Last update: 25/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -240,14 +249,195 @@ if "%menudebugdeluxe%" equ "calibrate" goto calibrate
 if "%menudebugdeluxe%" equ "disable.debug" del "%temp%\debug.txt" & goto endingchecker
 if "%menudebugdeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebugdeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudebugdeluxe%" equ "7" goto experimental
-if "%menudebugdeluxe%" equ "6" goto directorylist
-if "%menudebugdeluxe%" equ "5" goto dlc
+if "%menudebugdeluxe%" equ "7" goto directorylist
+if "%menudebugdeluxe%" equ "6" goto dlc
+if "%menudebugdeluxe%" equ "5" goto options
 if "%menudebugdeluxe%" equ "4" goto credits
 if "%menudebugdeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
 if "%menudebugdeluxe%" equ "2" exit
 if "%menudebugdeluxe%" equ "1" goto jesusai
 goto debugmenudeluxe
+
+:options
+cls
+color 0d
+echo               __                                  
+echo              /\ \__  __                           
+echo   ___   _____\ \ ,_\/\_\    ___     ___     ____  
+echo  / __`\/\ '__`\ \ \/\/\ \  / __`\ /' _ `\  /',__\ 
+echo /\ \L\ \ \ \L\ \ \ \_\ \ \/\ \L\ \/\ \/\ \/\__, `\
+echo \ \____/\ \ ,__/\ \__\\ \_\ \____/\ \_\ \_\/\____/
+echo  \/___/  \ \ \/  \/__/ \/_/\/___/  \/_/\/_/\/___/ 
+echo           \ \_\                                   
+echo            \/_/          
+echo[
+echo Welcome to the Options Menu!
+echo All options are togglable.
+echo Please select an option to turn on or off:
+echo[
+if exist "%temp%\option1.txt" (
+    echo 1: Test Option [ON]
+)
+if not exist "%temp%\option1.txt" (
+    echo 1: Test Option [OFF]
+)
+echo 2. Danger Zone
+echo 3. Go Back to Menu
+echo[
+set /p "options=Selected option: "
+if "%options%" equ "1" goto option1
+if "%options%" equ "2" goto dangerzonewarning
+if "%options%" equ "3" goto endingchecker
+goto options
+
+:option1
+cls
+if not exist "%temp%\option1.txt" (
+    cd %temp%
+    echo You got a checksum error today, but that doesn't mean you have to like it!> option1.txt
+    goto options
+)
+del "%temp%\option1.txt" & goto options
+
+:dangerzonewarning
+cls
+echo WARNING: You are entering the Danger Zone.
+echo Things in this section contain things relating to save data and important game files.
+echo Tampering with these things could cause issues.
+echo Please type "Yes" to enter the Danger Zone.
+echo Please type "No" to go back to the Options menu.
+echo[
+set /p "dan=?: "
+if "%dan%" equ "Yes" goto dangerzone
+if "%dan%" equ "YES" goto dangerzone
+if "%dan%" equ "yes" goto dangerzone
+if "%dan%" equ "No" goto options
+if "%dan%" equ "NO" goto options
+if "%dan%" equ "no" goto options
+goto dangerzonewarning
+
+:dangerzone
+cls
+color 0b
+echo   __                                                                               
+echo  /\ \                                                                              
+echo  \_\ \     __      ___      __      __   _ __       ____     ___     ___      __   
+echo  /'_` \  /'__`\  /' _ `\  /'_ `\  /'__`\/\`'__\    /\_ ,`\  / __`\ /' _ `\  /'__`\ 
+echo /\ \L\ \/\ \L\.\_/\ \/\ \/\ \L\ \/\  __/\ \ \/     \/_/  /_/\ \L\ \/\ \/\ \/\  __/ 
+echo \ \___,_\ \__/.\_\ \_\ \_\ \____ \ \____\\ \_\       /\____\ \____/\ \_\ \_\ \____\
+echo  \/__,_ /\/__/\/_/\/_/\/_/\/___L\ \/____/ \/_/       \/____/\/___/  \/_/\/_/\/____/
+echo                             /\____/                                                
+echo                             \_/__/                                                 
+echo[
+echo Welcome to the Danger Zone.
+echo Please select an option.
+echo[
+echo 1. Delete Intro Verification File (Makes the terms and conditions screen appear on launch)
+echo 2. Uninstall JesusAI
+echo 3. Reset Save Data
+echo 4. Return to Options Menu
+set /p "dangerzone=Selected option: "
+if "%dangerzone%" equ "4" goto options
+if "%dangerzone%" equ "3" goto areyousure3
+if "%dangerzone%" equ "2" goto areyousure2
+if "%dangerzone%" equ "1" goto areyousure1
+goto dangerzone
+
+:areyousure1
+cls
+echo Are you sure you want to delete the Intro Configuration File?
+echo (Disclaimer: This file is rewritten when the game is booted.)
+echo (You will not cause permanent damage by deleting it.)
+echo Respond with Y to delete, or N to return to the Danger Zone.
+echo[
+set /p "areyousure1=?: "
+if "%areyousure1%" equ "Y" del "%temp%\verify.txt" & goto completed1
+if "%areyousure1%" equ "y" del "%temp%\verify.txt" & goto completed1
+if "%areyousure1%" equ "N" goto dangerzone
+if "%areyousure1%" equ "n" goto dangerzone
+goto areyousure1
+
+:areyousure2
+cls
+echo Are you sure you want to uninstall JesusAI?
+echo This will delete all files relating to JesusAI.
+echo If you want to reinstall the game, visit the GitHub page.
+echo Respond with Y to delete, or N to return to the Experimental Features menu.
+set /p "areyousure2=?: "
+if "%areyousure2%" equ "Y" goto reallysure2
+if "%areyousure2%" equ "y" goto reallysure2
+if "%areyousure2%" equ "N" goto dangerzone
+if "%areyousure2%" equ "n" goto dangerzone
+goto areyousure2
+
+:areyousure3
+cls
+echo Are you sure you want to reset your save data?
+echo This will delete all your ending files, intro configuration file,
+echo secret files and more. Only do this if you want to replay the game.
+echo Respond with Y to reset save data, or N to return to the Experimental Features menu.
+set /p "areyousure3=?: " 
+if "%areyousure3%" equ "Y" goto reallysure3
+if "%areyousure3%" equ "y" goto reallysure3
+if "%areyousure3%" equ "N" goto dangerzone
+if "%areyousure3%" equ "n" goto dangerzone
+goto areyousure3
+
+:reallysure3
+cls
+echo Are you REALLY sure you want to reset your save data?
+echo You will not be able to get it back without restarting the entire game.
+echo This is your last chance to go back.
+echo Respond with Y to reset save data, or N to return to the Experimental Features menu.
+set /p "reallysure3=?: "
+if "%reallysure3%" equ "Y" goto resetsavedata
+if "%reallysure3%" equ "y" goto resetsavedata
+if "%reallysure3%" equ "N" goto dangerzone
+if "%reallysure3%" equ "n" goto dangerzone
+goto reallysure3
+
+:resetsavedata
+cd %temp%
+del "%temp%\verify.txt"
+del "%temp%\ending1.txt"
+del "%temp%\ending2.txt"
+del "%temp%\ending3.txt"
+del "%temp%\debug.txt"
+goto completed3
+
+:completed3
+cls
+echo Save data deleted.
+echo Press anything to exit JesusAI.
+set /p "completed3=?: "
+if "%completed3%" equ "uh0sefuisdhf8w3yh45jh2asdasdad2342342344b4h2u421u" exit
+exit
+
+:reallysure2
+cls
+echo Are you REALLY sure you want to uninstall JesusAI?
+echo Only do this if you really want to delete it or fix an issue.
+echo Respond with Y to delete, or N to return to the Experimental Features menu.
+set /p "reallysure2=?: "
+if "%reallysure2%" equ "Y" goto uninstall
+if "%reallysure2%" equ "y" goto uninstall
+if "%reallysure2%" equ "N" goto dangerzone
+if "%reallysure2%" equ "n" goto dangerzone
+goto reallysure2
+
+:uninstall
+del "%temp%\verify.txt"
+cd %localhost%
+del "JesusA.I.bat"
+exit
+
+:completed1
+cls
+echo File deleted.
+echo Type anything to return to the Experimental Features menu.
+set /p "completed1=?: "
+if "%completed1%" equ "saoihdhoisadfsad7dsad87d9sad799ad" exit
+goto dangerzone
 
 :xshop
 cls
@@ -403,20 +593,36 @@ echo 1. Open the Cartridges Download Page
 echo 2. Run Cartridge 1
 echo 3. Run Cartridge 2
 echo 4. Run Cartridge 3
-echo 5. Run Cartridge 0
-echo 6. Go Back to Extras Menu
+echo 5. Go Back to Extras Menu
 set /p "cartridges=Selected option: "
 if "%cartridges%" equ "1" start "" "https://github.com/DREZMOR/JesusAI-Cartridges"
-if "%cartridges%" equ "2" call %~dp0Cartridge 1.bat
-if "%cartridges%" equ "3" call %~dp0Cartridge 2.bat
+if "%cartridges%" equ "2" goto cartridge1
+if "%cartridges%" equ "3" goto cartridge2
 if "%cartridges%" equ "4" goto cartridge3
-if "%cartridges%" equ "5" goto cartridges
-if "%cartridges%" equ "6" goto dlc
+if "%cartridges%" equ "5" goto dlc
+goto cartridges
+
+:cartridge1
+cls
+echo Cartridge success
+cd %temp%
+echo .> CARTRIDGECHECKER.txt
+cd %localhost%
+call "%~dp0Cartridge 1.bat"
+goto cartridges
+
+:cartridge2
+cls
+echo Cartridge success
+cd %temp%
+echo .> CARTRIDGECHECKER.txt
+cd %localhost%
+call "%~dp0Cartridge 2.bat"
 goto cartridges
 
 :cartridge3
 cls
-echo Test successful
+echo Cartridge success
 cd %temp%
 echo .> CARTRIDGECHECKER.txt
 cd %localhost%
@@ -459,140 +665,6 @@ echo Type anything to go back
 set /p "accepted=?: "
 if "%accepted%" equ "q8y234guiegharlyuwafuaetfv" exit
 goto menu
-
-:experimental
-cls
-color 1f
-echo                                                                    __             ___      
-echo                                      __                           /\ \__         /\_ \     
-echo    __   __  _  _____      __   _ __ /\_\    ___ ___      __    ___\ \ ,_\    __  \//\ \    
-echo  /'__`\/\ \/'\/\ '__`\  /'__`\/\`'__\/\ \ /' __` __`\  /'__`\/' _ `\ \ \/  /'__`\  \ \ \   
-echo /\  __/\/'  '/\ \ \L\ \/\  __/\ \ \/ \ \ \/\ \/\ \/\ \/\  __//\ \/\ \ \ \_/\ \L\.\_ \_\ \_ 
-echo \ \____\/\_/\_\\ \ ,__/\ \____\\ \_\  \ \_\ \_\ \_\ \_\ \____\ \_\ \_\ \__\ \__/.\_\/\____\
-echo  \/____/\//\/_/ \ \ \/  \/____/ \/_/   \/_/\/_/\/_/\/_/\/____/\/_/\/_/\/__/\/__/\/_/\/____/
-echo                  \ \_\                                                                     
-echo                   \/_/                                                                     
-echo    ___                __                                                                   
-echo  /'___\              /\ \__                                                                
-echo /\ \__/   __     __  \ \ ,_\  __  __  _ __    __    ____                                   
-echo \ \ ,__\/'__`\ /'__`\ \ \ \/ /\ \/\ \/\`'__\/'__`\ /',__\                                  
-echo  \ \ \_/\  __//\ \L\.\_\ \ \_\ \ \_\ \ \ \//\  __//\__, `\                                 
-echo   \ \_\\ \____\ \__/.\_\\ \__\\ \____/\ \_\\ \____\/\____/                                 
-echo    \/_/ \/____/\/__/\/_/ \/__/ \/___/  \/_/ \/____/\/___/                                  
-echo[
-echo WARNING: These features could cause the game to crash or other unintended side effects.
-echo These features are not regularly maintained and could become outdated.
-echo Use at your own risk.
-echo[
-echo Current Experimental Features:
-echo 1. Delete Intro Configuration File (Makes the terms and conditions screen appear on launch)
-echo 2. Uninstall JesusAI
-echo 3. Reset Save Data
-echo[
-echo More features will be added soon (maybe).
-echo You can also type anything else to go back to the menu.
-set /p "experimental=Activate feature: "
-if "%experimental%" equ "3" goto areyousure3
-if "%experimental%" equ "2" goto areyousure2
-if "%experimental%" equ "1" goto areyousure1
-goto debugmenu
-
-:areyousure1
-cls
-echo Are you sure you want to delete the Intro Configuration File?
-echo (Disclaimer: This file is rewritten when the game is booted.)
-echo (You will not cause permanent damage by deleting it.)
-echo (This is more for development purposes.)
-echo Respond with Y to delete, or N to return to the Experimental Features menu.
-echo[
-set /p "areyousure1=?: "
-if "%areyousure1%" equ "Y" del "%temp%\verify.txt" & goto completed1
-if "%areyousure1%" equ "y" del "%temp%\verify.txt" & goto completed1
-if "%areyousure1%" equ "N" goto experimental
-if "%areyousure1%" equ "n" goto experimental
-goto areyousure1
-
-:areyousure2
-cls
-echo Are you sure you want to uninstall JesusAI?
-echo This will delete all files relating to JesusAI.
-echo If you want to reinstall the game, visit the GitHub page.
-echo Respond with Y to delete, or N to return to the Experimental Features menu.
-set /p "areyousure2=?: "
-if "%areyousure2%" equ "Y" goto reallysure2
-if "%areyousure2%" equ "y" goto reallysure2
-if "%areyousure2%" equ "N" goto experimental
-if "%areyousure2%" equ "n" goto experimental
-goto areyousure2
-
-:areyousure3
-cls
-echo Are you sure you want to reset your save data?
-echo This will delete all your ending files, intro configuration file,
-echo secret files and more. Only do this if you want to replay the game.
-echo Respond with Y to reset save data, or N to return to the Experimental Features menu.
-set /p "areyousure3=?: " 
-if "%areyousure3%" equ "Y" goto reallysure3
-if "%areyousure3%" equ "y" goto reallysure3
-if "%areyousure3%" equ "N" goto experimental
-if "%areyousure3%" equ "n" goto experimental
-goto areyousure3
-
-:reallysure3
-cls
-echo Are you REALLY sure you want to reset your save data?
-echo You will not be able to get it back without restarting the entire game.
-echo This is your last chance to go back.
-echo Respond with Y to reset save data, or N to return to the Experimental Features menu.
-set /p "reallysure3=?: "
-if "%reallysure3%" equ "Y" goto resetsavedata
-if "%reallysure3%" equ "y" goto resetsavedata
-if "%reallysure3%" equ "N" goto experimental
-if "%reallysure3%" equ "n" goto experimental
-goto reallysure3
-
-:resetsavedata
-cd %temp%
-del "%temp%\verify.txt"
-del "%temp%\ending1.txt"
-del "%temp%\ending2.txt"
-del "%temp%\ending3.txt"
-del "%temp%\debug.txt"
-goto completed3
-
-:completed3
-cls
-echo Save data deleted.
-echo Press anything to exit JesusAI.
-set /p "completed3=?: "
-if "%completed3%" equ "uh0sefuisdhf8w3yh45jh2b4h2u421u" goto fnnlf
-exit
-
-:reallysure2
-cls
-echo Are you REALLY sure you want to uninstall JesusAI?
-echo Only do this if you really want to delete it or fix an issue.
-echo Respond with Y to delete, or N to return to the Experimental Features menu.
-set /p "reallysure2=?: "
-if "%reallysure2%" equ "Y" goto uninstall
-if "%reallysure2%" equ "y" goto uninstall
-if "%reallysure2%" equ "N" goto experimental
-if "%reallysure2%" equ "n" goto experimental
-goto reallysure2
-
-:uninstall
-del "%temp%\verify.txt"
-cd %localhost%
-del "JesusA.I.bat"
-exit
-
-:completed1
-cls
-echo File deleted.
-echo Type anything to return to the Experimental Features menu.
-set /p "completed1=?: "
-if "%completed1%" equ "saoihdhoisadfsad7dsad87d9sad799ad" exit
-goto experimental
 
 :calibrate
 cls
@@ -1365,6 +1437,22 @@ goto hell
 :xhell
 cls
 color 0c
+echo I see you are asking for forgiveness.
+echo Forgiveness shall come in due time, my child.
+echo But first...
+echo Let's make this more interesting, sOVERRIDE DETECTED.
+echo[
+echo Compatible disc with data has been detected.
+echo Insert disc?
+echo[
+set /p "xhell=?: "
+if "%xhell%" equ "Yes" goto insert 
+if "%xhell%" equ "yes" goto insert 
+if "%xhell%" equ "YES" goto insert 
+if "%xhell%" equ "no" goto failsafe
+if "%xhell%" equ "NO" goto failsafe
+if "%xhell%" equ "No" goto failsafe
+goto xhell
 
 :hell
 cls
@@ -1447,3 +1535,12 @@ echo The End 1 %date% %time%> "%temp%\ending1.txt"
 set /p "hellfinale=?: "
 if "%hellfinale%" equ "agysdaysugdasodgy13948y712398" exit
 goto menu
+
+:failsafe
+cls
+set /p "failsafe="
+if "%failsafe%" equ "hsbdfb4jhb53hkjkbj35jh2b34bjh23kb4h23jh4sabhfhsdfgbudyiguy234234234344324" exit
+goto failsafe
+
+
+
