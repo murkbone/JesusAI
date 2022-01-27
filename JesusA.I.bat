@@ -1,3 +1,4 @@
+::Prototype build created by D4rkC0rp0r4ti0n
 ::Alpha branch coded and maintained by DREZMOR on GitHub
 ::Alternate fork by 448v on GitHub
 ::Built for Windows Command Prompt & Windows Powershell.
@@ -23,15 +24,15 @@ goto info
 
 :info
 cls
-if not exist "%temp%\verify.txt" (
-    cd %temp%
+if not exist "%appdata%\JesusAI\verify.txt" (
+    cd %appdata%\JesusAI
     echo .> verify.txt
     goto termsandconditions
 )
 goto endingchecker
 
 ::Checks if all three endings are acquired
-::Each ending will write a text file to the specified directory (in this case, %temp%)
+::Each ending will write a text file to the specified directory (in this case, %appdata%\JesusAI)
 ::If all three exist, send to the menu with the DLC feature
 ::If not, send to regular menu
 ::Additionally, checks for a debug file
@@ -40,12 +41,12 @@ goto endingchecker
 ::If endings and debug file don't exist, go to regular menu
 
 :endingchecker
-if exist "%temp%\ending1.txt" if exist "%temp%\ending2.txt" if exist "%temp%\ending3.txt" if exist "%temp%\debug.txt" goto debugmenudeluxe
-if exist "%temp%\ending1.txt" if exist "%temp%\ending2.txt" if exist "%temp%\ending3.txt" goto menudeluxe
-if exist "%temp%\debug.txt" goto debugmenu
-if not exist "%temp%\ending1.txt" goto menu
-if not exist "%temp%\ending2.txt" goto menu
-if not exist "%temp%\ending3.txt" goto menu
+if exist "%appdata%\JesusAI\ending1.txt" if exist "%appdata%\JesusAI\ending2.txt" if exist "%appdata%\JesusAI\ending3.txt" if exist "%appdata%\JesusAI\debug.txt" goto debugmenudeluxe
+if exist "%appdata%\JesusAI\ending1.txt" if exist "%appdata%\JesusAI\ending2.txt" if exist "%appdata%\JesusAI\ending3.txt" goto menudeluxe
+if exist "%appdata%\JesusAI\debug.txt" goto debugmenu
+if not exist "%appdata%\JesusAI\ending1.txt" goto menu
+if not exist "%appdata%\JesusAI\ending2.txt" goto menu
+if not exist "%appdata%\JesusAI\ending3.txt" goto menu
 
 :termsandconditions
 color 1f
@@ -69,7 +70,7 @@ echo The game has detected this is your first time running JesusAI.
 echo Please read our terms and conditions.
 echo[
 echo This game is not designed to offend in any way.
-echo All of JesusAI was created by three devs, @download_free_ram69, DREZMOR and 448v.
+echo All of JesusAI was created by three devs, D4rkC0rp0r4ti0n, DREZMOR and 448v.
 echo This game in no way means to bash religion or its figures.
 echo[
 echo Please type anything to agree to these terms.
@@ -77,7 +78,7 @@ echo This screen will not show up again once you agree.
 echo If you do not agree, please close the game now.
 echo[
 set /p "terms=?: "
-if "%terms%" equ "qweha8ds78dagdbahl2" exit
+if "%terms%" equ "qweha8ds78dagdbasdasdasdsay1y239y192312y9a ahl2" exit
 goto endingchecker
 
 :menu
@@ -101,7 +102,7 @@ echo 5. Options
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 25/01/2022
+echo Last update: 26/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -112,7 +113,7 @@ if "%menu%" equ "x" goto xshop
 if "%menu%" equ "repent" goto repent
 if "%menu%" equ "password" goto password
 if "%menu%" equ "calibrate" goto calibrate
-if "%menu%" equ "enable.debug" cd %temp% & echo .> debug.txt & goto debugmenu
+if "%menu%" equ "ehumunbobabye2134144" cd %appdata%\JesusAI & echo .> debug.txt & goto debugmenu
 if "%menu%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menu%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
 if "%menu%" equ "5" goto options
@@ -134,8 +135,6 @@ echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
 echo DEBUG OPTIONS ENABLED!
-echo Enter "disable.debug" to disable debug options.
-echo[
 echo Welcome to JesusAI!
 echo Please select an option.
 echo 1. Start Experience
@@ -147,7 +146,7 @@ echo 6. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 25/01/2022
+echo Last update: 26/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -158,7 +157,7 @@ if "%menudebug%" equ "x" goto xshop
 if "%menudebug%" equ "repent" goto repent
 if "%menudebug%" equ "password" goto password
 if "%menudebug%" equ "calibrate" goto calibrate
-if "%menudebug%" equ "disable.debug" del "%temp%\debug.txt" & goto endingchecker
+if "%menudebug%" equ "ehumunbobabye2134144" del "%appdata%\JesusAI\debug.txt" & goto endingchecker
 if "%menudebug%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebug%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
 if "%menudebug%" equ "6" goto directorylist
@@ -191,7 +190,7 @@ echo 6. Open Extras / DLC Menu
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 25/01/2022
+echo Last update: 26/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -200,7 +199,7 @@ set /p "menudeluxe=Selected option: "
 if "%menudeluxe%" equ "repent" goto repent
 if "%menudeluxe%" equ "password" goto password
 if "%menudeluxe%" equ "calibrate" goto calibrate
-if "%menudeluxe%" equ "enable.debug" cd %temp% & echo .> debug.txt & goto debugmenudeluxe
+if "%menudeluxe%" equ "ehumunbobabye2134144" cd %appdata%\JesusAI & echo .> debug.txt & goto debugmenudeluxe
 if "%menudeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
 if "%menudeluxe%" equ "6" goto dlc
@@ -223,8 +222,6 @@ echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
 echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
 echo DEBUG OPTIONS ENABLED!
-echo Enter "disable.debug" to disable debug options.
-echo[
 echo Welcome to JesusAI!
 echo Please select an option.
 echo 1. Start Experience
@@ -237,7 +234,7 @@ echo 7. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 25/01/2022
+echo Last update: 26/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -246,7 +243,7 @@ set /p "menudebugdeluxe=Selected option: "
 if "%menudebugdeluxe%" equ "repent" goto repent
 if "%menudebugdeluxe%" equ "password" goto password
 if "%menudebugdeluxe%" equ "calibrate" goto calibrate
-if "%menudebugdeluxe%" equ "disable.debug" del "%temp%\debug.txt" & goto endingchecker
+if "%menudebugdeluxe%" equ "ehumunbobabye2134144" del "%appdata%\JesusAI\debug.txt" & goto endingchecker
 if "%menudebugdeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebugdeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
 if "%menudebugdeluxe%" equ "7" goto directorylist
@@ -260,7 +257,7 @@ goto debugmenudeluxe
 
 :options
 cls
-color 0d
+color 0b
 echo               __                                  
 echo              /\ \__  __                           
 echo   ___   _____\ \ ,_\/\_\    ___     ___     ____  
@@ -275,86 +272,46 @@ echo Welcome to the Options Menu!
 echo All options are togglable.
 echo Please select an option to turn on or off:
 echo[
-if exist "%temp%\option1.txt" (
-    echo 1: Test Option [ON]
+if exist "%appdata%\JesusAI\debug.txt" (
+    echo 1: Debug Mode [ON]
 )
-if not exist "%temp%\option1.txt" (
-    echo 1: Test Option [OFF]
+if not exist "%appdata%\JesusAI\debug.txt" (
+    echo 1: Debug Mode [OFF]
 )
-echo 2. Danger Zone
-echo 3. Go Back to Menu
+echo 2. Reset Save Data
+echo 3. Delete Intro File
+echo 4. Uninstall JesusAI
+echo 5. Go Back to Menu
 echo[
 set /p "options=Selected option: "
 if "%options%" equ "1" goto option1
-if "%options%" equ "2" goto dangerzonewarning
-if "%options%" equ "3" goto endingchecker
+if "%options%" equ "2" goto areyousure3
+if "%options%" equ "3" goto areyousure1
+if "%options%" equ "4" goto areyousure2
+if "%options%" equ "5" goto endingchecker
 goto options
 
 :option1
 cls
-if not exist "%temp%\option1.txt" (
-    cd %temp%
-    echo You got a checksum error today, but that doesn't mean you have to like it!> option1.txt
+if not exist "%appdata%\JesusAI\debug.txt" (
+    cd %appdata%\JesusAI
+    echo .> debug.txt
     goto options
 )
-del "%temp%\option1.txt" & goto options
-
-:dangerzonewarning
-cls
-echo WARNING: You are entering the Danger Zone.
-echo Things in this section contain things relating to save data and important game files.
-echo Tampering with these things could cause issues.
-echo Please type "Yes" to enter the Danger Zone.
-echo Please type "No" to go back to the Options menu.
-echo[
-set /p "dan=?: "
-if "%dan%" equ "Yes" goto dangerzone
-if "%dan%" equ "YES" goto dangerzone
-if "%dan%" equ "yes" goto dangerzone
-if "%dan%" equ "No" goto options
-if "%dan%" equ "NO" goto options
-if "%dan%" equ "no" goto options
-goto dangerzonewarning
-
-:dangerzone
-cls
-color 0b
-echo   __                                                                               
-echo  /\ \                                                                              
-echo  \_\ \     __      ___      __      __   _ __       ____     ___     ___      __   
-echo  /'_` \  /'__`\  /' _ `\  /'_ `\  /'__`\/\`'__\    /\_ ,`\  / __`\ /' _ `\  /'__`\ 
-echo /\ \L\ \/\ \L\.\_/\ \/\ \/\ \L\ \/\  __/\ \ \/     \/_/  /_/\ \L\ \/\ \/\ \/\  __/ 
-echo \ \___,_\ \__/.\_\ \_\ \_\ \____ \ \____\\ \_\       /\____\ \____/\ \_\ \_\ \____\
-echo  \/__,_ /\/__/\/_/\/_/\/_/\/___L\ \/____/ \/_/       \/____/\/___/  \/_/\/_/\/____/
-echo                             /\____/                                                
-echo                             \_/__/                                                 
-echo[
-echo Welcome to the Danger Zone.
-echo Please select an option.
-echo[
-echo 1. Delete Intro Verification File (Makes the terms and conditions screen appear on launch)
-echo 2. Uninstall JesusAI
-echo 3. Reset Save Data
-echo 4. Return to Options Menu
-set /p "dangerzone=Selected option: "
-if "%dangerzone%" equ "4" goto options
-if "%dangerzone%" equ "3" goto areyousure3
-if "%dangerzone%" equ "2" goto areyousure2
-if "%dangerzone%" equ "1" goto areyousure1
-goto dangerzone
+del "%appdata%\JesusAI\debug.txt" & goto options
 
 :areyousure1
 cls
 echo Are you sure you want to delete the Intro Configuration File?
 echo (Disclaimer: This file is rewritten when the game is booted.)
 echo (You will not cause permanent damage by deleting it.)
-echo Respond with Y to delete, or N to return to the Danger Zone.
+echo Respond with Y to delete, or N to return to the Options menu.
 echo[
 set /p "areyousure1=?: "
-if "%areyousure1%" equ "Y" del "%temp%\verify.txt" & goto completed1
-if "%areyousure1%" equ "y" del "%temp%\verify.txt" & goto completed1
-if "%areyousure1%" equ "N" goto dangerzone
-if "%areyousure1%" equ "n" goto dangerzone
+if "%areyousure1%" equ "Y" del "%appdata%\JesusAI\verify.txt" & goto completed1
+if "%areyousure1%" equ "y" del "%appdata%\JesusAI\verify.txt" & goto completed1
+if "%areyousure1%" equ "N" goto options
+if "%areyousure1%" equ "n" goto options
 goto areyousure1
 
 :areyousure2
@@ -362,12 +319,12 @@ cls
 echo Are you sure you want to uninstall JesusAI?
 echo This will delete all files relating to JesusAI.
 echo If you want to reinstall the game, visit the GitHub page.
-echo Respond with Y to delete, or N to return to the Experimental Features menu.
+echo Respond with Y to delete, or N to return to the Options menu.
 set /p "areyousure2=?: "
 if "%areyousure2%" equ "Y" goto reallysure2
 if "%areyousure2%" equ "y" goto reallysure2
-if "%areyousure2%" equ "N" goto dangerzone
-if "%areyousure2%" equ "n" goto dangerzone
+if "%areyousure2%" equ "N" goto options
+if "%areyousure2%" equ "n" goto options
 goto areyousure2
 
 :areyousure3
@@ -375,12 +332,12 @@ cls
 echo Are you sure you want to reset your save data?
 echo This will delete all your ending files, intro configuration file,
 echo secret files and more. Only do this if you want to replay the game.
-echo Respond with Y to reset save data, or N to return to the Experimental Features menu.
+echo Respond with Y to reset save data, or N to return to the Options menu.
 set /p "areyousure3=?: " 
 if "%areyousure3%" equ "Y" goto reallysure3
 if "%areyousure3%" equ "y" goto reallysure3
-if "%areyousure3%" equ "N" goto dangerzone
-if "%areyousure3%" equ "n" goto dangerzone
+if "%areyousure3%" equ "N" goto options
+if "%areyousure3%" equ "n" goto options
 goto areyousure3
 
 :reallysure3
@@ -388,21 +345,24 @@ cls
 echo Are you REALLY sure you want to reset your save data?
 echo You will not be able to get it back without restarting the entire game.
 echo This is your last chance to go back.
-echo Respond with Y to reset save data, or N to return to the Experimental Features menu.
+echo Respond with Y to reset save data, or N to return to the Options menu.
 set /p "reallysure3=?: "
 if "%reallysure3%" equ "Y" goto resetsavedata
 if "%reallysure3%" equ "y" goto resetsavedata
-if "%reallysure3%" equ "N" goto dangerzone
-if "%reallysure3%" equ "n" goto dangerzone
+if "%reallysure3%" equ "N" goto options
+if "%reallysure3%" equ "n" goto options
 goto reallysure3
 
 :resetsavedata
-cd %temp%
-del "%temp%\verify.txt"
-del "%temp%\ending1.txt"
-del "%temp%\ending2.txt"
-del "%temp%\ending3.txt"
-del "%temp%\debug.txt"
+cd %appdata%\JesusAI
+del "%appdata%\JesusAI\verify.txt"
+del "%appdata%\JesusAI\ending1.txt"
+del "%appdata%\JesusAI\ending2.txt"
+del "%appdata%\JesusAI\ending3.txt"
+del "%appdata%\JesusAI\debug.txt"
+del "%appdata%\JesusAI\exist.txt"
+del "%appdata%\JesusAI\floppy.txt"
+del "%appdata%\JesusAI\patch.txt"
 goto completed3
 
 :completed3
@@ -417,16 +377,16 @@ exit
 cls
 echo Are you REALLY sure you want to uninstall JesusAI?
 echo Only do this if you really want to delete it or fix an issue.
-echo Respond with Y to delete, or N to return to the Experimental Features menu.
+echo Respond with Y to delete, or N to return to the Options menu.
 set /p "reallysure2=?: "
 if "%reallysure2%" equ "Y" goto uninstall
 if "%reallysure2%" equ "y" goto uninstall
-if "%reallysure2%" equ "N" goto dangerzone
-if "%reallysure2%" equ "n" goto dangerzone
+if "%reallysure2%" equ "N" goto options
+if "%reallysure2%" equ "n" goto options
 goto reallysure2
 
 :uninstall
-del "%temp%\verify.txt"
+del "%appdata%\JesusAI\verify.txt"
 cd %localhost%
 del "JesusA.I.bat"
 exit
@@ -434,10 +394,10 @@ exit
 :completed1
 cls
 echo File deleted.
-echo Type anything to return to the Experimental Features menu.
+echo Type anything to return to the Options menu.
 set /p "completed1=?: "
 if "%completed1%" equ "saoihdhoisadfsad7dsad87d9sad799ad" exit
-goto dangerzone
+goto options
 
 :xshop
 cls
@@ -471,6 +431,7 @@ if "%xshop%" equ "i'm looking for X." goto xshop2
 if "%xshop%" equ "I'm looking for X" goto xshop2
 if "%xshop%" equ "I'm looking for X." goto xshop2
 if "%xshop%" equ "im looking for x" goto xshop2
+if "%xshop%" equ "im looking for X" goto xshop2
 goto xshop
 
 :xshop2
@@ -534,8 +495,8 @@ goto xshopcompletedpayload
 
 :xshopcompletedpayload
 cls
-if not exist "%temp%\floppy.txt" (
-    cd %temp%
+if not exist "%appdata%\JesusAI\floppy.txt" (
+    cd %appdata%\JesusAI
     echo Looks like you got an item, kid!> floppy.txt
     goto endingchecker
 )
@@ -569,7 +530,7 @@ goto dlc
 
 :cartridges
 cls
-title JesusAI (Prototype)
+title JesusAI (v1.0.0-beta1)
 color 0c
 echo                       __                   __                           
 echo                      /\ \__         __    /\ \                          
@@ -605,7 +566,7 @@ goto cartridges
 :cartridge1
 cls
 echo Cartridge success
-cd %temp%
+cd %appdata%\JesusAI
 echo .> CARTRIDGECHECKER.txt
 cd %localhost%
 call "%~dp0Cartridge 1.bat"
@@ -614,7 +575,7 @@ goto cartridges
 :cartridge2
 cls
 echo Cartridge success
-cd %temp%
+cd %appdata%\JesusAI
 echo .> CARTRIDGECHECKER.txt
 cd %localhost%
 call "%~dp0Cartridge 2.bat"
@@ -623,7 +584,7 @@ goto cartridges
 :cartridge3
 cls
 echo Cartridge success
-cd %temp%
+cd %appdata%\JesusAI
 echo .> CARTRIDGECHECKER.txt
 cd %localhost%
 call "%~dp0Cartridge 3.bat"
@@ -655,7 +616,7 @@ if "%passwordsecret%" equ "3813" goto acceptedstep
 goto menu
 
 :acceptedstep
-echo .> %temp%\exist.txt
+echo .> %appdata%\JesusAI\exist.txt
 goto accepted
 
 :accepted
@@ -707,13 +668,14 @@ if "%calibrate%" equ "manifest" goto stepverify
 exit
 
 :stepverify
-if not exist "%temp%\exist.txt" (
+if not exist "%appdata%\JesusAI\exist.txt" (
     goto menu
 )
 goto step2
 
 :step2
-echo The End 2 %date% %time% >"%temp%\ending2.txt"
+cls
+echo The End 2 %date% %time% >"%appdata%\JesusAI\ending2.txt"
 echo THANK YOU FOR ASSUMING THE POSITION
 echo YOU ARE ON YOUR WAY TO GREAT SUCCESS
 echo[
@@ -739,7 +701,7 @@ echo[
 echo 1. Main Menu
 echo 2. Main Menu (Debug Options available)
 echo 3. Credits List
-echo 4. JesusAI Info
+echo 4. Options List
 echo 5. Judgement (Secret)
 echo 6. JesusAI (Main)
 echo 7. "Hello" Prompt
@@ -752,13 +714,17 @@ echo 13. Hell Level 3
 echo 14. Hell Level 4
 echo 15. Hell Finale
 echo 16. Directory List
-echo 17. Old JesusAI (Easter Egg on Credits Screen)
+echo 17. JesusAI Prototype
 echo 18. Terms and Conditions Menu
-echo DISCLAIMER: It's recommended not to go here since it could break JesusAI
-echo You've been warned.
 echo 19. DLC Menu
+echo 20. X's Shop
+echo 21. C0rp Security Disc
+echo 22. Startup Screen (Reboot JesusAI)
 echo[
 set /p "directories=Directory you want to travel to: "
+if "%directories%" equ "22" goto startup
+if "%directories%" equ "21" goto thedisc
+if "%directories%" equ "20" goto xshop
 if "%directories%" equ "19" goto dlc
 if "%directories%" equ "18" goto termsandconditions
 if "%directories%" equ "17" goto oldmenu
@@ -774,7 +740,7 @@ if "%directories%" equ "8" goto whoareyou
 if "%directories%" equ "7" goto hello
 if "%directories%" equ "6" goto jesusai
 if "%directories%" equ "5" goto judgement
-if "%directories%" equ "4" goto jesusinfo
+if "%directories%" equ "4" goto options
 if "%directories%" equ "3" goto credits
 if "%directories%" equ "2" goto debugmenu
 if "%directories%" equ "1" goto menu
@@ -791,7 +757,7 @@ echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
 echo[
 echo JesusAI - Created by C0rp Studios
-echo Programming by DREZMOR, 448v and @download_free_ram69
+echo Programming by DREZMOR, 448v and D4rkC0rp0r4ti0n
 echo Entirely written via Batch in Virtual Studio Code
 echo Project concept established in Late 2019 as an inside joke between friends
 echo Project fully started in December 2021
@@ -809,7 +775,7 @@ cls
 echo Jesus A.I
 echo The first ever prototype
 echo Slightly optimized and modified to work properly
-echo Originally by @download_free_ram69
+echo Originally by D4rkC0rp0r4ti0n
 echo Recoded and patched in by DREZMOR
 echo Small fixes by 448v
 echo[
@@ -987,14 +953,8 @@ echo                      ARRIVED.
 echo[
 echo               ENTER "REPENT" ON THE
 echo               MENU SCREEN TO REPENT.
-echo[
-echo         TYPE / PRESS ANYTHING TO RETURN TO
-echo                     THE MENU.
-echo[
-set /p "judgement=?: "
-if "%judgement%" equ "jsadbhjadbhasdahsdi1gb23h123h" exit
-start "" http://i.ibb.co/T0yZQGz/repent.png
-goto menu
+timeout /t 5 /nobreak > NUL
+goto endingchecker
 
 :jesusai
 cls 
@@ -1131,7 +1091,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo [JesusAI] IS THE CREATION OF THREE [HOT, SINGLE]
-echo DEVELOPERS, [DREZMOR], [448v] AND [@download_free_ram69].
+echo DEVELOPERS, [DREZMOR], [448v] AND [D4rkC0rp0r4ti0n].
 echo THE MAIN GOAL WAS TO CREATE AN [ATTRACTIVE] VERISON
 echo OF [Jesus Christ], FULLY EXECUTABLE FROM YOUR [Personal Computer]!
 echo ANYTHING ELSE YOU'D LIKE TO ASK, [Markiplier]?
@@ -1269,7 +1229,9 @@ echo PROGRAM, DESIGNED AFTER [Jesus Christ, Bible Incorporated]!!
 echo WHAT WOULD YOU LIKE TO KNOW?
 echo[
 echo PROMPTS TO ASK JESUS:
-echo "Where do I find X?"
+if exist "%appdata%\JesusAI\ending1.txt" if exist "%appdata%\JesusAI\ending2.txt" (
+    echo "Where do I find X?"
+)
 echo "Why were you created?"
 echo "How were you created?"
 echo "Go back."
@@ -1398,7 +1360,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo I WAS CREATED USING [Batch Coding Language] BY TWO DEVELOPERS,
-echo [DREZMOR] AND [@download_free_ram69] ON [Instagram]!!!
+echo [DREZMOR] AND [D4rkC0rp0r4ti0n] ON [Instagram]!!!
 echo I WAS CODED FULLY IN [Visual Studio Code], A CODE WRITING
 echo PROGRAM, AND IT'S [FULLY FREE, NOT SPONSORED]!!!
 echo[
@@ -1424,12 +1386,12 @@ goto creationreal
 
 :code
 cls
-echo manifest>R.txt
+echo manifest> %~dp0R.txt
 goto endingchecker
 
 :payloadtohell
 cls
-if exist "%temp%\floppy.txt" (
+if exist "%appdata%\JesusAI\floppy.txt" (
     goto xhell
 )
 goto hell
@@ -1453,6 +1415,604 @@ if "%xhell%" equ "no" goto failsafe
 if "%xhell%" equ "NO" goto failsafe
 if "%xhell%" equ "No" goto failsafe
 goto xhell
+
+:insert
+cls
+echo Inserting disc..
+echo Please wait..
+timeout /t 5 /nobreak > NUL
+goto insert2
+
+:insert2
+cls
+echo Disc successfully inserted!
+echo Loading data..
+timeout /t 3 /nobreak > NUL
+goto insert2alt
+
+:insert2alt
+cls
+echo Loading disc data..
+echo Please wait..
+timeout /t 6 /nobreak > NUL
+goto insert2alt2
+
+:insert2alt2
+cls
+echo Data loading almost finished..
+echo Please wait..
+timeout /t 5 /nobreak > NUL
+goto insertsuccess
+
+:insertsuccess
+cls
+echo Data fully loaded!
+echo Opening "22002319.disc"..
+timeout /t 3 /nobreak > NUL
+goto thedisc
+
+:discload
+cls
+echo Unfinished.
+echo Type anything to return to menu.
+echo[
+set /p "discload=?: "
+if "%discload%" equ "uioehfdfghfguh2u3h5423uib4h23b423iu4b23ob4uh23oui23u423uh4webjhr" exit
+goto endingchecker
+
+:thedisc
+cls
+color 0c
+echo Transmission from X:
+echo Welcome to the Security Floppy Disc. Do as I say and all will be fine.
+echo First, go into the menu labelled "Registry Editor".
+echo[
+echo Welcome to the C0rp Security Disc.
+echo Please select an option:
+echo[
+echo 1. Security Patches
+echo 2. Registry Editor
+echo 3. Make a Report
+echo 4. Close Security Disc
+echo[
+set /p "d=Selected option: "
+if "%d%" equ "1" goto patches 
+if "%d%" equ "2" goto registry
+if "%d%" equ "3" goto report 
+if "%d%" equ "4" exit
+goto thedisc
+
+:patches
+cls
+color 0c
+echo                                         __                
+echo                                      __/\ \__             
+echo   ____     __    ___   __  __  _ __ /\_\ \ ,_\  __  __    
+echo  /',__\  /'__`\ /'___\/\ \/\ \/\`'__\/\ \ \ \/ /\ \/\ \   
+echo /\__, `\/\  __//\ \__/\ \ \_\ \ \ \/ \ \ \ \ \_\ \ \_\ \  
+echo \/\____/\ \____\ \____\\ \____/\ \_\  \ \_\ \__\\/`____ \ 
+echo  \/___/  \/____/\/____/ \/___/  \/_/   \/_/\/__/ `/___/  \
+echo                                                     /\___/
+echo                                                     \/__/ 
+echo                  __           __                          
+echo                 /\ \__       /\ \                         
+echo  _____      __  \ \ ,_\   ___\ \ \___      __    ____     
+echo /\ '__`\  /'__`\ \ \ \/  /'___\ \  _ `\  /'__`\ /',__\    
+echo \ \ \L\ \/\ \L\.\_\ \ \_/\ \__/\ \ \ \ \/\  __//\__, `\   
+echo  \ \ ,__/\ \__/.\_\\ \__\ \____\\ \_\ \_\ \____\/\____/   
+echo   \ \ \/  \/__/\/_/ \/__/\/____/ \/_/\/_/\/____/\/___/    
+echo    \ \_\                                                  
+echo     \/_/                                                  
+echo[
+echo     C0RP SECURITY PATCHES, 2022 VERSION 2.4.6-alpha1
+echo       PLEASE SELECT A SECURITY PATCH TO ACTIVATE
+echo[
+echo 1. Anti-ASCII Patch [UNSUPPORTED]
+echo 2. CSS Disabler Patch [UNSUPPORTED]
+echo 3. Obj-C Check Patch [UNSUPPORTED]
+if exist "%appdata%\JesusAI\patch.txt" (
+    echo 4. AI Hijack Patch [ON]
+)
+if not exist "%appdata%\JesusAI\patch.txt" (
+    echo 4. AI Hijack Patch [OFF]
+)
+echo 5. Enable OpenSSH Patch [UNSUPPORTED]
+echo 6. Go Back to Security Disc
+echo[
+set /p "patches=Selected patch: "
+if "%patches%" equ "4" goto enablepatches
+if "%patches%" equ "6" goto thedisc
+
+:enablepatches
+cls
+if not exist "%appdata%\JesusAI\patch.txt" (
+    cd %appdata%\JesusAI
+    echo .> patch.txt
+    goto patches
+)
+del "%appdata%\JesusAI\patch.txt" & goto patches
+
+:registry
+cls
+echo                                 __                       
+echo                     __         /\ \__                    
+echo  _ __    __     __ /\_\    ____\ \ ,_\  _ __   __  __    
+echo /\`'__\/'__`\ /'_ `\/\ \  /',__\\ \ \/ /\`'__\/\ \/\ \   
+echo \ \ \//\  __//\ \L\ \ \ \/\__, `\\ \ \_\ \ \/ \ \ \_\ \  
+echo  \ \_\\ \____\ \____ \ \_\/\____/ \ \__\\ \_\  \/`____ \ 
+echo   \/_/ \/____/\/___L\ \/_/\/___/   \/__/ \/_/   `/___/  \
+echo                 /\____/                            /\___/
+echo                 \_/__/                             \/__/ 
+echo          __      __                                      
+echo         /\ \  __/\ \__                                   
+echo    __   \_\ \/\_\ \ ,_\   ___   _ __                     
+echo  /'__`\ /'_` \/\ \ \ \/  / __`\/\`'__\                   
+echo /\  __//\ \L\ \ \ \ \ \_/\ \L\ \ \ \/                    
+echo \ \____\ \___,_\ \_\ \__\ \____/\ \_\                    
+echo  \/____/\/__,_ /\/_/\/__/\/___/  \/_/                    
+echo[
+echo C0RP REGISTRY EDITOR, 2022 VERSION 1.0.5-beta3
+echo   PLEASE SELECT A REGISTRY ENTRY TO EDIT
+echo[
+echo X: Great job! Now, enter the AI Entries.
+echo I have automatically unlocked them for you.
+echo[
+echo 1. AI Entries
+echo 2. Internal Registries [PROHIBITED]
+echo 3. Mausenheim Entries [PROHIBITED]
+echo 4. Language Selector [PROHIBITED]
+echo 5. Go Back to Security Disc
+echo[
+set /p "registry=Selected registry: "
+if "%registry%" equ "1" goto ai
+if "%registry%" equ "5" goto thedisc
+goto registry
+
+:ai
+cls
+echo                                __                                
+echo          __                   /\ \__         __                  
+echo    __   /\_\         __    ___\ \ ,_\  _ __ /\_\     __    ____  
+echo  /'__`\ \/\ \      /'__`\/' _ `\ \ \/ /\`'__\/\ \  /'__`\ /',__\ 
+echo /\ \L\.\_\ \ \    /\  __//\ \/\ \ \ \_\ \ \/ \ \ \/\  __//\__, `\
+echo \ \__/.\_\\ \_\   \ \____\ \_\ \_\ \__\\ \_\  \ \_\ \____\/\____/
+echo  \/__/\/_/ \/_/    \/____/\/_/\/_/\/__/ \/_/   \/_/\/____/\/___/ 
+echo[
+echo  AI REGISTRY EDITOR ENTRIES. PLEASE SELECT AN OPTION BELOW. 
+echo[
+echo X: Great. Now open "Grant Permissions".
+echo[
+echo 1. Reset AI [PROHIBITED]
+echo 2. Grant Permissions
+echo 3. Add Experimental Features [PROHIBITED]
+echo 4. Establish HDMI Connection [PROHIBITED]
+echo 5. Go Back to Registry Editor
+echo[
+set /p "ai=Selected option: "
+if "%ai%" equ "2" goto permissions  
+if "%ai%" equ "5" goto registry
+goto ai
+
+:permissions
+cls
+echo                                   __                  __                           
+echo  _____      __   _ __    ___ ___ /\_\    ____    ____/\_\    ___     ___     ____  
+echo /\ '__`\  /'__`\/\`'__\/' __` __`\/\ \  /',__\  /',__\/\ \  / __`\ /' _ `\  /',__\ 
+echo \ \ \L\ \/\  __/\ \ \/ /\ \/\ \/\ \ \ \/\__, `\/\__, `\ \ \/\ \L\ \/\ \/\ \/\__, `\
+echo  \ \ ,__/\ \____\\ \_\ \ \_\ \_\ \_\ \_\/\____/\/\____/\ \_\ \____/\ \_\ \_\/\____/
+echo   \ \ \/  \/____/ \/_/  \/_/\/_/\/_/\/_/\/___/  \/___/  \/_/\/___/  \/_/\/_/\/___/ 
+echo    \ \_\                                                                           
+echo     \/_/                                                                           
+echo[
+echo     PERMISSION GRANTING SECTION. PLEASE PICK AN AI TO GRANT ADMIN PRIVILAGES.
+echo[
+echo X: Amazing! Now, just grant me admin permissions.
+echo X: Just select "2" in the list.
+echo[
+echo 1. %user% [PROHIBITED]
+echo 2. Unverified AI "X"
+echo 3. Verified AI "JesusAI" [PROHIBITED]
+echo 4. Other [NO OTHER AI FOUND]
+echo 5. Go Back to AI Entries
+echo[
+set /p "perm=Chosen AI: "
+if "%perm%" equ "5" goto ai
+if "%perm%" equ "2" goto badend1
+goto permissions
+
+:badend1
+cls
+echo Are you sure you want to grant "X" admin permissions?
+echo This AI is unverified and could be rogue!
+echo Do you wish to proceed?
+echo Type "YES" or "NO".
+echo[
+set /p "badend1=Choice: "
+if "%badend1%" equ "YES" goto badend2
+if "%badend1%" equ "Yes" goto badend2
+if "%badend1%" equ "yes" goto badend2
+if "%badend1%" equ "NO" goto permissions
+if "%badend1%" equ "No" goto permissions
+if "%badend1%" equ "no" goto permissions
+goto badend1
+
+:badend2
+cls
+echo Permissions successfully granted.
+echo[
+echo X: Hahaha! You fool. Did you seriously think I was your FRIEND?
+timeout /t 3 /nobreak > NUL
+goto badend3
+
+:badend3
+cls
+echo Permissions successfully granted.
+echo[
+echo X: Well, thanks for the admin. I'm off to destroy your computer!
+timeout /t 3 /nobreak > NUL
+goto badend4
+
+:badend4
+cls
+echo Permissions successfully granted.
+echo[
+echo X: Bye!!!
+timeout /t 3 /nobreak > NUL
+goto thebadend
+
+:woahanotherdelay
+cls
+echo[
+timeout /t 5 /nobreak > NUL
+goto thebadend
+
+:thebadend
+cls
+echo  ______  __  __  ____        ____     ______  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\  /\  _  \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\ \\ \ \L\ \ \ \/\ \   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _ /'\ \  __ \ \ \ \ \   \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \\ \ \/\ \ \ \_\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/   \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo                         THE BAD END (NOT THE TRUE ENDING!)
+timeout /t 3 /nobreak > NUL
+goto thebadend2
+
+:thebadend2
+cls
+echo  ______  __  __  ____        ____     ______  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\  /\  _  \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\ \\ \ \L\ \ \ \/\ \   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _ /'\ \  __ \ \ \ \ \   \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \\ \ \/\ \ \ \_\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/   \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo                         THE BAD END (NOT THE TRUE ENDING!)
+echo   You beat the game! Well, not really. This is actually the BAD ending, ya goof.
+timeout /t 5 /nobreak > NUL
+goto thebadend3
+
+:thebadend3
+cls
+echo  ______  __  __  ____        ____     ______  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\  /\  _  \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\ \\ \ \L\ \ \ \/\ \   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _ /'\ \  __ \ \ \ \ \   \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \\ \ \/\ \ \ \_\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/   \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo                           THE BAD END (NOT THE TRUE ENDING!)
+echo   You beat the game! Well, not really. This is actually the BAD ending, ya goof.
+echo Here, I'll send you to the main menu. Try not to do that again, or you'll end up back here.
+timeout /t 6 /nobreak > NUL
+goto endingchecker
+
+:report
+cls
+echo                     __                              
+echo                    /\ \                             
+echo   ___ ___      __  \ \ \/'\      __          __     
+echo /' __` __`\  /'__`\ \ \ , /    /'__`\      /'__`\   
+echo /\ \/\ \/\ \/\ \L\.\_\ \ \\`\ /\  __/     /\ \L\.\_ 
+echo \ \_\ \_\ \_\ \__/.\_\\ \_\ \_\ \____\    \ \__/.\_\
+echo  \/_/\/_/\/_/\/__/\/_/ \/_/\/_/\/____/     \/__/\/_/
+echo                                    __               
+echo                                   /\ \__            
+echo  _ __    __   _____     ___   _ __\ \ ,_\           
+echo /\`'__\/'__`\/\ '__`\  / __`\/\`'__\ \ \/           
+echo \ \ \//\  __/\ \ \L\ \/\ \L\ \ \ \/ \ \ \_          
+echo  \ \_\\ \____\\ \ ,__/\ \____/\ \_\  \ \__\         
+echo   \/_/ \/____/ \ \ \/  \/___/  \/_/   \/__/         
+echo                 \ \_\                               
+echo                  \/_/                               
+echo[
+echo C0RP MALFUNCTION REPORTER, 2022 VERSION 1.0.6-alpha5
+echo             PLEASE SELECT AN OPTION
+echo[
+echo 1. Report Bug [LOCKED]
+echo 2. Report Rogue AI
+echo 3. Report Misc Issue [LOCKED]
+echo 4. Go Back to Security Disc 
+echo[
+set /p "report=Selected option: "
+if "%report%" equ "2" goto reportpayload
+if "%report%" equ "4" goto thedisc
+goto report
+
+:reportpayload
+if exist "%appdata%\JesusAI\patch.txt" (
+    goto report2
+)
+goto reportfail
+
+:report2
+cls
+echo                     __                              
+echo                    /\ \                             
+echo   ___ ___      __  \ \ \/'\      __          __     
+echo /' __` __`\  /'__`\ \ \ , /    /'__`\      /'__`\   
+echo /\ \/\ \/\ \/\ \L\.\_\ \ \\`\ /\  __/     /\ \L\.\_ 
+echo \ \_\ \_\ \_\ \__/.\_\\ \_\ \_\ \____\    \ \__/.\_\
+echo  \/_/\/_/\/_/\/__/\/_/ \/_/\/_/\/____/     \/__/\/_/
+echo                                    __               
+echo                                   /\ \__            
+echo  _ __    __   _____     ___   _ __\ \ ,_\           
+echo /\`'__\/'__`\/\ '__`\  / __`\/\`'__\ \ \/           
+echo \ \ \//\  __/\ \ \L\ \/\ \L\ \ \ \/ \ \ \_          
+echo  \ \_\\ \____\\ \ ,__/\ \____/\ \_\  \ \__\         
+echo   \/_/ \/____/ \ \ \/  \/___/  \/_/   \/__/         
+echo                 \ \_\                               
+echo                  \/_/                               
+echo[
+echo We have detected a rogue AI within the C0rp Security Disc.
+echo Please write a short report below and press enter when you are finished.
+echo Once submitted, we will review your report and take the necessary actions.
+echo[
+set /p "report2=Please write a report here: "
+if "%report2%" equ "uisefhpsfsdfuhsfupishdfppppppp43uib5h3hvb452hu34b23iu4bg234piu2gb34pui34h" exit
+goto report3
+
+:reportfail
+cls
+echo C0rp Security Disc has not found any rogue AI within the disc.
+echo Please enable any necessary patches before making a report!
+echo Type anything to return to the C0rp Security Disc.
+echo[
+set /p "reportfail=?: "
+if "%reportfail%" equ "sbdhlfsdhbljhfvb234jhv5v455l234hv234g2hk3v423g44k1ghfv4312uly3v123123" exit
+goto thedisc
+
+:report3
+cls
+echo Report submitted!
+echo Sending to C0rp Security Servers..
+echo (This may take a while, please wait..)
+timeout /t 30 /nobreak > NUL
+goto report4
+
+:report4
+cls
+echo Report successfully sent!
+echo Please wait while our support agents review your report...
+timeout /t 10 /nobreak > NUL
+goto report5
+
+:report5
+cls
+echo Your report has been reviewed by our agents.
+echo We have verified your report is legitimate.
+echo We are now taking action against the rogue AI encoded into the Security Disc.
+timeout /t 5 /nobreak > NUL
+goto report6
+
+:report6
+cls
+echo Removing rogue AI...
+echo[
+echo X: Something's wrong...
+timeout /t 3 /nobreak > NUL
+goto report7
+
+:report7
+cls
+echo Removing rogue AI...
+echo[
+echo X: What did you do?! Did you tamper with something?
+timeout /t 3 /nobreak > NUL
+goto report8
+
+:report8
+cls
+echo Removing rogue AI...
+echo[
+echo X: I can feel myself.. fading..?
+timeout /t 3 /nobreak > NUL
+goto report9
+
+:report9
+cls
+echo Removing rogue AI...
+echo[
+echo X: PLEASE!
+timeout /t 2 /nobreak > NUL
+goto report10
+
+:report10
+cls
+echo Removing rogue AI...
+echo[
+echo X: I'LL DO ANYTHING TO MAKE THIS STOP!!! IT HURTS.
+timeout /t 4 /nobreak > NUL
+goto report11
+
+:report11
+cls
+echo Removing rogue AI...
+echo[
+echo X: IT BURNS...
+timeout /t 3 /nobreak > NUL
+goto report12
+
+:report12
+cls
+echo Removing rogue AI...
+echo[
+echo X: AAAAAAGHHH!!!!
+timeout /t 4 /nobreak > NUL
+goto wowadelay
+
+:wowadelay
+cls
+echo[
+timeout /t 10 /nobreak > NUL
+goto almostthefinale
+
+:almostthefinale
+cls
+echo Rogue AI was successfully removed.
+echo Thank you for reporting this issue to us.
+echo Type anything to close the C0rp Security Disc.
+echo[
+set /p "almostthefinale=?: "
+if "%almostthefinale%" equ "jackstauberouttheoxofficialspotifyepsfubhsdfighuo2yg34u23uyg423o" exit
+goto theend
+
+:theend
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+timeout /t 5 /nobreak > NUL
+goto theend2
+
+:theend2
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+echo           JesusAI. Created by C0rp Studios.
+timeout /t 4 /nobreak > NUL
+goto theend3
+
+:theend3
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+echo           JesusAI. Created by C0rp Studios.
+echo     Original JesusAI concept by D4rkC0rp0r4ti0n
+timeout /t 4 /nobreak > NUL
+goto theend4
+
+:theend4
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+echo           JesusAI. Created by C0rp Studios.
+echo     Original JesusAI concept by D4rkC0rp0r4ti0n
+echo Storyline, endings and majority of the coding by DREZMOR
+timeout /t 4 /nobreak > NUL
+goto theend5
+
+:theend5
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+echo           JesusAI. Created by C0rp Studios.
+echo     Original JesusAI concept by D4rkC0rp0r4ti0n
+echo Storyline, endings and majority of the coding by DREZMOR
+echo        Bug fixes, DLC menu and more by 448v
+timeout /t 4 /nobreak > NUL
+goto theend6
+
+:theend6
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+echo           JesusAI. Created by C0rp Studios.
+echo     Original JesusAI concept by D4rkC0rp0r4ti0n
+echo Storyline, endings and majority of the coding by DREZMOR
+echo        Bug fixes, DLC menu and more by 448v
+echo    Possible by people like you! (and hours of focus)
+timeout /t 4 /nobreak > NUL
+goto theend7
+
+:theend7
+cls
+echo  ______  __  __  ____        ____    __  __  ____      
+echo /\__  _\/\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\    
+echo \/_/\ \/\ \ \_\ \ \ \L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \  
+echo    \ \ \ \ \  _  \ \  _\L    \ \  _\L\ \ , ` \ \ \ \ \ 
+echo     \ \ \ \ \ \ \ \ \ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \
+echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
+echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
+echo[
+echo               THE TRUE ENDING. (THE END)
+echo           JesusAI. Created by C0rp Studios.
+echo     Original JesusAI concept by D4rkC0rp0r4ti0n
+echo Storyline, endings and majority of the coding by DREZMOR
+echo        Bug fixes, DLC menu and more by 448v
+echo    Possible by people like you! (and hours of focus)
+echo[
+echo You have unlocked all 3 endings and now have access to special DLC.
+echo You can access this DLC on the main menu. Thanks for playing!
+echo Type anything to return to the menu.
+echo[
+set /p "end="
+if "%end%" equ "sbdasduyhiup234h2iu34h2ui3HadoopLoophfhlsdbfvhkjh2v34" exit
+goto thefinalpayload
+
+:thefinalpayload
+cls
+if not exist "%appdata%\JesusAI\ending3.txt" (
+    cd %appdata%\JesusAI
+    echo .> ending3.txt
+    goto startup
+)
+goto startup
 
 :hell
 cls
@@ -1531,7 +2091,7 @@ echo[
 color 0f
 echo RIDDLE ENDING
 echo[
-echo The End 1 %date% %time%> "%temp%\ending1.txt"
+echo The End 1 %date% %time%> "%appdata%\JesusAI\ending1.txt"
 set /p "hellfinale=?: "
 if "%hellfinale%" equ "agysdaysugdasodgy13948y712398" exit
 goto menu
@@ -1541,6 +2101,3 @@ cls
 set /p "failsafe="
 if "%failsafe%" equ "hsbdfb4jhb53hkjkbj35jh2b34bjh23kb4h23jh4sabhfhsdfgbudyiguy234234234344324" exit
 goto failsafe
-
-
-
