@@ -3,7 +3,7 @@
 ### A batch game featuring Jesus, 4 endings + extra DLC
 ### Tons of hidden and extra content too
 ### Created by D4rkC0rp0r4ti0n, DREZMOR & 448v
-### Currently in alpha. 75% complete.
+### Currently in alpha. 85% complete.
 
 Made using state of the art blockchain and Batch technology. 
 Not affiliated with God, Jesus or The Bible in any way.
