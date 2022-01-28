@@ -102,7 +102,7 @@ echo 5. Options
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 26/01/2022
+echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -146,7 +146,7 @@ echo 6. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 26/01/2022
+echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -190,7 +190,7 @@ echo 6. Open Extras / DLC Menu
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 26/01/2022
+echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
@@ -234,7 +234,7 @@ echo 7. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta1
-echo Last update: 26/01/2022
+echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
 echo Expect random crashes or glitches.
