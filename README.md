@@ -1,7 +1,7 @@
 # JesusAI
 
 ### A batch game featuring Jesus, 4 endings + extra DLC
-### Tons of hidden and extra content too
+### Available on Windows (Linux support in the works!)
 ### Created by D4rkC0rp0r4ti0n, DREZMOR & 448v
 ### Currently in beta. 85% complete.
 
