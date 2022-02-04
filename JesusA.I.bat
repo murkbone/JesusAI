@@ -1,12 +1,12 @@
 ::Prototype build created by D4rkC0rp0r4ti0n
-::Alpha branch coded and maintained by DREZMOR on GitHub
+::Alpha branch coded and maintained by meowfluff on GitHub
 ::Alternate fork by 448v on GitHub
 ::Built for Windows Command Prompt & Windows Powershell.
 ::Untested on other operating systems
 ::Found an issue? Report it at our repository: https://github.com/JesusAIexperience/JesusAI
 
 @echo off
-title JesusAI (v1.0.0-beta1)
+title JesusAI (v1.0.0-beta2)
 
 ::Runs on startup
 ::Checks if "verify.txt" exists (to identify if the game has been ran before)
@@ -70,7 +70,7 @@ echo The game has detected this is your first time running JesusAI.
 echo Please read our terms and conditions.
 echo[
 echo This game is not designed to offend in any way.
-echo All of JesusAI was created by three devs, D4rkC0rp0r4ti0n, DREZMOR and 448v.
+echo All of JesusAI was created by three devs, D4rkC0rp0r4ti0n, meowfluff and 448v.
 echo This game in no way means to bash religion or its figures.
 echo[
 echo Please type anything to agree to these terms.
@@ -101,7 +101,7 @@ echo 4. Credits
 echo 5. Options
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: v1.0.0-beta1
+echo Version: v1.0.0-beta2
 echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
@@ -145,7 +145,7 @@ echo 5. Options
 echo 6. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: v1.0.0-beta1
+echo Version: v1.0.0-beta2
 echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
@@ -189,7 +189,7 @@ echo 5. Options
 echo 6. Open Extras / DLC Menu
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: v1.0.0-beta1
+echo Version: v1.0.0-beta2
 echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
@@ -233,7 +233,7 @@ echo 6. Open Extras / DLC Menu
 echo 7. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
-echo Version: v1.0.0-beta1
+echo Version: v1.0.0-beta2
 echo Last update: 28/01/2022
 echo[
 echo This version is probably unstable.
@@ -530,7 +530,7 @@ goto dlc
 
 :cartridges
 cls
-title JesusAI (v1.0.0-beta1)
+title JesusAI (v1.0.0-beta2)
 color 0c
 echo                       __                   __                           
 echo                      /\ \__         __    /\ \                          
@@ -556,7 +556,7 @@ echo 3. Run Cartridge 2
 echo 4. Run Cartridge 3
 echo 5. Go Back to Extras Menu
 set /p "cartridges=Selected option: "
-if "%cartridges%" equ "1" start "" "https://github.com/DREZMOR/JesusAI-Cartridges"
+if "%cartridges%" equ "1" start "" "https://github.com/RAAKNET/JesusAI-Cartridges"
 if "%cartridges%" equ "2" goto cartridge1
 if "%cartridges%" equ "3" goto cartridge2
 if "%cartridges%" equ "4" goto cartridge3
@@ -593,6 +593,7 @@ goto cartridges
 :repent
 color 0a
 cls
+::Being revamped as of v1.0.0-beta2
 echo Diary Entry: 12/09/1977
 echo I have found a specific set of instructions you can do within the experience to unlock... something.
 echo Type "password" on the main menu screen and input "3813".
@@ -720,8 +721,10 @@ echo 19. DLC Menu
 echo 20. X's Shop
 echo 21. C0rp Security Disc
 echo 22. Startup Screen (Reboot JesusAI)
+echo 23. Failsafe Room
 echo[
 set /p "directories=Directory you want to travel to: "
+if "%directories%" equ "23" goto failsafe
 if "%directories%" equ "22" goto startup
 if "%directories%" equ "21" goto thedisc
 if "%directories%" equ "20" goto xshop
@@ -757,7 +760,7 @@ echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
 echo[
 echo JesusAI - Created by C0rp Studios
-echo Programming by DREZMOR, 448v and D4rkC0rp0r4ti0n
+echo Programming by meowfluff, 448v and D4rkC0rp0r4ti0n
 echo Entirely written via Batch in Virtual Studio Code
 echo Project concept established in Late 2019 as an inside joke between friends
 echo Project fully started in December 2021
@@ -776,7 +779,7 @@ echo Jesus A.I
 echo The first ever prototype
 echo Slightly optimized and modified to work properly
 echo Originally by D4rkC0rp0r4ti0n
-echo Recoded and patched in by DREZMOR
+echo Recoded and patched in by meowfluff
 echo Small fixes by 448v
 echo[
 echo Please pick an option
@@ -1091,7 +1094,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo [JesusAI] IS THE CREATION OF THREE [HOT, SINGLE]
-echo DEVELOPERS, [DREZMOR], [448v] AND [D4rkC0rp0r4ti0n].
+echo DEVELOPERS, [meowfluff], [448v] AND [D4rkC0rp0r4ti0n].
 echo THE MAIN GOAL WAS TO CREATE AN [ATTRACTIVE] VERISON
 echo OF [Jesus Christ], FULLY EXECUTABLE FROM YOUR [Personal Computer]!
 echo ANYTHING ELSE YOU'D LIKE TO ASK, [Markiplier]?
@@ -1360,7 +1363,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo I WAS CREATED USING [Batch Coding Language] BY TWO DEVELOPERS,
-echo [DREZMOR] AND [D4rkC0rp0r4ti0n] ON [Instagram]!!!
+echo [meowfluff] AND [D4rkC0rp0r4ti0n] ON [Instagram]!!!
 echo I WAS CODED FULLY IN [Visual Studio Code], A CODE WRITING
 echo PROGRAM, AND IT'S [FULLY FREE, NOT SPONSORED]!!!
 echo[
@@ -1939,7 +1942,7 @@ echo[
 echo               THE TRUE ENDING. (THE END)
 echo           JesusAI. Created by C0rp Studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by DREZMOR
+echo Storyline, endings and majority of the coding by meowfluff
 timeout /t 4 /nobreak > NUL
 goto theend5
 
@@ -1956,7 +1959,7 @@ echo[
 echo               THE TRUE ENDING. (THE END)
 echo           JesusAI. Created by C0rp Studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by DREZMOR
+echo Storyline, endings and majority of the coding by meowfluff
 echo        Bug fixes, DLC menu and more by 448v
 timeout /t 4 /nobreak > NUL
 goto theend6
@@ -1974,7 +1977,7 @@ echo[
 echo               THE TRUE ENDING. (THE END)
 echo           JesusAI. Created by C0rp Studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by DREZMOR
+echo Storyline, endings and majority of the coding by meowfluff
 echo        Bug fixes, DLC menu and more by 448v
 echo    Possible by people like you! (and hours of focus)
 timeout /t 4 /nobreak > NUL
@@ -1993,7 +1996,7 @@ echo[
 echo               THE TRUE ENDING. (THE END)
 echo           JesusAI. Created by C0rp Studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by DREZMOR
+echo Storyline, endings and majority of the coding by meowfluff
 echo        Bug fixes, DLC menu and more by 448v
 echo    Possible by people like you! (and hours of focus)
 echo[
@@ -2017,56 +2020,101 @@ goto startup
 :hell
 cls
 color 0c
-echo I see you are asking for forgiveness.
-echo Forgiveness shall come in due time, my child.
-echo But first...
-echo Let's make this more interesting, shall we?
+echo An unknown source has been detected trying to access important system files.
+echo Process name identified as: "stuxnet.sed"
+echo Allow this process to access important system files?
 echo[
-echo Your computer's IP information:
-ipconfig |find "ipv4" /i
-echo[
-echo JesusAI has now gathered information about your current location.
-echo %USERNAME%, you have one chance to redeem yourself before I take over your computer.
-echo Answer my riddles three, and you shall be granted immunity.
-echo Do you understand?
-echo[
-echo Answer with either YES or NO.
+echo Respond with either YES or NO.
 set /p "hell=Answer: "
-if "%hell%" equ "YES" goto hellpart2
-if "%hell%" equ "yes" goto hellpart2
-if "%hell%" equ "Yes" goto hellpart2
+if "%hell%" equ "YES" goto hellsed
+if "%hell%" equ "yes" goto hellsed
+if "%hell%" equ "Yes" goto hellsed
 if "%hell%" equ "NO" exit
 if "%hell%" equ "no" exit
 if "%hell%" equ "No" exit
 goto hell
 
+ipconfig | find /i "ipv4"
+
+:hellsed
+cls
+color 0c
+echo Allowing "stuxnet.sed" access important system files..
+echo Please wait..
+timeout /t 10 /nobreak > NUL
+goto brickd
+
+:brickd
+cls
+color 0c
+echo  ____    ______  __  __   __   __   __  __  ____    ______   
+echo /\  _`\ /\__  _\/\ \/\ \ /\ \ /\ \ /\ \/\ \/\  _`\ /\__  _\  
+echo \ \,\L\_\/_/\ \/\ \ \ \ \\ `\`\/'/'\ \ `\\ \ \ \L\_\/_/\ \/  
+echo  \/_\__ \  \ \ \ \ \ \ \ \`\/ ' '   \ \ , ` \ \  _\L  \ \ \  
+echo    /\ \L\ \ \ \ \ \ \ \_\ \  \/'/\`\ \ \ \`\ \ \ \L\ \ \ \ \ 
+echo    \ `\____\ \ \_\ \ \_____\ /\_\\ \_\\ \_\ \_\ \____/  \ \_\
+echo     \/_____/  \/_/  \/_____/ \/_/ \/_/ \/_/\/_/\/___/    \/_/
+echo[
+echo      Your system has been bricked by the STUXNET worm!
+echo    Your files relating to "JesusA.I.bat" have been locked!
+echo  In order to get your files back, you must answer five questions!
+echo Fail to answer these questions and your files are deleted FOREVER!!
+echo            Type anything to begin. Good luck!
+echo[
+set /p "brickd=?: "
+if "%brickd%" equ "sohdufisdufhui2h34ib234iybg23ib4y23i4uy23uigb423uigb423iigb23u4bi23k4buh234buj234buikfisidfi13123++" exit
+goto hellpart2
+
 :hellpart2
 cls
-echo Glad you agreed to my riddles.
-echo Riddle 1:
-echo What was the first word (excluding ASCII text images) of JesusAI's main menu?
+echo Question One of Five:
+echo What worm have you been infected by?
 echo[
-echo Option 1: Jesus
-echo Option 2: Welcome
-echo Option 3: Hello
+echo OPTIONS:
+echo 1. "Stuxnet"
+echo 2. "ILOVEYOU"
+echo 3. "Storm Worm"
+echo[
 set /p "hellpart2=Answer: "
-if "%hellpart2%" equ "1" goto payloadtoerror
-if "%hellpart2%" equ "2" goto hellpart3
-if "%hellpart2%" equ "3" goto payloadtoerror
+if "%hellpart2%" equ "1" goto hellpart3
+if "%hellpart2%" equ "2" goto failsafe
+if "%hellpart2%" equ "3" goto failsafe
+if "%hellpart2%" equ "Stuxnet" goto hellpart3
+if "%hellpart2%" equ "STUXNET" goto hellpart3
+if "%hellpart2%" equ "stuxnet" goto hellpart3
+if "%hellpart2%" equ "ILOVEYOU" goto failsafe
+if "%hellpart2%" equ "iloveyou" goto failsafe
+if "%hellpart2%" equ "Iloveyou" goto failsafe
+if "%hellpart2%" equ "Storm Worm" goto failsafe
+if "%hellpart2%" equ "STORM WORM" goto failsafe
+if "%hellpart2%" equ "storm worm" goto failsafe
 goto hellpart2
 
 :hellpart3
 cls
-echo Good job. Your second riddle:
-echo How do you enable the JesusAI Debug Menu?
+echo Question Two of Five:
+echo What game are you playing?
 echo[
-echo Option 1: There isn't a debug menu.
-echo Option 2: Type "debug" on the main menu screen 
-echo Option 3: Type "enable.debug" on the main menu screen
+echo OPTIONS:
+echo 1. "Cortisol"
+echo 2. "Mausenheim"
+echo 3. "JesusAI"
+echo[
 set /p "hellpart3=Answer: "
-if "%hellpart3%" equ "1" goto payloadtoerror
-if "%hellpart3%" equ "2" goto payloadtoerror
+if "%hellpart3%" equ "1" goto failsafe
+if "%hellpart3%" equ "2" goto failsafe
 if "%hellpart3%" equ "3" goto hellpart4
+if "%hellpart3%" equ "JesusAI" goto hellpart4
+if "%hellpart3%" equ "JesusA.I" goto hellpart4
+if "%hellpart3%" equ "jesusai" goto hellpart4
+if "%hellpart3%" equ "JESUSAI" goto hellpart4
+if "%hellpart3%" equ "jesusa.i" goto hellpart4
+if "%hellpart3%" equ "mausenheim" goto failsafe
+if "%hellpart3%" equ "MAUSENHEIM" goto failsafe
+if "%hellpart3%" equ "Mausenheim" goto failsafe
+if "%hellpart3%" equ "Storm Worm" goto failsafe
+if "%hellpart3%" equ "STORM WORM" goto failsafe
+if "%hellpart3%" equ "storm worm" goto failsafe
 goto hellpart3
 
 :hellpart4
