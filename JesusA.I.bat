@@ -9,7 +9,10 @@
 title JesusAI (v1.0.0-beta2)
 
 ::Runs on startup
-::Checks if "verify.txt" exists (to identify if the game has been ran before)
+::Checks to see if the folder containing save data has been previously created
+::If not, create the necessary files and continue
+::If it exists, just continue to :info
+::Info checks if "verify.txt" exists (to identify if the game has been ran before)
 ::If file exists, instantly send to menu
 ::If not, create file & send to intro screen
 
@@ -56,7 +59,7 @@ echo                   /\_ \
 echo  __  __  __     __\//\ \     ___    ___     ___ ___      __       
 echo /\ \/\ \/\ \  /'__`\\ \ \   /'___\ / __`\ /' __` __`\  /'__`\     
 echo \ \ \_/ \_/ \/\  __/ \_\ \_/\ \__//\ \L\ \/\ \/\ \/\ \/\  __/  __ 
-echo  \ \___x___/'\ \____\/\____\ \____\ \____/\ \_\ \_\ \_\ \____\/\ \
+echo  \ \_______/'\ \____\/\____\ \____\ \____/\ \_\ \_\ \_\ \____\/\ \
 echo   \/__//__/   \/____/\/____/\/____/\/___/  \/_/\/_/\/_/\/____/\ \/
 echo   __                                  ___                         
 echo  /\ \  __                  __        /\_ \                        
@@ -98,14 +101,15 @@ echo 1. Start Experience
 echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
-echo 5. Options
+echo 5. Options 
+echo 6. Open Extras Menu
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 28/01/2022
+echo Last update: 06/02/2022
 echo[
-echo This version is probably unstable.
-echo Expect random crashes or glitches.
+echo This version is currently in beta!
+echo Expect bugs.
 echo[
 set /p "menu=Selected option: "
 if "%menu%" equ "X" goto xshop
@@ -116,6 +120,7 @@ if "%menu%" equ "calibrate" goto calibrate
 if "%menu%" equ "ehumunbobabye2134144" cd %appdata%\JesusAI & echo .> debug.txt & goto debugmenu
 if "%menu%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menu%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
+if "%menu%" equ "6" goto dlc
 if "%menu%" equ "5" goto options
 if "%menu%" equ "4" goto credits
 if "%menu%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
@@ -142,14 +147,15 @@ echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
 echo 5. Options
-echo 6. (DEBUG) List Directories
+echo 6. Open Extras Menu
+echo 7. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 28/01/2022
+echo Last update: 06/02/2022
 echo[
-echo This version is probably unstable.
-echo Expect random crashes or glitches.
+echo This version is currently in beta!
+echo Expect bugs.
 echo[
 set /p "menudebug=Selected option: "
 if "%menudebug%" equ "X" goto xshop
@@ -160,7 +166,8 @@ if "%menudebug%" equ "calibrate" goto calibrate
 if "%menudebug%" equ "ehumunbobabye2134144" del "%appdata%\JesusAI\debug.txt" & goto endingchecker
 if "%menudebug%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebug%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudebug%" equ "6" goto directorylist
+if "%menudebug%" equ "7" goto directorylist
+if "%menudebug%" equ "6" goto dlc
 if "%menudebug%" equ "5" goto options
 if "%menudebug%" equ "4" goto credits
 if "%menudebug%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
@@ -186,14 +193,14 @@ echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
 echo 5. Options
-echo 6. Open Extras / DLC Menu
+echo 6. Open Extras Menu
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 28/01/2022
+echo Last update: 06/02/2022
 echo[
-echo This version is probably unstable.
-echo Expect random crashes or glitches.
+echo This version is currently in beta!
+echo Expect bugs.
 echo[
 set /p "menudeluxe=Selected option: "
 if "%menudeluxe%" equ "repent" goto repent
@@ -229,15 +236,15 @@ echo 2. Close Experience
 echo 3. Open GitHub Repository Page
 echo 4. Credits
 echo 5. Options
-echo 6. Open Extras / DLC Menu
+echo 6. Open Extras Menu
 echo 7. (DEBUG) List Directories
 echo[
 echo Copyright 2021 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 28/01/2022
+echo Last update: 06/02/2022
 echo[
-echo This version is probably unstable.
-echo Expect random crashes or glitches.
+echo This version is currently in beta!
+echo Expect bugs.
 echo[
 set /p "menudebugdeluxe=Selected option: "
 if "%menudebugdeluxe%" equ "repent" goto repent
@@ -504,29 +511,190 @@ goto endingchecker
 
 :dlc
 cls
+if exist "%appdata%\JesusAI\ending1.txt" if exist "%appdata%\JesusAI\ending2.txt" if exist "%appdata%\JesusAI\ending3.txt" goto fulldlc
+goto nonfulldlc
+
+:fulldlc
+cls
 color 0c
-echo               __                            
-echo              /\ \__                         
-echo    __   __  _\ \ ,_\  _ __    __      ____  
-echo  /'__`\/\ \/'\\ \ \/ /\`'__\/'__`\   /',__\ 
-echo /\  __/\/'  '/ \ \ \_\ \ \//\ \L\.\_/\__, `\
-echo \ \____\/\_/\_\ \ \__\\ \_\\ \__/.\_\/\____/
-echo  \/____/\//\/_/  \/__/ \/_/ \/__/\/_/\/___/ 
+echo  ____    __       ____      
+echo /\  _`\ /\ \     /\  _`\    
+echo \ \ \/\ \ \ \    \ \ \/\_\  
+echo  \ \ \ \ \ \ \  __\ \ \/_/_ 
+echo   \ \ \_\ \ \ \L\ \\ \ \L\ \
+echo    \ \____/\ \____/ \ \____/
+echo     \/___/  \/___/   \/___/ 
 echo[
-echo Congratulations on finishing the JesusAI campaign!
-echo You now have access to some cool little extras.
-echo New extras will be added at random times throughout updates.
-echo (DLC menu created by 448v)
+echo Welcome to the DLC menu.
+echo Please choose one of the options below. 
 echo[
 echo 1. Open Cartridges Menu (DLC)
+echo Extra DLC available to be ran through JesusAI
+echo[
 echo 2. Play JesusAI Prototype
-echo 3. Go Back to Main Menu
+echo Play the original incomplete prototype of JesusAI!
+echo[
+echo 3. Stop N' Swop
+echo Exchange items and other content with other C0rp Studios games
+echo[
+echo 4. JesusAI Tech Demos
+echo A bunch of tech demos to test JesusAI features.
+echo[
+echo 5. JesusAI Museum
+echo View a bunch of cut or unused features, behind the scenes content and more from the developers!
+echo[
+echo 6. Go Back to Main Menu
 echo[
 set /p "dlc=Selected option: "
 if "%dlc%" equ "1" goto cartridges
 if "%dlc%" equ "2" goto oldmenu
-if "%dlc%" equ "3" goto menudeluxe
+if "%dlc%" equ "3" goto stopnswopchecker
+if "%dlc%" equ "4" goto dmomenu
+if "%dlc%" equ "5" goto museumloader
+if "%dlc%" equ "6" goto endingchecker
 goto dlc
+
+:nonfulldlc
+cls
+color 0c
+echo  ____    __       ____      
+echo /\  _`\ /\ \     /\  _`\    
+echo \ \ \/\ \ \ \    \ \ \/\_\  
+echo  \ \ \ \ \ \ \  __\ \ \/_/_ 
+echo   \ \ \_\ \ \ \L\ \\ \ \L\ \
+echo    \ \____/\ \____/ \ \____/
+echo     \/___/  \/___/   \/___/ 
+echo[
+echo Welcome to the DLC menu.
+echo Any locked DLC will be unlocked once you finish the game.
+echo Please choose one of the options below. 
+echo[
+echo 1. [LOCKED]
+echo[
+echo 2. [LOCKED]
+echo[
+echo 3. Stop N' Swop
+echo Exchange items and other content with other C0rp Studios games
+echo[
+echo 4. [LOCKED]
+echo[
+echo 5. [LOCKED]
+echo[
+echo 6. Go Back to Main Menu
+echo[
+set /p "dlc=Selected option: "
+if "%dlc%" equ "3" goto stopnswopchecker
+if "%dlc%" equ "6" goto endingchecker
+goto dlc
+
+:dmomenu
+color 0d
+cls
+echo  _____                                  ______  ______     
+echo /\___ \                                /\  _  \/\__  _\    
+echo \/__/\ \     __    ____  __  __    ____\ \ \L\ \/_/\ \/    
+echo    _\ \ \  /'__`\ /',__\/\ \/\ \  /',__\\ \  __ \ \ \ \    
+echo   /\ \_\ \/\  __//\__, `\ \ \_\ \/\__, `\\ \ \/\ \ \_\ \__ 
+echo   \ \____/\ \____\/\____/\ \____/\/\____/ \ \_\ \_\/\_____\
+echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
+echo[
+echo  ____                                              
+echo /\  _`\                                            
+echo \ \ \/\ \     __    ___ ___     ___     ____       
+echo  \ \ \ \ \  /'__`\/' __` __`\  / __`\  /',__\      
+echo   \ \ \_\ \/\  __//\ \/\ \/\ \/\ \L\ \/\__, `\     
+echo    \ \____/\ \____\ \_\ \_\ \_\ \____/\/\____/     
+echo     \/___/  \/____/\/_/\/_/\/_/\/___/  \/___/      
+echo[
+echo Welcome to the JesusAI Feature Demos.
+echo This contains a bunch of tests we used to create features in JesusAI.
+echo Select a demo from the list below:
+echo[
+echo 1. Input Test 
+echo 2. Website Loader Test
+echo 3. Website Loader Test 2
+echo 4. Go Back to Extras Menu
+echo[
+echo Copyright 2022 C0rp Industries
+echo Created by D4rkC0rp0r4ti0n and meowfluff
+echo[
+set /p "menu=Demo selected: "
+if "%dmenu%" equ "1" goto inputtest
+if "%dmenu%" equ "2" goto websitetest
+if "%dmenu%" equ "3" goto websitetest2
+if "%dmenu%" equ "4" goto dlc
+goto dmomenu
+
+:inputtest
+Color 0B
+Cls
+echo This test identifies if text matches the text written by a program.
+echo The code this test uses was later scrapped.
+echo Type "hello" or something else to see how it works.
+echo Type "back" to go back to the main menu.
+set /p "Input=Type something here: "
+if "%Input%" equ "hello" goto HelloFunction
+if "%Input%" equ "Hello" goto HelloFunction
+if "%Input%" equ "back" goto dmomenu
+goto NoHelloFunction
+
+:HelloFunction
+cls
+Color 0A
+echo I am into The Hello Function
+pause
+Goto inputtest
+
+:NoHelloFunction
+cls
+Color 0C
+echo I am not into the Hello Function
+pause
+Goto inputtest
+
+:websitetest
+cls
+color 0f
+echo This test is incredibly simple.
+echo When "1" is typed, it opens Google.
+echo The specific code used in this test was never used in JesusAI,
+echo or used for an extremely short time.
+echo Type "back" to go back to the main menu.
+set /p "test=?: "
+
+if '%test%'=='1' (
+start www.google.com
+)
+if "%test%" equ "back" goto dmomenu
+goto websitetest
+
+:websitetest2
+cls
+color 0e
+echo This test came after the original website test.
+echo This new test lets you open multiple links from a list.
+echo This specific code is used in JesusAI to open links, as well
+echo as the basis for the options menus of JesusAI.
+echo Type a number to go to the respective website.
+echo Type "back" to go back to the main menu.
+:: write a simple list of options to console,
+echo Options;
+echo 1 : StackOverflow
+echo 2 : Google
+echo 3 : Youtube
+echo 4 : JesusAI GitHub
+
+:: Prompt for input,
+set /p "strMenu=Enter desired URL number: "
+
+:: Compare input through if commands,
+:: `if not defined strMenu goto :menu` can be used here if prefered.
+if "%strMenu%" equ "1" start "" "https://www.stackoverflow.com"
+if "%strMenu%" equ "2" start "" "https://www.Google.com"
+if "%strMenu%" equ "3" start "" "https://www.youtube.com"
+if "%strMenu%" equ "4" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%strMenu%" equ "back" goto dmomenu
+goto websitetest2
 
 :cartridges
 cls
@@ -589,6 +757,473 @@ echo .> CARTRIDGECHECKER.txt
 cd %localhost%
 call "%~dp0Cartridge 3.bat"
 goto cartridges
+
+:stopnswopchecker
+cls
+if not exist "%appdata%\StopNSwop" (
+    cd %appdata%
+    mkdir StopNSwop
+    goto stopnswop
+)
+goto stopnswop
+
+:stopnswop
+cls
+color 0c
+echo  ____    __                       __  __   __      ____                                  
+echo /\  _`\ /\ \__                   /\ \/\ \ /\ \    /\  _`\                                
+echo \ \,\L\_\ \ ,_\   ___   _____    \ \ `\\ \\ \/    \ \,\L\_\  __  __  __    ___   _____   
+echo  \/_\__ \\ \ \/  / __`\/\ '__`\   \ \ , ` \\/      \/_\__ \ /\ \/\ \/\ \  / __`\/\ '__`\ 
+echo    /\ \L\ \ \ \_/\ \L\ \ \ \L\ \   \ \ \`\ \         /\ \L\ \ \ \_/ \_/ \/\ \L\ \ \ \L\ \
+echo    \ `\____\ \__\ \____/\ \ ,__/    \ \_\ \_\        \ `\____\ \___x___/'\ \____/\ \ ,__/
+echo     \/_____/\/__/\/___/  \ \ \/      \/_/\/_/         \/_____/\/__//__/   \/___/  \ \ \/ 
+echo                           \ \_\                                                    \ \_\ 
+echo                            \/_/                                                     \/_/ 
+echo[
+echo                               Welcome to the Stop N' Swop menu.
+echo[
+echo You are able to exchange items here with other C0rp Studios games
+echo to grant other secrets, content, items, endings and more.
+echo[
+echo UNLOCKED STOP N' SWOP ITEMS:
+if exist "%appdata%\StopNSwop\JesusIceKey.txt" (
+    echo Ice Key [UNLOCKED]
+)
+if not exist "%appdata%\StopNSwop\JesusIceKey.txt" (
+    echo Ice Key [LOCKED]
+)
+if exist "%appdata%\StopNSwop\JesusUSB.txt" (
+    echo USB Drive [UNLOCKED]
+)
+if not exist "%appdata%\StopNSwop\JesusUSB.txt" (
+    echo USB Drive [LOCKED]
+)
+if exist "%appdata%\StopNSwop\JesusCar.txt" (
+    echo Toy Car [UNLOCKED]
+)
+if not exist "%appdata%\StopNSwop\JesusCar.txt" (
+    echo Toy Car [LOCKED]
+)
+echo[
+echo Select an option from the list below:
+echo 1. Send Stop N' Swop Items
+echo 2. Receive Stop N' Swop Items
+echo 3. Refresh Stop N' Swop Items
+echo 4. Tutorial on Stop N' Swop
+echo 5. Go Back to Extras Menu
+echo[
+set /p "stopnswop=Selected option: "
+if "%stopnswop%" equ "1" goto senditems
+if "%stopnswop%" equ "2" goto receiveitems
+if "%stopnswop%" equ "3" goto stopnswopchecker
+if "%stopnswop%" equ "4" goto tutorialswop
+if "%stopnswop%" equ "5" goto dlc
+goto stopnswop
+
+:receiveitems
+cls
+echo This copy of JesusAI is about to receive a Stop N' Swop item.
+echo Please send the item on whichever game you're sending it on,
+echo then press anything to begin searching for Stop N' Swop items.
+echo[
+set /p "receiveitems=?: "
+if "%receiveitems%" equ "husdfuhsdfuhsdfuiosdfhusdhfi;uhsdip9fyhfih werht5 34h5i34uh 5u345ilu;45iu;g54i34gb345gbi54" exit
+goto reciever
+
+:reciever
+cls
+color 0c
+echo Scanning for Stop N' Swop items..
+echo Please wait..
+timeout /t 5 /nobreak > NUL
+goto itemreciever
+
+:itemreciever
+cls
+if exist "%appdata%\StopNSwop\tempIceKey.txt" (
+    cd %appdata%\StopNSwop
+    echo .> JesusIceKey.txt
+    del tempIceKey.txt
+    goto successfulIceKey
+)
+if not exist "%appdata%\StopNSwop\tempIceKey.txt" (
+    goto unsuccessful
+)
+
+:successfulIceKey
+cls
+color 0c
+echo Stop N' Swop item recieved: Ice Key
+echo "A cold, mysterious key found in GAMENAME. What does it unlock?"
+echo Type anything to go back to the Stop N' Swop menu.
+echo[
+set /p "icekey="
+if "%icekey%" equ "sadbhfsdfuyhefwefulwefweulfguilwerfvulwegvfjwegvulfwevlfvewfluyvwefuwefv" exit
+goto stopnswopchecker
+
+:unsuccessful
+cls
+color 0d
+echo No Stop N' Swop items were recieved.
+echo Please try again.
+echo Type anything to go back to the Stop N' Swop menu.
+echo[
+set /p "usoc="
+if "%usoc%" equ "sadbhfsdfuyhefwefulwefweulfguilwerfvulwegvfjwegvulfwevlfvewfluyvwefuwefv" exit
+goto stopnswopchecker
+
+:museumloader
+cls
+color 0a
+echo[
+echo Loading the JesusAI Museum..
+echo Please wait..
+timeout /t 5 /nobreak > NUL
+goto museum 
+
+:museumleave
+cls
+color 0a
+echo[
+echo Closing the JesusAI Museum..
+echo Please wait..
+timeout /t 5 /nobreak > NUL
+goto dlc
+
+:museum
+cls
+color 0a
+echo  ______  __                                                                          
+echo /\__  _\/\ \                  /'\_/`\                                                
+echo \/_/\ \/\ \ \___      __     /\      \  __  __    ____     __   __  __    ___ ___    
+echo    \ \ \ \ \  _ `\  /'__`\   \ \ \__\ \/\ \/\ \  /',__\  /'__`\/\ \/\ \ /' __` __`\  
+echo     \ \ \ \ \ \ \ \/\  __/    \ \ \_/\ \ \ \_\ \/\__, `\/\  __/\ \ \_\ \/\ \/\ \/\ \ 
+echo      \ \_\ \ \_\ \_\ \____\    \ \_\\ \_\ \____/\/\____/\ \____\\ \____/\ \_\ \_\ \_\
+echo       \/_/  \/_/\/_/\/____/     \/_/ \/_/\/___/  \/___/  \/____/ \/___/  \/_/\/_/\/_/        
+echo[
+echo Welcome to the JesusAI Museum!
+echo Here you'll find cut content, story, features, 
+echo as well as behind the scenes stuff from the developers!
+echo (Inspired by The Normal City's Museum)
+echo[
+echo Please select an option from the list below:
+echo 1. Unused / Hidden Content 
+echo 2. Cut Content 
+echo 3. FAQ
+echo 4. Return to Extras Menu
+echo[
+set /p "museum=Selected option: "
+if "%museum%" equ "1" goto musunusedcontent
+if "%museum%" equ "2" goto cutcontent
+if "%museum%" equ "3" goto musfaq
+if "%museum%" equ "4" goto museumleave
+goto museum
+
+:musfaq
+cls
+echo  ____    ______  _____      
+echo /\  _`\ /\  _  \/\  __`\    
+echo \ \ \L\_\ \ \L\ \ \ \/\ \   
+echo  \ \  _\/\ \  __ \ \ \ \ \  
+echo   \ \ \/  \ \ \/\ \ \ \\'\\ 
+echo    \ \_\   \ \_\ \_\ \___\_\
+echo     \/_/    \/_/\/_/\/__//_/
+echo FAQ (Frequently Asked Questions) about JesusAI!
+echo[
+echo Q: When did JesusAI start?
+echo A: The game concept was established in 2019, and the game began development in December 2021.
+echo[
+echo Q: Is there a soundtrack to the game?
+echo A: Put on "Va" by Ryan Roth for the entire game. It's the best way to play it.
+echo[
+echo Q: Will more things be added after the game's release?
+echo A: A few bug fixes, yes, but not much else.
+echo[
+echo Q: Are you happy with the game?
+echo A: Mostly.
+echo[
+echo Q: What is your stance on unofficial mods?
+echo A: Do whatever you'd like to do with the game.
+echo[
+echo Q: Can people snoop around in the game's code?
+echo A: Yes. The game's coding is very interesting. Give it a read sometime.
+echo[
+echo Q: Can I donate to the game in any way? PayPal, Kofi, Patreon?
+echo A: No.
+echo[
+echo Q: Will there ever be a donation method?
+echo A: No.
+echo[
+echo Q: Was there ever JesusAI anti-piracy / anti-theft?
+echo A: There is a version of the game that contains anti-piracy methods, however you are not allowed to download it. It is private.
+echo[
+echo Q: Please put [OLD FEATURE] in the game!
+echo A: That's not really a question, is it? It's more of a request.
+echo[
+echo Q: Just answer it.
+echo A: Well, unless it adds to the game and we're happy with it, then no.
+echo[
+set /p "faqqq="
+if "%faqqq%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+
+:musunusedcontent
+cls
+echo  __  __                                     __      ____                    __                  __      
+echo /\ \/\ \                                   /\ \    /\  _`\                 /\ \__              /\ \__   
+echo \ \ \ \ \    ___   __  __    ____     __   \_\ \   \ \ \/\_\    ___     ___\ \ ,_\    __    ___\ \ ,_\  
+echo  \ \ \ \ \ /' _ `\/\ \/\ \  /',__\  /'__`\ /'_` \   \ \ \/_/_  / __`\ /' _ `\ \ \/  /'__`\/' _ `\ \ \/  
+echo   \ \ \_\ \/\ \/\ \ \ \_\ \/\__, `\/\  __//\ \L\ \   \ \ \L\ \/\ \L\ \/\ \/\ \ \ \_/\  __//\ \/\ \ \ \_ 
+echo    \ \_____\ \_\ \_\ \____/\/\____/\ \____\ \___,_\   \ \____/\ \____/\ \_\ \_\ \__\ \____\ \_\ \_\ \__\
+echo     \/_____/\/_/\/_/\/___/  \/___/  \/____/\/__,_ /    \/___/  \/___/  \/_/\/_/\/__/\/____/\/_/\/_/\/__/
+echo[
+echo Welcome to the Unused Content page!
+echo Select an option to read about below:
+echo[
+echo 1. Hidden Notes
+echo 2. Unused Endings 
+echo 3. Hidden Locations
+echo 4. Go Back to Museum Menu
+echo[
+set /p "musunused=Selected option: "
+if "%musunused%" equ "1" goto hiddennotes
+if "%musunused%" equ "2" goto unusedendings
+if "%musunused%" equ "3" goto hiddenlocations                                                            
+if "%musunused%" equ "4" goto museum
+goto musunusedcontent
+
+:hiddennotes
+cls
+echo  __  __          __      __                     __  __          __                    
+echo /\ \/\ \  __    /\ \    /\ \                   /\ \/\ \        /\ \__                 
+echo \ \ \_\ \/\_\   \_\ \   \_\ \     __    ___    \ \ `\\ \    ___\ \ ,_\    __    ____  
+echo  \ \  _  \/\ \  /'_` \  /'_` \  /'__`\/' _ `\   \ \ , ` \  / __`\ \ \/  /'__`\ /',__\ 
+echo   \ \ \ \ \ \ \/\ \L\ \/\ \L\ \/\  __//\ \/\ \   \ \ \`\ \/\ \L\ \ \ \_/\  __//\__, `\
+echo    \ \_\ \_\ \_\ \___,_\ \___,_\ \____\ \_\ \_\   \ \_\ \_\ \____/\ \__\ \____\/\____/
+echo     \/_/\/_/\/_/\/__,_ /\/__,_ /\/____/\/_/\/_/    \/_/\/_/\/___/  \/__/\/____/\/___/ 
+echo[
+echo Throughout JesusAI, there are hidden notes you can only see if you open up the game.
+echo These are usually related to credits, how parts of the game work or to-do notes.
+echo Open up the game and see what you can find!
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "hidden="
+if "%hidden%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+:unusedendings
+cls
+echo  __  __                                     __      ____                __                                
+echo /\ \/\ \                                   /\ \    /\  _`\             /\ \  __                           
+echo \ \ \ \ \    ___   __  __    ____     __   \_\ \   \ \ \L\_\    ___    \_\ \/\_\    ___      __     ____  
+echo  \ \ \ \ \ /' _ `\/\ \/\ \  /',__\  /'__`\ /'_` \   \ \  _\L  /' _ `\  /'_` \/\ \ /' _ `\  /'_ `\  /',__\ 
+echo   \ \ \_\ \/\ \/\ \ \ \_\ \/\__, `\/\  __//\ \L\ \   \ \ \L\ \/\ \/\ \/\ \L\ \ \ \/\ \/\ \/\ \L\ \/\__, `\
+echo    \ \_____\ \_\ \_\ \____/\/\____/\ \____\ \___,_\   \ \____/\ \_\ \_\ \___,_\ \_\ \_\ \_\ \____ \/\____/
+echo     \/_____/\/_/\/_/\/___/  \/___/  \/____/\/__,_ /    \/___/  \/_/\/_/\/__,_ /\/_/\/_/\/_/\/___L\ \/___/ 
+echo                                                                                              /\____/      
+echo                                                                                              \_/__/       
+echo[
+echo Before v1.0.0-beta2, JesusAI had two older endings. The Riddle Ending and the Password Ending.
+echo In v1.0.0-beta2, these endings were fully updated to be more high-tech and work better.
+echo These old endings were made in older, previous versions of JesusAI developer builds.
+echo As of now, these are unplayable.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "undus="
+if "%undus%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+:hiddenlocations
+cls
+echo  __  __          __      __                     __                               __                                  
+echo /\ \/\ \  __    /\ \    /\ \                   /\ \                             /\ \__  __                           
+echo \ \ \_\ \/\_\   \_\ \   \_\ \     __    ___    \ \ \        ___     ___     __  \ \ ,_\/\_\    ___     ___     ____  
+echo  \ \  _  \/\ \  /'_` \  /'_` \  /'__`\/' _ `\   \ \ \  __  / __`\  /'___\ /'__`\ \ \ \/\/\ \  / __`\ /' _ `\  /',__\ 
+echo   \ \ \ \ \ \ \/\ \L\ \/\ \L\ \/\  __//\ \/\ \   \ \ \L\ \/\ \L\ \/\ \__//\ \L\.\_\ \ \_\ \ \/\ \L\ \/\ \/\ \/\__, `\
+echo    \ \_\ \_\ \_\ \___,_\ \___,_\ \____\ \_\ \_\   \ \____/\ \____/\ \____\ \__/.\_\\ \__\\ \_\ \____/\ \_\ \_\/\____/
+echo     \/_/\/_/\/_/\/__,_ /\/__,_ /\/____/\/_/\/_/    \/___/  \/___/  \/____/\/__/\/_/ \/__/ \/_/\/___/  \/_/\/_/\/___/ 
+echo[
+echo Within the code, there are a few hidden locations you are not able to get to by normal means.
+echo These are usually just for creating files or changing variables.
+echo It's an easier method to use than doing everything all at once.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "unduds="
+if "%unduds%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+:cutcontent
+cls
+echo  ____             __        ____                    __                  __      
+echo /\  _`\          /\ \__    /\  _`\                 /\ \__              /\ \__   
+echo \ \ \/\_\  __  __\ \ ,_\   \ \ \/\_\    ___     ___\ \ ,_\    __    ___\ \ ,_\  
+echo  \ \ \/_/_/\ \/\ \\ \ \/    \ \ \/_/_  / __`\ /' _ `\ \ \/  /'__`\/' _ `\ \ \/  
+echo   \ \ \L\ \ \ \_\ \\ \ \_    \ \ \L\ \/\ \L\ \/\ \/\ \ \ \_/\  __//\ \/\ \ \ \_ 
+echo    \ \____/\ \____/ \ \__\    \ \____/\ \____/\ \_\ \_\ \__\ \____\ \_\ \_\ \__\
+echo     \/___/  \/___/   \/__/     \/___/  \/___/  \/_/\/_/\/__/\/____/\/_/\/_/\/__/
+echo[
+echo Welcome to the Cut Content page!
+echo Select an option to read about below:
+echo[
+echo 1. Removed Endings
+echo 2. "Valuable Asset Retrieval"
+echo 3. Old Debug Features
+echo 4. Removed Mod Loader
+echo 5. Save Data
+echo 6. Go Back to Museum Menu
+echo[
+set /p "musunused=Selected option: "
+if "%musunused%" equ "1" goto removedendings
+if "%musunused%" equ "2" goto assets
+if "%musunused%" equ "3" goto olddebug                                                            
+if "%musunused%" equ "4" goto modloader
+if "%musunused%" equ "5" goto savedata
+if "%musunused%" equ "6" goto museum
+goto cutcontent
+
+:removedendings
+cls
+echo  ____                                                  __      ____                __                                
+echo /\  _`\                                               /\ \    /\  _`\             /\ \  __                           
+echo \ \ \L\ \     __    ___ ___     ___   __  __     __   \_\ \   \ \ \L\_\    ___    \_\ \/\_\    ___      __     ____  
+echo  \ \ ,  /   /'__`\/' __` __`\  / __`\/\ \/\ \  /'__`\ /'_` \   \ \  _\L  /' _ `\  /'_` \/\ \ /' _ `\  /'_ `\  /',__\ 
+echo   \ \ \\ \ /\  __//\ \/\ \/\ \/\ \L\ \ \ \_/ \/\  __//\ \L\ \   \ \ \L\ \/\ \/\ \/\ \L\ \ \ \/\ \/\ \/\ \L\ \/\__, `\
+echo    \ \_\ \_\ \____\ \_\ \_\ \_\ \____/\ \___/ \ \____\ \___,_\   \ \____/\ \_\ \_\ \___,_\ \_\ \_\ \_\ \____ \/\____/
+echo     \/_/\/ /\/____/\/_/\/_/\/_/\/___/  \/__/   \/____/\/__,_ /    \/___/  \/_/\/_/\/__,_ /\/_/\/_/\/_/\/___L\ \/___/ 
+echo                                                                                                         /\____/      
+echo                                                                                                         \_/__/       
+echo[
+echo Throughout the development of JesusAI, many of the endings have been removed or changed.
+echo A few of these endings that never were made were:
+echo - The Critic Ending
+echo - The Forum Ending
+echo - The Cable Ending
+echo and there were a few more that were actually made and then later removed.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "undudds="
+if "%undudds%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+:assets
+cls
+echo  __  __     ______       ____       
+echo /\ \/\ \   /\  _  \     /\  _`\     
+echo \ \ \ \ \  \ \ \L\ \    \ \ \L\ \   
+echo  \ \ \ \ \  \ \  __ \    \ \ ,  /   
+echo   \ \ \_/ \__\ \ \/\ \  __\ \ \\ \  
+echo    \ `\___/\_\\ \_\ \_\/\_\\ \_\ \_\
+echo     `\/__/\/_/ \/_/\/_/\/_/ \/_/\/ /
+echo[
+echo V.A.R (standing for Valuable Asset Retrieval) was a removed easter egg.
+echo By inputting a specific phrase in a random dev build, some cryptic numbers would appear.
+echo It was a sort of minigame in a way, where you had to input correct phrases or the game would close.
+echo It was removed two dev builds later, as it had no actual use apart from being an easter egg.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "unduddds="
+if "%unduddds%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+:olddebug
+cls
+echo  _____    ___       __      ____            __                          ____    __               ___    ___  
+echo /\  __`\ /\_ \     /\ \    /\  _`\         /\ \                        /\  _`\ /\ \__          /'___\ /'___\ 
+echo \ \ \/\ \\//\ \    \_\ \   \ \ \/\ \     __\ \ \____  __  __     __    \ \,\L\_\ \ ,_\  __  __/\ \__//\ \__/ 
+echo  \ \ \ \ \ \ \ \   /'_` \   \ \ \ \ \  /'__`\ \ '__`\/\ \/\ \  /'_ `\   \/_\__ \\ \ \/ /\ \/\ \ \ ,__\ \ ,__\
+echo   \ \ \_\ \ \_\ \_/\ \L\ \   \ \ \_\ \/\  __/\ \ \L\ \ \ \_\ \/\ \L\ \    /\ \L\ \ \ \_\ \ \_\ \ \ \_/\ \ \_/
+echo    \ \_____\/\____\ \___,_\   \ \____/\ \____\\ \_,__/\ \____/\ \____ \   \ `\____\ \__\\ \____/\ \_\  \ \_\ 
+echo     \/_____/\/____/\/__,_ /    \/___/  \/____/ \/___/  \/___/  \/___L\ \   \/_____/\/__/ \/___/  \/_/   \/_/ 
+echo                                                                  /\____/                                     
+echo                                                                  \_/__/                                      
+echo[
+echo As JesusAI progressed, many Debug features were added to the game. Some of these were:
+echo - Info about the game and your computer
+echo - Experimental Features (later merged into the options menu)
+echo - Embedded Content which contained links and images used in the game
+echo All of these features were either merged or removed in later updates.
+echo The only debug feature that remains is the "List Directories" option.
+echo[
+echo Before the v1.0.0-beta1 update, debug mode was enabled and disabled by typing
+echo "enable.debug" and "disable.debug" respectively. This was even referred to in the old Riddle Ending.
+echo Debug mode is now enabled via turning it on in the new Options menu.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "undies="
+if "%undies%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum   
+
+:modloader
+cls
+echo                      __      __                           __                  
+echo  /'\_/`\            /\ \    /\ \                         /\ \                 
+echo /\      \    ___    \_\ \   \ \ \        ___      __     \_\ \     __   _ __  
+echo \ \ \__\ \  / __`\  /'_` \   \ \ \  __  / __`\  /'__`\   /'_` \  /'__`\/\`'__\
+echo  \ \ \_/\ \/\ \L\ \/\ \L\ \   \ \ \L\ \/\ \L\ \/\ \L\.\_/\ \L\ \/\  __/\ \ \/ 
+echo   \ \_\\ \_\ \____/\ \___,_\   \ \____/\ \____/\ \__/.\_\ \___,_\ \____\\ \_\ 
+echo    \/_/ \/_/\/___/  \/__,_ /    \/___/  \/___/  \/__/\/_/\/__,_ /\/____/ \/_/     
+echo[
+echo Before the Cartridges menu was made, the Mod Loader was the way to play third-party content.
+echo You would access it in the now removed Experimental Features menu.
+echo Once the option was selected, a folder was created for mods to be put into.
+echo Then, you could run whichever mod you wanted to play.
+echo There were some things that we wanted to add to the old Mod Loader, but we didn't know how.
+echo Some of these unused features were:
+echo - The ability to see all available mods in the loader itself
+echo - Read JesusAI's code and use it
+echo - Advanced debug options
+echo However, these were never made.
+echo[
+echo The Mod Loader was removed a little later, due to a plethora of issues.
+echo These issues include:
+echo - Mods wouldn't load at all
+echo - Directory Viewer was incredibly hard to implement
+echo - The folder containing mods would be deleted if the loader was closed
+echo[
+echo The Mod Loader was never fully released, even in a dev build.
+echo No prior evidence actually exists of the loader, but it did exist.
+echo In commit #29, the loader was replaced by the now used Cartridges menu.
+echo The Cartridges menu does what the Mod Loader did, but ten times better.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "loadera="
+if "%loadera%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+:savedata
+cls
+echo  ____                                  ____              __               
+echo /\  _`\                               /\  _`\           /\ \__            
+echo \ \,\L\_\     __     __  __     __    \ \ \/\ \     __  \ \ ,_\    __     
+echo  \/_\__ \   /'__`\  /\ \/\ \  /'__`\   \ \ \ \ \  /'__`\ \ \ \/  /'__`\   
+echo    /\ \L\ \/\ \L\.\_\ \ \_/ \ /\  __/    \ \ \_\ \/\ \L\.\_\ \ \_/\ \L\.\_ 
+echo    \ `\____\ \__/.\_\\ \___/ \ \____\    \ \____/\ \__/.\_\\ \__\ \__/.\_\
+echo     \/_____/\/__/\/_/ \/__/   \/____/     \/___/  \/__/\/_/ \/__/\/__/\/_/    
+echo[
+echo The way Save Data is used in JesusAI has changed a lot since its original creation.
+echo For starters, any sort of Save Data was used in commit #22.
+echo It was used to verify if you've seen the terms and conditions screen before.
+echo A little while after, it was used to check if you've completed the game.
+echo These are both still used and run on startup, so you never see them.
+echo[
+echo Until a later build, save data was saved to "temp", a directory in Windows.
+echo The temp directory gets cleared out regularly and Saves would get cleared.
+echo Thus, in a later build, this was changed to a folder in appdata, and still is.
+echo Save Data no longer gets erased.
+echo[
+echo An early concept relating to Save Data was "Profiles".
+echo You would be able to save your current game in a profile, then switch to a new one.
+echo This would let you replay the game without deleting any of your Save Data.
+echo You would've been able to have up to three profiles.
+echo The concept was never established as it would've been hard to implement.
+echo[
+echo Type anything to go back to the Museum menu.
+set /p "nezzera="
+if "%nezzera%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
+goto museum
+
+
 
 :repent
 color 0a
@@ -2067,8 +2702,10 @@ goto hellpart2
 
 :hellpart2
 cls
+echo[
 echo Question One of Five:
 echo What worm have you been infected by?
+echo (You can either respond with numbers or the actual answer.)
 echo[
 echo OPTIONS:
 echo 1. "Stuxnet"
@@ -2092,6 +2729,7 @@ goto hellpart2
 
 :hellpart3
 cls
+echo[
 echo Question Two of Five:
 echo What game are you playing?
 echo[
@@ -2119,30 +2757,233 @@ goto hellpart3
 
 :hellpart4
 cls
-echo You're doing well, %USERNAME%. Your final riddle:
-echo Do you consent to the 2500 page JesusAI terms and conditions?
-echo (You cannot read them.)
 echo[
-echo Option 1: Yes
-echo Option 2: No
+echo Question Three of Five:
+echo Who made JesusAI?
+echo[
+echo OPTIONS:
+echo 1. "meowfluff, ghoulstar & wavesky"
+echo 2. "D4rkC0rp0r4ti0n, meowfluff & 448v"
+echo 3. "448v, gaypaw & cloudcore"
+echo[
 set /p "hellpart4=Answer: "
-if "%hellpart4%" equ "2" goto payloadtoerror
-if "%hellpart4%" equ "1" goto hellfinale
+if "%hellpart4%" equ "1" goto failsafe
+if "%hellpart4%" equ "2" goto hellpart5
+if "%hellpart4%" equ "3" goto failsafe
+if "%hellpart4%" equ "D4rkC0rp0r4ti0n, meowfluff & 448v" goto hellpart5
+if "%hellpart4%" equ "D4RKC0RP0R4TI0N, MEOWFLUFF & 448V" goto hellpart5
+if "%hellpart4%" equ "d4rkc0rp0r4ti0n, meowfluff & 448v" goto hellpart5
+if "%hellpart4%" equ "d4rkc0rp0r4ti0n meowfluff 448v" goto hellpart5
+if "%hellpart4%" equ "D4rkC0rp0r4ti0n meowfluff 448v" goto hellpart5
+if "%hellpart4%" equ "D4RKC0RP0R4TI0N MEOWFLUFF 448V" goto hellpart5
+if "%hellpart4%" equ "jesusai" goto hellpart5
+if "%hellpart4%" equ "JESUSAI" goto hellpart5
+if "%hellpart4%" equ "jesusa.i" goto hellpart5
+if "%hellpart4%" equ "meowfluff, ghoulstar & wavesky" goto failsafe
+if "%hellpart4%" equ "MEOWFLUFF, GHOULSTAR & WAVESKY" goto failsafe
+if "%hellpart4%" equ "MEOWFLUFF GHOULSTAR  WAVESKY" goto failsafe
+if "%hellpart4%" equ "meowfluff ghoulstar wavesky" goto failsafe
+if "%hellpart4%" equ "448v, gaypaw & cloudcore" goto failsafe
+if "%hellpart4%" equ "448V, GAYPAW & CLOUDCORE" goto failsafe
+if "%hellpart4%" equ "448v gaypaw cloudcore" goto failsafe
+if "%hellpart4%" equ "448V GAYPAW CLOUDCORE" goto failsafe
 goto hellpart4
 
-:hellfinale
+:hellpart5
 cls
-echo You have answered all 3 riddles correctly, %USERNAME%.
-echo Your computer's information is safe.
-echo Type anything to go back to the menu.
 echo[
-color 0f
-echo RIDDLE ENDING
+echo Pregunta Cuatro de Cinco:
+echo Puedes traducir esto correctamente?
 echo[
-echo The End 1 %date% %time%> "%appdata%\JesusAI\ending1.txt"
-set /p "hellfinale=?: "
-if "%hellfinale%" equ "agysdaysugdasodgy13948y712398" exit
-goto menu
+echo OPCIONES:
+echo 1. "Si, puedo!"
+echo 2. "No, no puedo."
+echo[
+set /p "hellpart5=Respuesta: "
+if "%hellpart5%" equ "1" goto hellpart6
+if "%hellpart5%" equ "2" goto failsafe
+if "%hellpart5%" equ "¡Sí, puedo!" goto hellpart6
+if "%hellpart5%" equ "si puedo!" goto hellpart6
+if "%hellpart5%" equ "si puedo" goto hellpart6
+if "%hellpart5%" equ "SI PEUDO" goto hellpart6
+if "%hellpart5%" equ "Si, peudo" goto hellpart6
+if "%hellpart5%" equ "Si, peudo!" goto hellpart6
+if "%hellpart5%" equ "SI PEUDO!" goto hellpart6
+if "%hellpart5%" equ "si puedo" goto hellpart6
+if "%hellpart5%" equ "No, no puedo." goto failsafe
+if "%hellpart5%" equ "No, no puedo" goto failsafe
+if "%hellpart5%" equ "No no puedo." goto failsafe
+if "%hellpart5%" equ "No no puedo" goto failsafe
+if "%hellpart5%" equ "NO, NO PEUDO." goto failsafe
+if "%hellpart5%" equ "NO NO PEUDO." goto failsafe
+if "%hellpart5%" equ "NO NO PEUDO" goto failsafe
+goto hellpart5
+
+:hellpart6
+cls
+echo[
+echo Question Five of Five:
+echo True or False: Today is %date%.
+echo[
+echo OPTIONS:
+echo 1. "False"
+echo 2. "True"
+echo[
+set /p "hellpart6=Answer: "
+if "%hellpart6%" equ "1" goto failsafe
+if "%hellpart6%" equ "2" goto hellpart7
+if "%hellpart6%" equ "false" goto failsafe
+if "%hellpart6%" equ "False" goto failsafe
+if "%hellpart6%" equ "FALSE" goto failsafe
+if "%hellpart6%" equ "TRUE" goto hellpart7
+if "%hellpart6%" equ "true" goto hellpart7
+if "%hellpart6%" equ "True" goto hellpart7
+goto hellpart6
+
+:hellpart7
+cls
+echo[
+echo You have answered all questions correctly.
+echo Your files are safe!
+echo Type anything to unencrypt your precious files.
+echo[
+set /p "hellpart7=?: "
+if "%hellpart7%" equ "uisdbfuisdfusdui23ho4ob234hb23b4uh23buh423bhol2b34hbiibjecho[echo[echo[echo[echo[qiudisaubdsijaidk" exit
+goto unencrypt1
+
+:unencrypt1
+cls
+echo[
+echo Unencrypting files (1/744)..
+echo Please wait..
+timeout /t 5 /nobreak > NUL
+goto unencrypt2
+
+:unencrypt2
+cls
+echo[
+echo Unencrypting files (122/744)..
+echo Please wait..
+timeout /t 3 /nobreak > NUL
+goto unencrypt3
+
+:unencrypt3
+cls
+echo[
+echo Unencrypting files (456/744)..
+echo Please wait..
+timeout /t 6 /nobreak > NUL
+goto unencrypt4
+
+:unencrypt4
+cls
+echo[
+echo Unencrypting files (663/744)..
+echo Please wait..
+timeout /t 2 /nobreak > NUL
+goto unencrypt5
+
+:unencrypt5
+cls
+echo[
+echo Unencrypting files (743/744)..
+echo Please wait..
+timeout /t 8 /nobreak > NUL
+goto unencrypt6
+
+:unencrypt6
+cls
+echo[
+echo Files successfully unencrypted!
+echo Type anything to exit Stuxnet computer worm.
+echo[
+set /p "unencrypt6=?: "
+if "%unencrypt6%" equ "suhdfsdfuhsdfsduo;ohsdfklhjl3ui4hp23i4h2gb4ujh3vb4u23hu4sdavhkusdfvbjdfvjhfavjhafsdjhk" exit
+goto ending1
+
+:ending1
+cls
+echo  __  __  ______   ____    __  __  ____        ____    __  __  ____    ______   __  __  ____      
+echo /\ \/\ \/\__  _\ /\  _`\ /\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\ /\__  _\ /\ \/\ \/\  _`\    
+echo \ \ \ \ \/_/\ \/ \ \ \L\ \ \ \ \ \ \,\L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \/_/\ \/ \ \ `\\ \ \ \L\_\  
+echo  \ \ \ \ \ \ \ \  \ \ ,  /\ \ \ \ \/_\__ \    \ \  _\L\ \ , ` \ \ \ \ \ \ \ \  \ \ , ` \ \ \L_L  
+echo   \ \ \_/ \ \_\ \__\ \ \\ \\ \ \_\ \/\ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ \`\ \ \ \/, \
+echo    \ `\___/ /\_____\\ \_\ \_\ \_____\ `\____\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
+echo     `\/__/  \/_____/ \/_/\/ /\/_____/\/_____/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/ 
+echo[
+echo                              You've unlocked: Virus Ending (Ending 1)
+timeout /t 8 /nobreak > NUL
+goto ending1continued
+
+:ending1continued
+cls
+echo  __  __  ______   ____    __  __  ____        ____    __  __  ____    ______   __  __  ____      
+echo /\ \/\ \/\__  _\ /\  _`\ /\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\ /\__  _\ /\ \/\ \/\  _`\    
+echo \ \ \ \ \/_/\ \/ \ \ \L\ \ \ \ \ \ \,\L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \/_/\ \/ \ \ `\\ \ \ \L\_\  
+echo  \ \ \ \ \ \ \ \  \ \ ,  /\ \ \ \ \/_\__ \    \ \  _\L\ \ , ` \ \ \ \ \ \ \ \  \ \ , ` \ \ \L_L  
+echo   \ \ \_/ \ \_\ \__\ \ \\ \\ \ \_\ \/\ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ \`\ \ \ \/, \
+echo    \ `\___/ /\_____\\ \_\ \_\ \_____\ `\____\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
+echo     `\/__/  \/_____/ \/_/\/ /\/_____/\/_____/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/ 
+echo[
+echo                              You've unlocked: Virus Ending (Ending 1)
+echo[
+echo                               JesusAI. Created by C0rp Studios.
+echo                         Original JesusAI concept by D4rkC0rp0r4ti0n
+echo                  Storyline, endings and majority of the coding by meowfluff
+echo                           Bug fixes, DLC menu and more by 448v
+echo                   Made possible by people like you! (and hours of coding)
+timeout /t 10 /nobreak > NUL
+goto ending1finish
+
+:ending1finish
+cls
+echo  __  __  ______   ____    __  __  ____        ____    __  __  ____    ______   __  __  ____      
+echo /\ \/\ \/\__  _\ /\  _`\ /\ \/\ \/\  _`\     /\  _`\ /\ \/\ \/\  _`\ /\__  _\ /\ \/\ \/\  _`\    
+echo \ \ \ \ \/_/\ \/ \ \ \L\ \ \ \ \ \ \,\L\_\   \ \ \L\_\ \ `\\ \ \ \/\ \/_/\ \/ \ \ `\\ \ \ \L\_\  
+echo  \ \ \ \ \ \ \ \  \ \ ,  /\ \ \ \ \/_\__ \    \ \  _\L\ \ , ` \ \ \ \ \ \ \ \  \ \ , ` \ \ \L_L  
+echo   \ \ \_/ \ \_\ \__\ \ \\ \\ \ \_\ \/\ \L\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ \`\ \ \ \/, \
+echo    \ `\___/ /\_____\\ \_\ \_\ \_____\ `\____\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
+echo     `\/__/  \/_____/ \/_/\/ /\/_____/\/_____/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/ 
+echo[
+echo                              You've unlocked: Virus Ending (Ending 1)
+echo[
+echo                               JesusAI. Created by C0rp Studios.
+echo                         Original JesusAI concept by D4rkC0rp0r4ti0n
+echo                  Storyline, endings and majority of the coding by meowfluff
+echo                           Bug fixes, DLC menu and more by 448v
+echo                   Made possible by people like you! (and hours of coding)
+echo[
+echo                          You've unlocked 1 of the 3 main endings!
+echo                         Type anything to go back to the main menu.
+echo[
+set /p "ending1finish="
+if "%ending1finish%" equ "nisadfjisdfujhnsdfujhnsdfjurf;ib234lh2342jh34b23jh4b23jh4b234jh2jb4h23hbj4j" exit
+goto ending1give
+
+:ending1give
+cls
+echo .> "%appdata%\JesusAI\ending1.txt"
+goto endingchecker
+
+:obscureunlock
+cls
+echo[
+echo 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 :failsafe
 cls
