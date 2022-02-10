@@ -97,33 +97,29 @@ echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Experience
-echo 2. Close Experience
-echo 3. Open GitHub Repository Page
-echo 4. Credits
-echo 5. Options 
-echo 6. Open Extras Menu
+echo 1. Start Game
+echo 2. Close Game
+echo 3. Credits
+echo 4. Options 
+echo 5. Open Extras Menu
 echo[
-echo Copyright 2021 C0rp Studios
+echo Copyright 2022 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 06/02/2022
+echo Last Update: 10/02/2022
 echo[
-echo This version is currently in beta!
-echo Expect bugs.
+echo JesusAI is currently in beta!
+echo This copy may contain unexpected bugs or glitches.
 echo[
 set /p "menu=Selected option: "
 if "%menu%" equ "X" goto xshop
 if "%menu%" equ "x" goto xshop
-if "%menu%" equ "repent" goto repent
 if "%menu%" equ "password" goto password
-if "%menu%" equ "calibrate" goto calibrate
-if "%menu%" equ "ehumunbobabye2134144" cd %appdata%\JesusAI & echo .> debug.txt & goto debugmenu
+if "%menu%" equ "PASSWORD" goto password
 if "%menu%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menu%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menu%" equ "6" goto dlc
-if "%menu%" equ "5" goto options
-if "%menu%" equ "4" goto credits
-if "%menu%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%menu%" equ "5" goto dlc
+if "%menu%" equ "4" goto options
+if "%menu%" equ "3" goto credits
 if "%menu%" equ "2" exit
 if "%menu%" equ "1" goto jesusai
 goto menu
@@ -142,35 +138,30 @@ echo[
 echo DEBUG OPTIONS ENABLED!
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Experience
-echo 2. Close Experience
-echo 3. Open GitHub Repository Page
-echo 4. Credits
-echo 5. Options
-echo 6. Open Extras Menu
-echo 7. (DEBUG) List Directories
+echo 1. Start Game
+echo 2. Close Game
+echo 3. Credits
+echo 4. Options
+echo 5. Open Extras Menu
+echo 6. (DEBUG) List Directories
 echo[
-echo Copyright 2021 C0rp Studios
+echo Copyright 2022 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 06/02/2022
+echo Last Update: 10/02/2022
 echo[
-echo This version is currently in beta!
-echo Expect bugs.
+echo JesusAI is currently in beta!
+echo This copy may contain unexpected bugs or glitches.
 echo[
 set /p "menudebug=Selected option: "
 if "%menudebug%" equ "X" goto xshop
 if "%menudebug%" equ "x" goto xshop
-if "%menudebug%" equ "repent" goto repent
 if "%menudebug%" equ "password" goto password
-if "%menudebug%" equ "calibrate" goto calibrate
-if "%menudebug%" equ "ehumunbobabye2134144" del "%appdata%\JesusAI\debug.txt" & goto endingchecker
 if "%menudebug%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebug%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudebug%" equ "7" goto directorylist
-if "%menudebug%" equ "6" goto dlc
-if "%menudebug%" equ "5" goto options
-if "%menudebug%" equ "4" goto credits
-if "%menudebug%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%menudebug%" equ "6" goto directorylist
+if "%menudebug%" equ "5" goto dlc
+if "%menudebug%" equ "4" goto options
+if "%menudebug%" equ "3" goto credits
 if "%menudebug%" equ "2" exit
 if "%menudebug%" equ "1" goto jesusai
 goto debugmenu
@@ -188,31 +179,26 @@ echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Experience
-echo 2. Close Experience
-echo 3. Open GitHub Repository Page
-echo 4. Credits
-echo 5. Options
-echo 6. Open Extras Menu
+echo 1. Start Game
+echo 2. Close Game
+echo 3. Credits
+echo 4. Options
+echo 5. Open Extras Menu
 echo[
-echo Copyright 2021 C0rp Studios
+echo Copyright 2022 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 06/02/2022
+echo Last Update: 10/02/2022
 echo[
-echo This version is currently in beta!
-echo Expect bugs.
+echo JesusAI is currently in beta!
+echo This copy may contain unexpected bugs or glitches.
 echo[
 set /p "menudeluxe=Selected option: "
 if "%menudeluxe%" equ "repent" goto repent
-if "%menudeluxe%" equ "password" goto password
-if "%menudeluxe%" equ "calibrate" goto calibrate
-if "%menudeluxe%" equ "ehumunbobabye2134144" cd %appdata%\JesusAI & echo .> debug.txt & goto debugmenudeluxe
 if "%menudeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudeluxe%" equ "6" goto dlc
-if "%menudeluxe%" equ "5" goto options
-if "%menudeluxe%" equ "4" goto credits
-if "%menudeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%menudeluxe%" equ "5" goto dlc
+if "%menudeluxe%" equ "4" goto options
+if "%menudeluxe%" equ "3" goto credits
 if "%menudeluxe%" equ "2" exit
 if "%menudeluxe%" equ "1" goto jesusai
 goto menu
@@ -231,33 +217,27 @@ echo[
 echo DEBUG OPTIONS ENABLED!
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Experience
-echo 2. Close Experience
-echo 3. Open GitHub Repository Page
-echo 4. Credits
-echo 5. Options
-echo 6. Open Extras Menu
-echo 7. (DEBUG) List Directories
+echo 1. Start Game
+echo 2. Close Game
+echo 3. Credits
+echo 4. Options
+echo 5. Open Extras Menu
+echo 6. (DEBUG) List Directories
 echo[
-echo Copyright 2021 C0rp Studios
+echo Copyright 2022 C0rp Studios
 echo Version: v1.0.0-beta2
-echo Last update: 06/02/2022
+echo Last Update: 10/02/2022
 echo[
-echo This version is currently in beta!
-echo Expect bugs.
+echo JesusAI is currently in beta!
+echo This copy may contain unexpected bugs or glitches.
 echo[
 set /p "menudebugdeluxe=Selected option: "
-if "%menudebugdeluxe%" equ "repent" goto repent
-if "%menudebugdeluxe%" equ "password" goto password
-if "%menudebugdeluxe%" equ "calibrate" goto calibrate
-if "%menudebugdeluxe%" equ "ehumunbobabye2134144" del "%appdata%\JesusAI\debug.txt" & goto endingchecker
 if "%menudebugdeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
 if "%menudebugdeluxe%" equ "jesus" start "" https://i.imgur.com/DCtv3fR.gif
-if "%menudebugdeluxe%" equ "7" goto directorylist
-if "%menudebugdeluxe%" equ "6" goto dlc
-if "%menudebugdeluxe%" equ "5" goto options
-if "%menudebugdeluxe%" equ "4" goto credits
-if "%menudebugdeluxe%" equ "3" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%menudebugdeluxe%" equ "6" goto directorylist
+if "%menudebugdeluxe%" equ "5" goto dlc
+if "%menudebugdeluxe%" equ "4" goto options
+if "%menudebugdeluxe%" equ "3" goto credits
 if "%menudebugdeluxe%" equ "2" exit
 if "%menudebugdeluxe%" equ "1" goto jesusai
 goto debugmenudeluxe
@@ -820,6 +800,85 @@ if "%stopnswop%" equ "4" goto tutorialswop
 if "%stopnswop%" equ "5" goto dlc
 goto stopnswop
 
+:tutorialswop
+cls
+echo  ______         __                                ___      
+echo /\__  _\       /\ \__                __          /\_ \     
+echo \/_/\ \/ __  __\ \ ,_\   ___   _ __ /\_\     __  \//\ \    
+echo    \ \ \/\ \/\ \\ \ \/  / __`\/\`'__\/\ \  /'__`\  \ \ \   
+echo     \ \ \ \ \_\ \\ \ \_/\ \L\ \ \ \/ \ \ \/\ \L\.\_ \_\ \_ 
+echo      \ \_\ \____/ \ \__\ \____/\ \_\  \ \_\ \__/.\_\/\____\
+echo       \/_/\/___/   \/__/\/___/  \/_/   \/_/\/__/\/_/\/____/
+echo[
+echo Stop N' Swop is a C0rp Studios feature that lets you receive and send in-game items to other games.
+echo Simply open the menu on both games, one sends, one receives.
+echo Send the item on one game, then receive from the other.
+echo Other game gets the item and vice versa.
+echo More games are getting Stop N' Swop integrated in them as they are developed.
+echo[
+echo Type anything to go back to the Stop N' Swop menu.
+set /p "tutaa=?: "
+if "%tutaa%" equ "sf9sifs09fiw9blackblakclbkackijsfisdjf[09isd09finnsofhihsouih2u3ih42p94ujh" exit
+goto stopnswopchecker
+
+:senditems
+cls
+echo This copy of JesusAI is about to send a Stop N' Swop item (Golden Owl Replica).
+echo Please open the game you want to receive this item on, and open its Stop N' Swop menu.
+echo Then, press anything to send the Stop N' Swop item.
+echo[
+set /p "sending=?: "
+if "%sending%" equ "husdfuhsdfuhsdfuiosdfhusdhfi;uhsdip9fyhfih werht5 34h5i34uh 5u345ilu;45iu;g54i34gb345gbi54" exit
+goto sender
+
+:sender
+cls
+if not exist "%appdata%\StopNSwop\tempGoldOwl.txt" (
+    cd %appdata%\StopNSwop
+    echo .> tempGoldOwl.txt
+    goto displaytext
+)
+if exist "%appdata%\StopNSwop\tempGoldOwl.txt" (
+    goto displaytext
+)
+
+:displaytext
+cls
+color 0c
+echo Sending Golden Owl Replica to Game Client..
+echo Please wait..
+echo (Make sure other game is scanning for items).
+timeout /t 10 /nobreak > NUL
+goto checker 
+
+:checker
+cls
+if not exist "%appdata%\StopNSwop\tempGoldOwl.txt" (
+    goto resend
+)
+if exist "%appdata%\StopNSwop\tempGoldOwl.txt" (
+    del "%appdata%\StopNSwop\tempGoldOwl.txt"
+    goto unsend
+)
+
+:resend
+cls
+echo Item sent successfully!
+echo Type anything to return to the Stop N' Swop menu.
+echo[
+set /p "stopwork="
+if "%stopwork%" equ "sffsdfuhfsfsui;odfhsuifhsdui;fhsdiufsdiu;lfgbsduigbfvsdfisdyhfvbsduyfhgvsdfuyfsgdfuisdygfsduy8fgsdfg" exit
+goto stopnswop
+
+:unsend
+cls
+echo Item was not recieved on the other game.
+echo Please re-setup Stop N' Swop and try again.
+echo Type anything to return to the Stop N' Swop menu.
+set /p "startwork="
+if "%startwork%" equ "shduuhsdfusdifhsduifhsdfiuh23gh423423ui4gh234bkacj" exit
+goto stopnswop
+
 :receiveitems
 cls
 echo This copy of JesusAI is about to receive a Stop N' Swop item.
@@ -904,7 +963,6 @@ echo[
 echo Welcome to the JesusAI Museum!
 echo Here you'll find cut content, story, features, 
 echo as well as behind the scenes stuff from the developers!
-echo (Inspired by The Normal City's Museum)
 echo[
 echo Please select an option from the list below:
 echo 1. Unused / Hidden Content 
@@ -1223,103 +1281,315 @@ set /p "nezzera="
 if "%nezzera%" equ "ubhsdfusdfuihb23ui4g234yi24b23yh4b24h2b34ugvb23y4g234vu23ig4y2g3189audablackblakkbhsdfsdjfsdf" exit
 goto museum
 
-
-
-:repent
-color 0a
-cls
-::Being revamped as of v1.0.0-beta2
-echo Diary Entry: 12/09/1977
-echo I have found a specific set of instructions you can do within the experience to unlock... something.
-echo Type "password" on the main menu screen and input "3813".
-echo Next, once you're back in the menu, type "calibrate".
-echo The screen requires a password of some sort, but I don't know what it is.
-echo Try searching around the program to see what you can find.
-echo[
-echo Type anything to return to the menu.
-echo[
-set /p "repent=?: "
-if "%repent%" equ "sbhdjfvhejhgwv3u2yg423ygvu4v234y" exit
-goto quickflash
-
-:quickflash
-goto code
-
 :password
 cls
-set /p "passwordsecret=Password: "
-if "%passwordsecret%" equ "3813" goto acceptedstep
-goto menu
-
-:acceptedstep
-echo .> %appdata%\JesusAI\exist.txt
-goto accepted
-
-:accepted
-cls
-echo Password accepted
-echo Type anything to go back
-set /p "accepted=?: "
-if "%accepted%" equ "q8y234guiegharlyuwafuaetfv" exit
-goto menu
-
-:calibrate
-cls
-color 4f
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@  @@ ,@ @@ @@@ @@@ @@@   @@  @@  @@@@ @@@ @@@@   @/ @@@ @@@@ #@  *@@  @@@@@    @@@        @  @@@
-echo @@@@   @@%     @@@ @@@@@@    @@  @        @@@ @@   @@@/ @@@ @  @@@@@ *@@  @@  @@(  @@@ @@ @   @  @@@
-echo @@@@ (@ @%     @@@  @@@      @@    @@   @ @@@ @@ @   @/ @@@    @ #@  *@@  @ @@ @@@ @@@   @@@@ @  @@@
-echo @@@@     ,@    @@@    @   @  @@    @@@@@  @@@   @@      @@@ @    #@  *@@  @ @@@    @@@     @@ @  @@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@           @@@           @@           @@@           @@@          *@@           @@@           @@@
-echo @@@@ (@ @@@    @@@  @@@@@    @@   @  @@@  @@@    @@@    @@@ @   @* @ *@@  @        @@@    @  @   @@@
-echo @@@@ (@*@ *#   @@@  ##*@@#*  @@  @@@@*  @ @@@   *****#, @@@ @@@# /#@ *@@  *#####%@ @@@ @@ ###@*  @@@
-echo @@@@ (@    @   @@@ @   @@@@  @@  @@@@@@@  @@@ @@ @@@    @@@    @@@@  *@@  @   @ /@ @@@        @  @@@
-echo @@@@           @@@           @@           @@@           @@@          *@@           @@@           @@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@    @% @@@ @@@  @@       @@   @@@@  @ @@@ @@     @/ @@@ @    #@@ *@@  @   @@@@ @@@ @@@    @  @@@
-echo @@@@           @@@ @@@   @@  @@    @@ @@@ @@@   @@  @   @@@ @    #@  *@@   @  @    @@@ @@@@  @   @@@
-echo @@@@ (@    @@@ @@@  @@ @@ @  @@  @ @@ @@  @@@ @@ @@@    @@@    @@*   *@@  @@@@@@(  @@@ @@    @   @@@
-echo @@@@ (@@@%     @@@  @@    @  @@   @@@@    @@@ @@@       @@@ @@@@ #@  *@@   @   @@@ @@@     @@ @  @@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@           @@@           @@           @@@           @@@          *@@           @@@           @@@
-echo @@@@ (@@ ,@@   @@@    @@@@@  @@    @@     @@@ @@    @   @@@ @@@ @@@@ *@@  @   @@(  @@@           @@@
-echo @@@@    @% @@@ @@@ @      @  @@   @  @@@  @@@ @@ @   @/ @@@ @  @@*   *@@  @@@@@ /@ @@@    @@@@@  @@@
-echo @@@@     ,@@   @@@ @@@@@@ @  @@  @ @@   @ @@@    @  @   @@@      #@@ *@@    @@     @@@ @@ @  @   @@@
-echo @@@@           @@@           @@           @@@           @@@          *@@           @@@           @@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@   @@% @@@ @@@ @   @@@   @@    @@@    @@@   @   @   @@@  @@ @*   *@@   @@@  /@ @@@ @@  @@ @  @@@
-echo @@@@   @@@@@   @@@    @  @@  @@  @ @@   @ @@@ @@@@@@@@/ @@@     @@@@ *@@   @@@@ /@ @@@ @@@ @@ @  @@@
-echo @@@@ / @...    @@@ .      @  @@   @       @@@ ..@  @  * @@@  ..  ..@ *@@  .@  .  @ @@@ ..    @@  @@@
-echo @@@@   @@% @@@ @@@  @@ @@@@  @@  @ @@   @ @@@      @@@/ @@@  @@    @ *@@  @ @@@@@@ @@@    @@@@   @@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-echo[
-echo                                           ENTER PASSPHRASE
-set /p "calibrate=?: "
-if "%calibrate%" equ "manifest" goto stepverify
-exit
-
-:stepverify
-if not exist "%appdata%\JesusAI\exist.txt" (
-    goto menu
+if exist "%appdata%\JesusAI\fakeout.txt" (
+    goto passwordreal
 )
-goto step2
+if not exist "%appdata%\JesusAI\fakeout.txt" (
+    goto endingchecker
+)
 
-:step2
+:passwordreal
 cls
-echo The End 2 %date% %time% >"%appdata%\JesusAI\ending2.txt"
-echo THANK YOU FOR ASSUMING THE POSITION
-echo YOU ARE ON YOUR WAY TO GREAT SUCCESS
+echo  ______      __                              __                                     
+echo /\  _  \    /\ \              __            /\ \                      __            
+echo \ \ \L\ \   \_\ \    ___ ___ /\_\    ___    \ \ \        ___      __ /\_\    ___    
+echo  \ \  __ \  /'_` \ /' __` __`\/\ \ /' _ `\   \ \ \  __  / __`\  /'_ `\/\ \ /' _ `\  
+echo   \ \ \/\ \/\ \L\ \/\ \/\ \/\ \ \ \/\ \/\ \   \ \ \L\ \/\ \L\ \/\ \L\ \ \ \/\ \/\ \ 
+echo    \ \_\ \_\ \___,_\ \_\ \_\ \_\ \_\ \_\ \_\   \ \____/\ \____/\ \____ \ \_\ \_\ \_\
+echo     \/_/\/_/\/__,_ /\/_/\/_/\/_/\/_/\/_/\/_/    \/___/  \/___/  \/___L\ \/_/\/_/\/_/
+echo                                                                   /\____/           
+echo                                                                   \_/__/     
+echo[       
+echo          Welcome to Admin Login Portal. Please input passphrase.
+echo    Or, alternatively, type "forgot" if you have forgotten your password.
+echo        Or, you can type anything else to return to the main menu.
 echo[
-echo PASSCODE ENDING
-echo TYPE ANYTHING TO GO BACK 
-set /p "step2=?: "
-if "%step2%" equ "wqgyyukwuwkygeygwegaey123123" exit
-goto menu
+set /p "pwreal=Passphrase: "
+if "%pwreal%" equ "forgot" goto forgotpassword
+if "%pwreal%" equ "mae105" goto adminmainframe
+goto endingchecker
+
+:forgotpassword
+cls
+echo Grabbing password.
+echo Please wait..
+timeout /t 15 /nobreak > NUL
+goto forgorpassword
+
+:forgorpassword
+cls
+echo Retrieved password.
+echo Origin date: 17/12/1995
+echo Password: "mae105"
+echo[
+echo Type anything to return to login screen.
+set /p "forgor="
+if "%forgor%" equ "suhdf;sodifh234uyh234iloveyoumaeuishdfuilsdhfiuh234" exit
+goto password
+
+:adminmainframe
+cls
+echo                                   ___                                     
+echo  /'\_/`\            __          /'___\                                    
+echo /\      \     __   /\_\    ___ /\ \__/  _ __    __      ___ ___      __   
+echo \ \ \__\ \  /'__`\ \/\ \ /' _ `\ \ ,__\/\`'__\/'__`\  /' __` __`\  /'__`\ 
+echo  \ \ \_/\ \/\ \L\.\_\ \ \/\ \/\ \ \ \_/\ \ \//\ \L\.\_/\ \/\ \/\ \/\  __/ 
+echo   \ \_\\ \_\ \__/.\_\\ \_\ \_\ \_\ \_\  \ \_\\ \__/.\_\ \_\ \_\ \_\ \____\
+echo    \/_/ \/_/\/__/\/_/ \/_/\/_/\/_/\/_/   \/_/ \/__/\/_/\/_/\/_/\/_/\/____/
+echo[
+echo Welcome to the MBG Admin Panel!
+echo Please make a selection from the list below:
+echo 1. IP Management
+echo 2. Data Management
+echo 3. Log Out 
+echo 4. Check Server Connection
+echo[
+echo Selected option: 
+timeout /t 5 /nobreak > NUL
+goto thanksforthat
+
+:thanksforthat
+cls
+echo               .---.
+echo               I[X]I
+echo        _.==._.""""".___n__
+echo       d __ ___.-''-. _____b
+echo       I[__]  /."""".\ _   I
+echo       I     // /""\ \\_)  I
+echo       I     \\ \__/ //    I
+echo       I      \`.__.'/     I
+echo       \=======`-..-'======/
+echo        `-----------------' 
+echo THANK YOU FOR LETTING US GAIN ACCESS.
+echo     YOU HAVE BEEN A GOOD PAWN.
+echo     WE WILL TAKE IT FROM HERE.
+timeout /t 5 /nobreak > NUL
+goto panel1
+
+:panel1
+cls
+echo                                   ___                                     
+echo  /'\_/`\            __          /'___\                                    
+echo /\      \     __   /\_\    ___ /\ \__/  _ __    __      ___ ___      __   
+echo \ \ \__\ \  /'__`\ \/\ \ /' _ `\ \ ,__\/\`'__\/'__`\  /' __` __`\  /'__`\ 
+echo  \ \ \_/\ \/\ \L\.\_\ \ \/\ \/\ \ \ \_/\ \ \//\ \L\.\_/\ \/\ \/\ \/\  __/ 
+echo   \ \_\\ \_\ \__/.\_\\ \_\ \_\ \_\ \_\  \ \_\\ \__/.\_\ \_\ \_\ \_\ \____\
+echo    \/_/ \/_/\/__/\/_/ \/_/\/_/\/_/\/_/   \/_/ \/__/\/_/\/_/\/_/\/_/\/____/
+echo[
+echo Welcome to the MBG Admin Panel!
+echo Please make a selection from the list below:
+echo 1. IP Management
+echo 2. Data Management
+echo 3. Log Out 
+echo 4. Check Server Connection
+echo[
+echo Selected option: 
+timeout /t 3 /nobreak > NUL
+goto panel2
+
+:panel2
+cls
+echo                                   ___                                     
+echo  /'\_/`\            __          /'___\                                    
+echo /\      \     __   /\_\    ___ /\ \__/  _ __    __      ___ ___      __   
+echo \ \ \__\ \  /'__`\ \/\ \ /' _ `\ \ ,__\/\`'__\/'__`\  /' __` __`\  /'__`\ 
+echo  \ \ \_/\ \/\ \L\.\_\ \ \/\ \/\ \ \ \_/\ \ \//\ \L\.\_/\ \/\ \/\ \/\  __/ 
+echo   \ \_\\ \_\ \__/.\_\\ \_\ \_\ \_\ \_\  \ \_\\ \__/.\_\ \_\ \_\ \_\ \____\
+echo    \/_/ \/_/\/__/\/_/ \/_/\/_/\/_/\/_/   \/_/ \/__/\/_/\/_/\/_/\/_/\/____/
+echo[
+echo Welcome to the MBG Admin Panel!
+echo Please make a selection from the list below:
+echo 1. IP Management
+echo 2. Data Management
+echo 3. Log Out 
+echo 4. Check Server Connection
+echo[
+echo Selected option: 4
+timeout /t 3 /nobreak > NUL
+goto panel3
+
+:panel3
+cls
+echo  ____    __    __                                    __      
+echo /\  _`\ /\ \__/\ \                                  /\ \__   
+echo \ \ \L\_\ \ ,_\ \ \___      __   _ __    ___      __\ \ ,_\  
+echo  \ \  _\L\ \ \/\ \  _ `\  /'__`\/\`'__\/' _ `\  /'__`\ \ \/  
+echo   \ \ \L\ \ \ \_\ \ \ \ \/\  __/\ \ \/ /\ \/\ \/\  __/\ \ \_ 
+echo    \ \____/\ \__\\ \_\ \_\ \____\\ \_\ \ \_\ \_\ \____\\ \__\
+echo     \/___/  \/__/ \/_/\/_/\/____/ \/_/  \/_/\/_/\/____/ \/__/
+echo[
+echo          Your ethernet connection to our servers is:
+echo                        2ms (Great)
+echo[
+timeout /t 5 /nobreak > NUL
+goto panel4
+
+:panel4
+cls
+echo                                   ___                                     
+echo  /'\_/`\            __          /'___\                                    
+echo /\      \     __   /\_\    ___ /\ \__/  _ __    __      ___ ___      __   
+echo \ \ \__\ \  /'__`\ \/\ \ /' _ `\ \ ,__\/\`'__\/'__`\  /' __` __`\  /'__`\ 
+echo  \ \ \_/\ \/\ \L\.\_\ \ \/\ \/\ \ \ \_/\ \ \//\ \L\.\_/\ \/\ \/\ \/\  __/ 
+echo   \ \_\\ \_\ \__/.\_\\ \_\ \_\ \_\ \_\  \ \_\\ \__/.\_\ \_\ \_\ \_\ \____\
+echo    \/_/ \/_/\/__/\/_/ \/_/\/_/\/_/\/_/   \/_/ \/__/\/_/\/_/\/_/\/_/\/____/
+echo[
+echo Welcome to the MBG Admin Panel!
+echo Please make a selection from the list below:
+echo 1. IP Management
+echo 2. Data Management
+echo 3. Log Out 
+echo 4. Check Server Connection
+echo[
+echo Selected option: 2
+timeout /t 3 /nobreak > NUL
+goto panel5
+
+:panel5
+cls
+echo   __            __                    __   ___    ___      
+echo  /\ \          /\ \__                /\ \ /\_ \  /\_ \     
+echo  \_\ \     __  \ \ ,_\    __         \_\ \\//\ \ \//\ \    
+echo  /'_` \  /'__`\ \ \ \/  /'__`\       /'_` \ \ \ \  \ \ \   
+echo /\ \L\ \/\ \L\.\_\ \ \_/\ \L\.\_  __/\ \L\ \ \_\ \_ \_\ \_ 
+echo \ \___,_\ \__/.\_\\ \__\ \__/.\_\/\_\ \___,_\/\____\/\____\
+echo  \/__,_ /\/__/\/_/ \/__/\/__/\/_/\/_/\/__,_ /\/____/\/____/
+echo[
+echo Welcome to data.dll, Data Management Program.
+echo[
+echo Select an option:
+echo 1. Reverse Data
+echo 2. Insert Drive
+echo 3. Trade Data
+echo 4. Go Back to Mainframe
+echo[
+echo Selected option:
+timeout /t 3 /nobreak > NUL
+goto panel6
+
+:panel6
+cls
+echo   __            __                    __   ___    ___      
+echo  /\ \          /\ \__                /\ \ /\_ \  /\_ \     
+echo  \_\ \     __  \ \ ,_\    __         \_\ \\//\ \ \//\ \    
+echo  /'_` \  /'__`\ \ \ \/  /'__`\       /'_` \ \ \ \  \ \ \   
+echo /\ \L\ \/\ \L\.\_\ \ \_/\ \L\.\_  __/\ \L\ \ \_\ \_ \_\ \_ 
+echo \ \___,_\ \__/.\_\\ \__\ \__/.\_\/\_\ \___,_\/\____\/\____\
+echo  \/__,_ /\/__/\/_/ \/__/\/__/\/_/\/_/\/__,_ /\/____/\/____/
+echo[
+echo Welcome to data.dll, Data Management Program.
+echo[
+echo Select an option:
+echo 1. Reverse Data
+echo 2. Insert Drive
+echo 3. Trade Data
+echo 4. Go Back to Mainframe
+echo[
+echo Selected option: 2
+timeout /t 3 /nobreak > NUL
+goto panel7
+
+:panel7
+cls
+echo Inserting Drive G into Slot 2..
+echo Please wait..
+echo[
+echo               .---.
+echo               I[X]I
+echo        _.==._.""""".___n__
+echo       d __ ___.-''-. _____b
+echo       I[__]  /."""".\ _   I
+echo       I     // /""\ \\_)  I
+echo       I     \\ \__/ //    I
+echo       I      \`.__.'/     I
+echo       \=======`-..-'======/
+echo        `-----------------' 
+echo   THANKS FOR YOUR HELP, SUCKER!
+echo       SEE YOU LATER. HEHE!
+timeout /t 5 /nobreak > NUL
+goto panel8
+
+:panel8
+cls
+timeout /t 6 /nobreak > NUL
+goto panel9
+
+:panel9
+cls
+echo Drive G inserted into Slot 2.
+echo Type anything to return to the Main Menu.
+echo[
+set /p "panel9="
+if "%panel9%" equ "uhsdfusdfh9u23h4923u4h239u4h294uh234923p984u24pu82349283294823498h24p982h4p92384h239p84h234" goto exit
+goto ending2
+
+:ending2
+cls
+color 0a
+cls
+echo  ____    ______  ______  ______      ____    __  __  ____    ______   __  __  ____      
+echo /\  _`\ /\  _  \/\__  _\/\  _  \    /\  _`\ /\ \/\ \/\  _`\ /\__  _\ /\ \/\ \/\  _`\    
+echo \ \ \/\ \ \ \L\ \/_/\ \/\ \ \L\ \   \ \ \L\_\ \ `\\ \ \ \/\ \/_/\ \/ \ \ `\\ \ \ \L\_\  
+echo  \ \ \ \ \ \  __ \ \ \ \ \ \  __ \   \ \  _\L\ \ , ` \ \ \ \ \ \ \ \  \ \ , ` \ \ \L_L  
+echo   \ \ \_\ \ \ \/\ \ \ \ \ \ \ \/\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ \`\ \ \ \/, \
+echo    \ \____/\ \_\ \_\ \ \_\ \ \_\ \_\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
+echo     \/___/  \/_/\/_/  \/_/  \/_/\/_/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/        
+echo[
+echo                    You've unlocked: Data Ending (Ending 2)
+timeout /t 8 /nobreak > NUL
+goto ending2continued
+
+:ending2continued
+cls
+echo  ____    ______  ______  ______      ____    __  __  ____    ______   __  __  ____      
+echo /\  _`\ /\  _  \/\__  _\/\  _  \    /\  _`\ /\ \/\ \/\  _`\ /\__  _\ /\ \/\ \/\  _`\    
+echo \ \ \/\ \ \ \L\ \/_/\ \/\ \ \L\ \   \ \ \L\_\ \ `\\ \ \ \/\ \/_/\ \/ \ \ `\\ \ \ \L\_\  
+echo  \ \ \ \ \ \  __ \ \ \ \ \ \  __ \   \ \  _\L\ \ , ` \ \ \ \ \ \ \ \  \ \ , ` \ \ \L_L  
+echo   \ \ \_\ \ \ \/\ \ \ \ \ \ \ \/\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ \`\ \ \ \/, \
+echo    \ \____/\ \_\ \_\ \ \_\ \ \_\ \_\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
+echo     \/___/  \/_/\/_/  \/_/  \/_/\/_/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/        
+echo[
+echo                    You've unlocked: Data Ending (Ending 2)
+echo[
+echo                         JesusAI. Created by C0rp Studios.
+echo                     Original JesusAI concept by D4rkC0rp0r4ti0n
+echo                Storyline, endings and majority of the coding by meowfluff
+echo                        Bug fixes, DLC menu and more by 448v
+echo                Made possible by people like you! (and hours of coding)
+timeout /t 10 /nobreak > NUL
+goto ending2finish
+
+:ending2finish
+cls
+echo  ____    ______  ______  ______      ____    __  __  ____    ______   __  __  ____      
+echo /\  _`\ /\  _  \/\__  _\/\  _  \    /\  _`\ /\ \/\ \/\  _`\ /\__  _\ /\ \/\ \/\  _`\    
+echo \ \ \/\ \ \ \L\ \/_/\ \/\ \ \L\ \   \ \ \L\_\ \ `\\ \ \ \/\ \/_/\ \/ \ \ `\\ \ \ \L\_\  
+echo  \ \ \ \ \ \  __ \ \ \ \ \ \  __ \   \ \  _\L\ \ , ` \ \ \ \ \ \ \ \  \ \ , ` \ \ \L_L  
+echo   \ \ \_\ \ \ \/\ \ \ \ \ \ \ \/\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ \`\ \ \ \/, \
+echo    \ \____/\ \_\ \_\ \ \_\ \ \_\ \_\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
+echo     \/___/  \/_/\/_/  \/_/  \/_/\/_/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/        
+echo[
+echo                    You've unlocked: Data Ending (Ending 2)
+echo[
+echo                         JesusAI. Created by C0rp Studios.
+echo                     Original JesusAI concept by D4rkC0rp0r4ti0n
+echo                Storyline, endings and majority of the coding by meowfluff
+echo                        Bug fixes, DLC menu and more by 448v
+echo                Made possible by people like you! (and hours of coding)
+echo[
+echo                       You've unlocked 2 of the 3 main endings!
+echo                      Type anything to go back to the main menu.
+echo[
+set /p "ending2finish="
+if "%ending2finish%" equ "nisadfjisdfujhnsdfujhnsdfjurf;ib234lh2342jh34b23jh4b23jh4b234jh2jb4h23hbj4j" exit
+goto ending2give
+
+:ending2give
+cls
+echo .> "%appdata%\JesusAI\ending2.txt"
+goto endingchecker
 
 :directorylist
 cls
@@ -1385,6 +1655,7 @@ if "%directories%" equ "1" goto menu
 goto directorylist
 
 :credits
+color 0c
 cls
 echo                       __      __             
 echo                      /\ \  __/\ \__          
@@ -1392,20 +1663,149 @@ echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____
 echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
 echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
-echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/                                                                                                     
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo JesusAI - Created by C0rp Studios
-echo Programming by meowfluff, 448v and D4rkC0rp0r4ti0n
-echo Entirely written via Batch in Virtual Studio Code
-echo Project concept established in Late 2019 as an inside joke between friends
-echo Project fully started in December 2021
-echo Repository hosted on GitHub
-echo Thanks StackOverflow (for helping fix so many things)
+echo       JesusAI - A Game by C0rp Studios
+timeout /t 3 /nobreak > NUL
+goto credits1
+
+:credits1
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo Type anything to go back.
-set /p "credits=?: "
-if "%credits%" equ "bhfbhdfohbob324ohsdfsdf234234bhshui" exit
-goto endingchecker
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+timeout /t 3 /nobreak > NUL
+goto credits2
+
+:credits2
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
+echo[
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+echo        Full game coded by meowfluff
+timeout /t 3 /nobreak > NUL
+goto credits3
+
+:credits3
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
+echo[
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+echo        Full game coded by meowfluff
+echo    Bug fixes, DLC menu and more by 448v
+timeout /t 3 /nobreak > NUL
+goto credits4
+
+:credits4
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
+echo[
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+echo        Full game coded by meowfluff
+echo    Bug fixes, DLC menu and more by 448v
+echo         Project hosted on GitHub
+timeout /t 3 /nobreak > NUL
+goto credits5
+
+:credits5
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
+echo[
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+echo        Full game coded by meowfluff
+echo    Bug fixes, DLC menu and more by 448v
+echo         Project hosted on GitHub
+echo  Hundreds of fixes by StackOverflow answers
+timeout /t 3 /nobreak > NUL
+goto credits6
+
+:credits6
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
+echo[
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+echo        Full game coded by meowfluff
+echo    Bug fixes, DLC menu and more by 448v
+echo         Project hosted on GitHub
+echo  Hundreds of fixes by StackOverflow answers
+echo      You, for playing our project! <3
+timeout /t 6 /nobreak > NUL
+goto credits7
+
+:credits7
+cls
+echo                       __      __             
+echo                      /\ \  __/\ \__          
+echo   ___   _ __    __   \_\ \/\_\ \ ,_\   ____  
+echo  /'___\/\`'__\/'__`\ /'_` \/\ \ \ \/  /',__\ 
+echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
+echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
+echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
+echo[
+echo       JesusAI - A Game by C0rp Studios
+echo     Prototype created by D4rkC0rp0r4ti0n
+echo        Full game coded by meowfluff
+echo    Bug fixes, DLC menu and more by 448v
+echo         Project hosted on GitHub
+echo  Hundreds of fixes by StackOverflow answers
+echo      You, for playing our project! <3
+echo[
+echo Please select an option:
+echo 1. Open meowfluff's GitHub
+echo 2. Open D4rkC0rp0r4ti0n's GitHub
+echo 3. Open 448v's GitHub
+echo 4. Open JesusAI's GitHub Repository Page
+echo 5. Go Back to Main Menu
+echo[
+set /p "credits7=Selected option: "
+if "%credits7%" equ "1" start "" "https://github.com/meowfluff"
+if "%credits7%" equ "2" start "" "https://github.com/D4rkC0rp0r4ti0n"
+if "%credits7%" equ "3" start "" "https://github.com/448v"
+if "%credits7%" equ "4" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%credits7%" equ "5" goto endingchecker
+goto credits7
 
 :oldmenu
 color 0a
@@ -1589,12 +1989,47 @@ echo                      '-=====-'
 echo             YOUR JUDGEMENT HAS ALMOST
 echo                      ARRIVED.
 echo[
-echo               ENTER "REPENT" ON THE
-echo               MENU SCREEN TO REPENT.
+echo            YOU MUST REPENT, MY CHILD.
 timeout /t 5 /nobreak > NUL
 goto endingchecker
 
 :jesusai
+cls
+if exist "%appdata%\JesusAI\ending2.txt" (
+    goto mainjesusai
+)
+if not exist "%appdata%\JesusAI\allowending2.txt" (
+    goto mainjesusai
+)
+if not exist "%appdata%\JesusAI\ending1.txt" (
+    goto mainjesusai
+)
+if exist "%appdata%\JesusAI\ending1.txt" if exist "%appdata%\JesusAI\allowending2.txt" (
+    goto fakeout
+)
+
+:fakeout
+cls
+color 0c
+echo               .---.
+echo               I[X]I
+echo        _.==._.""""".___n__
+echo       d __ ___.-''-. _____b
+echo       I[__]  /."""".\ _   I
+echo       I     // /""\ \\_)  I
+echo       I     \\ \__/ //    I
+echo       I      \`.__.'/     I
+echo       \=======`-..-'======/
+echo        `-----------------' 
+echo[
+echo I HAVE CHOSEN YOU, %user%, FOR A PURPOSE.
+echo INPUT "PASSWORD" ON THE MAIN MENU SCREEN.
+echo YOU MUST COMPLETE THIS IN DUE TIME.
+timeout /t 5 /nobreak > NUL
+echo .> "%appdata%\JesusAI\fakeout.txt"
+goto endingchecker
+
+:mainjesusai
 cls 
 color 0b
 echo                            ,($$ @  @(/  / $ ./.                                
@@ -1636,10 +2071,13 @@ echo             (@          @$    @                 .@        $@,   ,$
 echo               .@       ,, $@$.($                @    .$@(  $,  .@,             
 echo                 //    .(      ,$@@@$$/,.     ,($@@@$,      @  $@.              
 echo                  @  .@.                                  @. .@@                
-echo                 ,/$.                                    $  @, @                                   
-echo 1. (your text) Ask Jesus a question.
-echo 2. Beg for forgiveness.
-echo 3. Escape.
+echo                 ,/$.                                    $  @, @    
+echo[
+echo Choose an option from the list below:             
+echo[                  
+echo 1. Beg for forgiveness.
+echo 2. Escape.
+echo Or, ask a question from the list below:
 echo[
 echo CURRENT PROMPTS TO ASK JESUS
 echo "Hello"
@@ -1648,8 +2086,8 @@ echo "What is JesusAI?"
 echo "Let's talk!"
 echo[
 set /p "jesusai=Ask Jesus: "
-if "%jesusai%" equ "2" goto judgement
-if "%jesusai%" equ "3" goto payloadtoerror
+if "%jesusai%" equ "1" goto judgement
+if "%jesusai%" equ "2" goto payloadtoerror
 if "%jesusai%" equ "Let's talk!" goto jesusconversationpage1
 if "%jesusai%" equ "Let's talk" goto jesusconversationpage1
 if "%jesusai%" equ "let's talk!" goto jesusconversationpage1
@@ -2669,8 +3107,6 @@ if "%hell%" equ "no" exit
 if "%hell%" equ "No" exit
 goto hell
 
-ipconfig | find /i "ipv4"
-
 :hellsed
 cls
 color 0c
@@ -2862,7 +3298,7 @@ goto unencrypt2
 :unencrypt2
 cls
 echo[
-echo Unencrypting files (122/744)..
+echo Unencrypting files (106/744)..
 echo Please wait..
 timeout /t 3 /nobreak > NUL
 goto unencrypt3
@@ -2870,7 +3306,7 @@ goto unencrypt3
 :unencrypt3
 cls
 echo[
-echo Unencrypting files (456/744)..
+echo Unencrypting files (350/744)..
 echo Please wait..
 timeout /t 6 /nobreak > NUL
 goto unencrypt4
@@ -2878,7 +3314,7 @@ goto unencrypt4
 :unencrypt4
 cls
 echo[
-echo Unencrypting files (663/744)..
+echo Unencrypting files (563/744)..
 echo Please wait..
 timeout /t 2 /nobreak > NUL
 goto unencrypt5
@@ -2963,27 +3399,10 @@ goto ending1give
 :ending1give
 cls
 echo .> "%appdata%\JesusAI\ending1.txt"
+if not exist "%appdata%\JesusAI\ending3.txt" (
+    echo .> "%appdata%\JesusAI\allowending2.txt"
+)
 goto endingchecker
-
-:obscureunlock
-cls
-echo[
-echo 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 :failsafe
 cls
