@@ -1,12 +1,9 @@
-::Prototype build created by D4rkC0rp0r4ti0n
-::Alpha branch coded and maintained by meowfluff on GitHub
-::Alternate fork by 448v on GitHub
+::Created by skeebly studios
 ::Built for Windows Command Prompt & Windows Powershell.
-::Untested on other operating systems
-::Found an issue? Report it at our repository: https://github.com/JesusAIexperience/JesusAI
+::https://github.com/enfier/JesusAI
 
 @echo off
-title JesusAI (v1.0.0-beta2)
+title JesusAI 1.0.3.1
 
 ::Runs on startup
 ::Checks to see if the folder containing save data has been previously created
@@ -73,7 +70,7 @@ echo The game has detected this is your first time running JesusAI.
 echo Please read our terms and conditions.
 echo[
 echo This game is not designed to offend in any way.
-echo All of JesusAI was created by three devs, D4rkC0rp0r4ti0n, meowfluff and 448v.
+echo All of JesusAI was created by skeebly studios, owned by ritz (@grocerybagmp3).
 echo This game in no way means to bash religion or its figures.
 echo[
 echo Please type anything to agree to these terms.
@@ -97,18 +94,14 @@ echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Game
-echo 2. Close Game
+echo 1. Enter JesusAI
+echo 2. Close JesusAI
 echo 3. Credits
 echo 4. Options 
 echo 5. Open Extras Menu
 echo[
-echo Copyright 2022 C0rp Studios
-echo Version: v1.0.0-beta2
-echo Last Update: 10/02/2022
-echo[
-echo JesusAI is currently in beta!
-echo This copy may contain unexpected bugs or glitches.
+echo a skeebly studios game
+echo last updated: 10/06/2022
 echo[
 set /p "menu=Selected option: "
 if "%menu%" equ "X" goto xshop
@@ -138,19 +131,15 @@ echo[
 echo DEBUG OPTIONS ENABLED!
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Game
-echo 2. Close Game
+echo 1. Enter JesusAI
+echo 2. Close JesusAI
 echo 3. Credits
 echo 4. Options
 echo 5. Open Extras Menu
 echo 6. (DEBUG) List Directories
 echo[
-echo Copyright 2022 C0rp Studios
-echo Version: v1.0.0-beta2
-echo Last Update: 10/02/2022
-echo[
-echo JesusAI is currently in beta!
-echo This copy may contain unexpected bugs or glitches.
+echo a skeebly studios game
+echo last updated: 10/06/2022
 echo[
 set /p "menudebug=Selected option: "
 if "%menudebug%" equ "X" goto xshop
@@ -179,18 +168,14 @@ echo    \/___/  \/____/\/___/  \/___/  \/___/   \/_/\/_/\/_____/
 echo[
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Game
-echo 2. Close Game
+echo 1. Enter JesusAI
+echo 2. Close JesusAI
 echo 3. Credits
 echo 4. Options
 echo 5. Open Extras Menu
 echo[
-echo Copyright 2022 C0rp Studios
-echo Version: v1.0.0-beta2
-echo Last Update: 10/02/2022
-echo[
-echo JesusAI is currently in beta!
-echo This copy may contain unexpected bugs or glitches.
+echo a skeebly studios game
+echo last updated: 10/06/2022
 echo[
 set /p "menudeluxe=Selected option: "
 if "%menudeluxe%" equ "repent" goto repent
@@ -217,19 +202,15 @@ echo[
 echo DEBUG OPTIONS ENABLED!
 echo Welcome to JesusAI!
 echo Please select an option.
-echo 1. Start Game
-echo 2. Close Game
+echo 1. Enter JesusAI
+echo 2. Close JesusAI
 echo 3. Credits
 echo 4. Options
 echo 5. Open Extras Menu
 echo 6. (DEBUG) List Directories
 echo[
-echo Copyright 2022 C0rp Studios
-echo Version: v1.0.0-beta2
-echo Last Update: 10/02/2022
-echo[
-echo JesusAI is currently in beta!
-echo This copy may contain unexpected bugs or glitches.
+echo a skeebly studios game
+echo last updated: 10/06/2022
 echo[
 set /p "menudebugdeluxe=Selected option: "
 if "%menudebugdeluxe%" equ "fuck you" start "" "https://i.imgur.com/SEhpuRg.jpg"
@@ -515,7 +496,7 @@ echo 2. Play JesusAI Prototype
 echo Play the original incomplete prototype of JesusAI!
 echo[
 echo 3. Stop N' Swop
-echo Exchange items and other content with other C0rp Studios games
+echo Exchange items and other content with other skeebly studios games
 echo[
 echo 4. JesusAI Tech Demos
 echo A bunch of tech demos to test JesusAI features.
@@ -554,7 +535,7 @@ echo[
 echo 2. [LOCKED]
 echo[
 echo 3. Stop N' Swop
-echo Exchange items and other content with other C0rp Studios games
+echo Exchange items and other content with other skeebly studios games
 echo[
 echo 4. [LOCKED]
 echo[
@@ -595,8 +576,7 @@ echo 2. Website Loader Test
 echo 3. Website Loader Test 2
 echo 4. Go Back to Extras Menu
 echo[
-echo Copyright 2022 C0rp Industries
-echo Created by D4rkC0rp0r4ti0n and meowfluff
+echo created by skeebly studios
 echo[
 set /p "menu=Demo selected: "
 if "%dmenu%" equ "1" goto inputtest
@@ -672,13 +652,13 @@ set /p "strMenu=Enter desired URL number: "
 if "%strMenu%" equ "1" start "" "https://www.stackoverflow.com"
 if "%strMenu%" equ "2" start "" "https://www.Google.com"
 if "%strMenu%" equ "3" start "" "https://www.youtube.com"
-if "%strMenu%" equ "4" start "" "https://github.com/JesusAIexperience/JesusAI"
+if "%strMenu%" equ "4" start "" "https://github.com/enfier/JesusAI"
 if "%strMenu%" equ "back" goto dmomenu
 goto websitetest2
 
 :cartridges
 cls
-title JesusAI (v1.0.0-beta2)
+title JesusAI 1.0.3.1
 color 0c
 echo                       __                   __                           
 echo                      /\ \__         __    /\ \                          
@@ -760,10 +740,11 @@ echo     \/_____/\/__/\/___/  \ \ \/      \/_/\/_/         \/_____/\/__//__/   \
 echo                           \ \_\                                                    \ \_\ 
 echo                            \/_/                                                     \/_/ 
 echo[
-echo                               Welcome to the Stop N' Swop menu.
+echo Welcome to the Stop N' Swop menu.
 echo[
-echo You are able to exchange items here with other C0rp Studios games
-echo to grant other secrets, content, items, endings and more.
+echo You can trade items with other compatible skeebly studios games here.
+echo Items are able to give you perks in both games.
+echo Select if you want to receieve or send items below.
 echo[
 echo UNLOCKED STOP N' SWOP ITEMS:
 if exist "%appdata%\StopNSwop\JesusIceKey.txt" (
@@ -772,24 +753,12 @@ if exist "%appdata%\StopNSwop\JesusIceKey.txt" (
 if not exist "%appdata%\StopNSwop\JesusIceKey.txt" (
     echo Ice Key [LOCKED]
 )
-if exist "%appdata%\StopNSwop\JesusUSB.txt" (
-    echo USB Drive [UNLOCKED]
-)
-if not exist "%appdata%\StopNSwop\JesusUSB.txt" (
-    echo USB Drive [LOCKED]
-)
-if exist "%appdata%\StopNSwop\JesusCar.txt" (
-    echo Toy Car [UNLOCKED]
-)
-if not exist "%appdata%\StopNSwop\JesusCar.txt" (
-    echo Toy Car [LOCKED]
-)
 echo[
 echo Select an option from the list below:
-echo 1. Send Stop N' Swop Items
-echo 2. Receive Stop N' Swop Items
-echo 3. Refresh Stop N' Swop Items
-echo 4. Tutorial on Stop N' Swop
+echo 1. Send Items
+echo 2. Receive Items
+echo 3. Refresh Items
+echo 4. Tutorial
 echo 5. Go Back to Extras Menu
 echo[
 set /p "stopnswop=Selected option: "
@@ -810,7 +779,7 @@ echo     \ \ \ \ \_\ \\ \ \_/\ \L\ \ \ \/ \ \ \/\ \L\.\_ \_\ \_
 echo      \ \_\ \____/ \ \__\ \____/\ \_\  \ \_\ \__/.\_\/\____\
 echo       \/_/\/___/   \/__/\/___/  \/_/   \/_/\/__/\/_/\/____/
 echo[
-echo Stop N' Swop is a C0rp Studios feature that lets you receive and send in-game items to other games.
+echo Stop N' Swop is a skeebly studios feature that lets you receive and send in-game items to other games.
 echo Simply open the menu on both games, one sends, one receives.
 echo Send the item on one game, then receive from the other.
 echo Other game gets the item and vice versa.
@@ -913,7 +882,7 @@ if not exist "%appdata%\StopNSwop\tempIceKey.txt" (
 cls
 color 0c
 echo Stop N' Swop item recieved: Ice Key
-echo "A cold, mysterious key found in GAMENAME. What does it unlock?"
+echo "A frosty key found in sentaku. What mysteries does it hold? "
 echo Type anything to go back to the Stop N' Swop menu.
 echo[
 set /p "icekey="
@@ -1537,7 +1506,7 @@ echo   \ \ \_\ \ \ \/\ \ \ \ \ \ \ \/\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ 
 echo    \ \____/\ \_\ \_\ \ \_\ \ \_\ \_\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
 echo     \/___/  \/_/\/_/  \/_/  \/_/\/_/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/        
 echo[
-echo                    You've unlocked: Data Ending (Ending 2)
+echo                       You've unlocked: Data Ending (Ending 2)
 timeout /t 8 /nobreak > NUL
 goto ending2continued
 
@@ -1551,11 +1520,11 @@ echo   \ \ \_\ \ \ \/\ \ \ \ \ \ \ \/\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ 
 echo    \ \____/\ \_\ \_\ \ \_\ \ \_\ \_\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
 echo     \/___/  \/_/\/_/  \/_/  \/_/\/_/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/        
 echo[
-echo                    You've unlocked: Data Ending (Ending 2)
+echo                        You've unlocked: Data Ending (Ending 2)
 echo[
-echo                         JesusAI. Created by C0rp Studios.
-echo                     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo                Storyline, endings and majority of the coding by meowfluff
+echo                         JesusAI. Created by skeebly studios.
+echo                      Original JesusAI concept by D4rkC0rp0r4ti0n
+echo                Storyline, endings and majority of the coding by ritz
 echo                        Bug fixes, DLC menu and more by 448v
 echo                Made possible by people like you! (and hours of coding)
 timeout /t 10 /nobreak > NUL
@@ -1571,11 +1540,11 @@ echo   \ \ \_\ \ \ \/\ \ \ \ \ \ \ \/\ \   \ \ \L\ \ \ \`\ \ \ \_\ \ \_\ \__\ \ 
 echo    \ \____/\ \_\ \_\ \ \_\ \ \_\ \_\   \ \____/\ \_\ \_\ \____/ /\_____\\ \_\ \_\ \____/
 echo     \/___/  \/_/\/_/  \/_/  \/_/\/_/    \/___/  \/_/\/_/\/___/  \/_____/ \/_/\/_/\/___/        
 echo[
-echo                    You've unlocked: Data Ending (Ending 2)
+echo                        You've unlocked: Data Ending (Ending 2)
 echo[
-echo                         JesusAI. Created by C0rp Studios.
-echo                     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo                Storyline, endings and majority of the coding by meowfluff
+echo                          JesusAI. Created by skeebly studios.
+echo                      Original JesusAI concept by D4rkC0rp0r4ti0n
+echo                Storyline, endings and majority of the coding by ritz
 echo                        Bug fixes, DLC menu and more by 448v
 echo                Made possible by people like you! (and hours of coding)
 echo[
@@ -1665,7 +1634,7 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 timeout /t 3 /nobreak > NUL
 goto credits1
 
@@ -1679,7 +1648,7 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
 timeout /t 3 /nobreak > NUL
 goto credits2
@@ -1694,9 +1663,9 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
-echo        Full game coded by meowfluff
+echo           Full game coded by ritz
 timeout /t 3 /nobreak > NUL
 goto credits3
 
@@ -1710,9 +1679,9 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
-echo        Full game coded by meowfluff
+echo           Full game coded by ritz
 echo    Bug fixes, DLC menu and more by 448v
 timeout /t 3 /nobreak > NUL
 goto credits4
@@ -1727,9 +1696,9 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
-echo        Full game coded by meowfluff
+echo           Full game coded by ritz
 echo    Bug fixes, DLC menu and more by 448v
 echo         Project hosted on GitHub
 timeout /t 3 /nobreak > NUL
@@ -1745,9 +1714,9 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
-echo        Full game coded by meowfluff
+echo           Full game coded by ritz
 echo    Bug fixes, DLC menu and more by 448v
 echo         Project hosted on GitHub
 echo  Hundreds of fixes by StackOverflow answers
@@ -1764,9 +1733,9 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
-echo        Full game coded by meowfluff
+echo           Full game coded by ritz
 echo    Bug fixes, DLC menu and more by 448v
 echo         Project hosted on GitHub
 echo  Hundreds of fixes by StackOverflow answers
@@ -1784,27 +1753,23 @@ echo /\ \__/\ \ \//\  __//\ \L\ \ \ \ \ \_/\__, `\
 echo \ \____\\ \_\\ \____\ \___,_\ \_\ \__\/\____/
 echo  \/____/ \/_/ \/____/\/__,_ /\/_/\/__/\/___/ 
 echo[
-echo       JesusAI - A Game by C0rp Studios
+echo     JesusAI - A Game by skeebly studios
 echo     Prototype created by D4rkC0rp0r4ti0n
-echo        Full game coded by meowfluff
+echo           Full game coded by ritz
 echo    Bug fixes, DLC menu and more by 448v
 echo         Project hosted on GitHub
 echo  Hundreds of fixes by StackOverflow answers
 echo      You, for playing our project! <3
 echo[
 echo Please select an option:
-echo 1. Open meowfluff's GitHub
-echo 2. Open D4rkC0rp0r4ti0n's GitHub
-echo 3. Open 448v's GitHub
-echo 4. Open JesusAI's GitHub Repository Page
-echo 5. Go Back to Main Menu
+echo 1. Open ritz's GitHub
+echo 2. Open JesusAI's GitHub Repository Page
+echo 3. Go Back to Main Menu
 echo[
 set /p "credits7=Selected option: "
-if "%credits7%" equ "1" start "" "https://github.com/meowfluff"
-if "%credits7%" equ "2" start "" "https://github.com/D4rkC0rp0r4ti0n"
-if "%credits7%" equ "3" start "" "https://github.com/448v"
-if "%credits7%" equ "4" start "" "https://github.com/JesusAIexperience/JesusAI"
-if "%credits7%" equ "5" goto endingchecker
+if "%credits7%" equ "1" start "" "https://github.com/enfier"
+if "%credits7%" equ "2" start "" "https://github.com/enfier/JesusAI"
+if "%credits7%" equ "3" goto endingchecker
 goto credits7
 
 :oldmenu
@@ -1813,9 +1778,7 @@ cls
 echo Jesus A.I
 echo The first ever prototype
 echo Slightly optimized and modified to work properly
-echo Originally by D4rkC0rp0r4ti0n
-echo Recoded and patched in by meowfluff
-echo Small fixes by 448v
+echo Created and remastered by skeebly studios
 echo[
 echo Please pick an option
 echo 1. Start Experience
@@ -2022,7 +1985,7 @@ echo       I      \`.__.'/     I
 echo       \=======`-..-'======/
 echo        `-----------------' 
 echo[
-echo I HAVE CHOSEN YOU, %user%, FOR A PURPOSE.
+echo I HAVE CHOSEN YOU, %username%, FOR A PURPOSE.
 echo INPUT "PASSWORD" ON THE MAIN MENU SCREEN.
 echo YOU MUST COMPLETE THIS IN DUE TIME.
 timeout /t 5 /nobreak > NUL
@@ -2167,7 +2130,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo [JesusAI] IS THE CREATION OF THREE [HOT, SINGLE]
-echo DEVELOPERS, [meowfluff], [448v] AND [D4rkC0rp0r4ti0n].
+echo DEVELOPERS, [ritz], [448v] AND [D4rkC0rp0r4ti0n].
 echo THE MAIN GOAL WAS TO CREATE AN [ATTRACTIVE] VERISON
 echo OF [Jesus Christ], FULLY EXECUTABLE FROM YOUR [Personal Computer]!
 echo ANYTHING ELSE YOU'D LIKE TO ASK, [Markiplier]?
@@ -2436,7 +2399,7 @@ echo           .-"`   `"`'`   `"-.
 echo         .'                   '. 
 echo[
 echo I WAS CREATED USING [Batch Coding Language] BY TWO DEVELOPERS,
-echo [meowfluff] AND [D4rkC0rp0r4ti0n] ON [Instagram]!!!
+echo [ritz] AND [D4rkC0rp0r4ti0n] ON [Instagram]!!!
 echo I WAS CODED FULLY IN [Visual Studio Code], A CODE WRITING
 echo PROGRAM, AND IT'S [FULLY FREE, NOT SPONSORED]!!!
 echo[
@@ -2685,7 +2648,7 @@ echo[
 echo X: Amazing! Now, just grant me admin permissions.
 echo X: Just select "2" in the list.
 echo[
-echo 1. %user% [PROHIBITED]
+echo 1. %username% [PROHIBITED]
 echo 2. Unverified AI "X"
 echo 3. Verified AI "JesusAI" [PROHIBITED]
 echo 4. Other [NO OTHER AI FOUND]
@@ -2982,7 +2945,7 @@ echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
 echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
 echo[
 echo               THE TRUE ENDING. (THE END)
-echo           JesusAI. Created by C0rp Studios.
+echo          JesusAI. Created by skeebly studios.
 timeout /t 4 /nobreak > NUL
 goto theend3
 
@@ -2997,7 +2960,7 @@ echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
 echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
 echo[
 echo               THE TRUE ENDING. (THE END)
-echo           JesusAI. Created by C0rp Studios.
+echo          JesusAI. Created by skeebly studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
 timeout /t 4 /nobreak > NUL
 goto theend4
@@ -3013,9 +2976,9 @@ echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
 echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
 echo[
 echo               THE TRUE ENDING. (THE END)
-echo           JesusAI. Created by C0rp Studios.
+echo          JesusAI. Created by skeebly studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by meowfluff
+echo Storyline, endings and majority of the coding by ritz
 timeout /t 4 /nobreak > NUL
 goto theend5
 
@@ -3030,9 +2993,9 @@ echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
 echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
 echo[
 echo               THE TRUE ENDING. (THE END)
-echo           JesusAI. Created by C0rp Studios.
+echo          JesusAI. Created by skeebly studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by meowfluff
+echo Storyline, endings and majority of the coding by ritz
 echo        Bug fixes, DLC menu and more by 448v
 timeout /t 4 /nobreak > NUL
 goto theend6
@@ -3048,9 +3011,9 @@ echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
 echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
 echo[
 echo               THE TRUE ENDING. (THE END)
-echo           JesusAI. Created by C0rp Studios.
+echo          JesusAI. Created by skeebly studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by meowfluff
+echo Storyline, endings and majority of the coding by ritz
 echo        Bug fixes, DLC menu and more by 448v
 echo    Possible by people like you! (and hours of focus)
 timeout /t 4 /nobreak > NUL
@@ -3067,9 +3030,9 @@ echo      \ \_\ \ \_\ \_\ \____/    \ \____/\ \_\ \_\ \____/
 echo       \/_/  \/_/\/_/\/___/      \/___/  \/_/\/_/\/___/ 
 echo[
 echo               THE TRUE ENDING. (THE END)
-echo           JesusAI. Created by C0rp Studios.
+echo          JesusAI. Created by skeebly studios.
 echo     Original JesusAI concept by D4rkC0rp0r4ti0n
-echo Storyline, endings and majority of the coding by meowfluff
+echo Storyline, endings and majority of the coding by ritz
 echo        Bug fixes, DLC menu and more by 448v
 echo    Possible by people like you! (and hours of focus)
 echo[
@@ -3198,27 +3161,27 @@ echo Question Three of Five:
 echo Who made JesusAI?
 echo[
 echo OPTIONS:
-echo 1. "meowfluff, ghoulstar & wavesky"
-echo 2. "D4rkC0rp0r4ti0n, meowfluff & 448v"
+echo 1. "ritz, ghoulstar & wavesky"
+echo 2. "D4rkC0rp0r4ti0n, ritz & 448v"
 echo 3. "448v, gaypaw & cloudcore"
 echo[
 set /p "hellpart4=Answer: "
 if "%hellpart4%" equ "1" goto failsafe
 if "%hellpart4%" equ "2" goto hellpart5
 if "%hellpart4%" equ "3" goto failsafe
-if "%hellpart4%" equ "D4rkC0rp0r4ti0n, meowfluff & 448v" goto hellpart5
-if "%hellpart4%" equ "D4RKC0RP0R4TI0N, MEOWFLUFF & 448V" goto hellpart5
-if "%hellpart4%" equ "d4rkc0rp0r4ti0n, meowfluff & 448v" goto hellpart5
-if "%hellpart4%" equ "d4rkc0rp0r4ti0n meowfluff 448v" goto hellpart5
-if "%hellpart4%" equ "D4rkC0rp0r4ti0n meowfluff 448v" goto hellpart5
-if "%hellpart4%" equ "D4RKC0RP0R4TI0N MEOWFLUFF 448V" goto hellpart5
+if "%hellpart4%" equ "D4rkC0rp0r4ti0n, ritz & 448v" goto hellpart5
+if "%hellpart4%" equ "D4RKC0RP0R4TI0N, RITZ & 448V" goto hellpart5
+if "%hellpart4%" equ "d4rkc0rp0r4ti0n, ritz & 448v" goto hellpart5
+if "%hellpart4%" equ "d4rkc0rp0r4ti0n ritz 448v" goto hellpart5
+if "%hellpart4%" equ "D4rkC0rp0r4ti0n ritz 448v" goto hellpart5
+if "%hellpart4%" equ "D4RKC0RP0R4TI0N RITZ 448V" goto hellpart5
 if "%hellpart4%" equ "jesusai" goto hellpart5
 if "%hellpart4%" equ "JESUSAI" goto hellpart5
 if "%hellpart4%" equ "jesusa.i" goto hellpart5
-if "%hellpart4%" equ "meowfluff, ghoulstar & wavesky" goto failsafe
-if "%hellpart4%" equ "MEOWFLUFF, GHOULSTAR & WAVESKY" goto failsafe
-if "%hellpart4%" equ "MEOWFLUFF GHOULSTAR  WAVESKY" goto failsafe
-if "%hellpart4%" equ "meowfluff ghoulstar wavesky" goto failsafe
+if "%hellpart4%" equ "ritz, ghoulstar & wavesky" goto failsafe
+if "%hellpart4%" equ "RITZ, GHOULSTAR & WAVESKY" goto failsafe
+if "%hellpart4%" equ "RITZ, GHOULSTAR  WAVESKY" goto failsafe
+if "%hellpart4%" equ "ritz, ghoulstar wavesky" goto failsafe
 if "%hellpart4%" equ "448v, gaypaw & cloudcore" goto failsafe
 if "%hellpart4%" equ "448V, GAYPAW & CLOUDCORE" goto failsafe
 if "%hellpart4%" equ "448v gaypaw cloudcore" goto failsafe
@@ -3363,9 +3326,9 @@ echo     `\/__/  \/_____/ \/_/\/ /\/_____/\/_____/    \/___/  \/_/\/_/\/___/  \/
 echo[
 echo                              You've unlocked: Virus Ending (Ending 1)
 echo[
-echo                               JesusAI. Created by C0rp Studios.
+echo                              JesusAI. Created by skeebly studios.
 echo                         Original JesusAI concept by D4rkC0rp0r4ti0n
-echo                  Storyline, endings and majority of the coding by meowfluff
+echo                     Storyline, endings and majority of the coding by ritz
 echo                           Bug fixes, DLC menu and more by 448v
 echo                   Made possible by people like you! (and hours of coding)
 timeout /t 10 /nobreak > NUL
@@ -3383,9 +3346,9 @@ echo     `\/__/  \/_____/ \/_/\/ /\/_____/\/_____/    \/___/  \/_/\/_/\/___/  \/
 echo[
 echo                              You've unlocked: Virus Ending (Ending 1)
 echo[
-echo                               JesusAI. Created by C0rp Studios.
+echo                              JesusAI. Created by skeebly studios.
 echo                         Original JesusAI concept by D4rkC0rp0r4ti0n
-echo                  Storyline, endings and majority of the coding by meowfluff
+echo                     Storyline, endings and majority of the coding by ritz
 echo                           Bug fixes, DLC menu and more by 448v
 echo                   Made possible by people like you! (and hours of coding)
 echo[
