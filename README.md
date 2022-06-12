@@ -6,13 +6,15 @@
 
 **Game is currently finished. Update 2 in the works. Bug fixes & improvements semi-regularly.**
 
+# Overview
+
 JesusAI is a text-based visual novel created by skeebly studios.
 
 Explore through a broken AI of Jesus Christ, unlocking secrets and generally chatting with the AI.
 
 Can you find what's behind the mask of a creation?
 
-## FAQ
+# FAQ
 ### Is this game free?
 Yes.
 
